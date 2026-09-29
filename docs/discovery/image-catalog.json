@@ -1,0 +1,1776 @@
+{
+ "items": [
+  {
+   "files": [
+    "500A2551-scaled.jpeg",
+    "500A2551-scaled-scaled.webp"
+   ],
+   "best_file": "500A2551-scaled.jpeg",
+   "dimensions": "2560x1707",
+   "category": "bundle-product-shot",
+   "product": "nephite-christmas",
+   "description": "Professional overhead flat-lay photo on white shiplap boards. The 'Nephite Christmas' hardcover (blue cover; boy in red headband holding a torch in front of a stone archway; 'Written by Tiffany Wheeler, Illustrated by Kelley Hicken') overlaps the coloring book ('Join me for a Nephite Christmas Adventure! Coloring and Activity [Book]'). Props: kraft gift box with ribbon, flocked pine branch, wooden bead garland, wooden snowflake, gold bells, gold star lantern, gold mesh ribbon. No overlay text.",
+   "new_site_use": "Hero or 'Complete Set' bundle bar background, and a strong OG/social image. This is the clean source photo behind the promos 2-scaled.jpg and 7-1.webp. It has room on the right for overlaid copy.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "closed-book.png",
+    "closed-book.webp"
+   ],
+   "best_file": "closed-book.png",
+   "dimensions": "2548x2097",
+   "category": "book-3d-mockup",
+   "product": "easter-journey",
+   "description": "Angled 3D render of the 'Easter Journey' hardcover on a clean transparent background (about 44% of the pixels are opaque). The front cover shows 'Easter Journey', 'Written by Tiffany Wheeler' and 'Illustrated by Kelley Hicken'. The spine reads 'EASTER JOURNEY' and 'WHEELER'.",
+   "new_site_use": "Hero (both-books composite), Easter product card and product gallery, bundle bar. Its transparency makes compositing with the Nephite Christmas cutouts easy.",
+   "quality": "excellent",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "book-cover-scaled.jpg",
+    "book-cover-scaled-scaled.webp"
+   ],
+   "best_file": "book-cover-scaled.jpg",
+   "dimensions": "2095x2560",
+   "category": "book-cover",
+   "product": "easter-journey",
+   "description": "Flat front cover art of 'Easter Journey' (script 'Easter' above serif 'JOURNEY'), 'Written by Tiffany Wheeler' and 'Illustrated by Kelley Hicken'. A smiling gray-bearded man in red and green robes gestures toward the viewer. A laughing woman and man wave palm fronds, and Jesus rides a donkey on a Jerusalem street in the background (Triumphal Entry). The cover shows no 'Promised Messiah' subtitle.",
+   "new_site_use": "Primary Easter product card and gallery image, and a hero element. The art can be cropped for Easter section backgrounds.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Adobe-Express-file-1.png",
+    "Adobe-Express-file-1.webp"
+   ],
+   "best_file": "Adobe-Express-file-1.png",
+   "dimensions": "1055x1054",
+   "category": "bundle-product-shot",
+   "product": "nephite-christmas",
+   "description": "Background-removed cutout of the 'Nephite Christmas' hardcover overlapping the 'Join me for a Nephite Christmas Adventure! Coloring and Activity Book'. It is the same photo as 7.png with the backdrop removed. The edges looked clean on a magenta test.",
+   "new_site_use": "Hero or bundle-bar compositing next to closed-book.png (Easter). Also works as a Nephite Christmas product card image on a brand-color background.",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "Adobe-Express-file-2.png",
+    "Adobe-Express-file-2.webp"
+   ],
+   "best_file": "Adobe-Express-file-2.png",
+   "dimensions": "1055x1054",
+   "category": "bundle-product-shot",
+   "product": "nephite-christmas",
+   "description": "Background-removed cutout of the Nephite Christmas hardcover, the coloring book, and a round white ceramic ornament reading 'Nephite Christmas' with a gold star, hung on gold ribbon. It is the same photo as Bundle-with-ornament.png with the backdrop removed.",
+   "new_site_use": "Image for a 'deluxe / gift set' bundle (book, coloring book and ornament) in the bundle bar or as an upsell.",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "7.png",
+    "7.webp"
+   ],
+   "best_file": "7.png",
+   "dimensions": "1055x1054",
+   "category": "bundle-product-shot",
+   "product": "nephite-christmas",
+   "description": "Studio photo of the 'Nephite Christmas' hardcover overlapping the coloring book ('Join me for a Nephite Christmas Adventure! Coloring and Activity...') on a plain light gray seamless backdrop. Square crop.",
+   "new_site_use": "Product gallery image or bundle card (book plus coloring book). Adobe-Express-file-1 is the transparent version.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Bundle-with-ornament.png",
+    "Bundle-with-ornament.webp",
+    "Bundle-with-ornament_transparent.webp"
+   ],
+   "best_file": "Bundle-with-ornament.png",
+   "dimensions": "1055x1054",
+   "category": "bundle-product-shot",
+   "product": "nephite-christmas",
+   "description": "Studio photo on a light gray backdrop of the Nephite Christmas hardcover, the coloring book, and a white ceramic 'Nephite Christmas' ornament with a gold star on gold ribbon. Despite its name, the 2048x2046 file 'Bundle-with-ornament_transparent.webp' still has its background. Its alpha channel is broken: holes cut into the white title lettering and highlights (verified over magenta). Do not use it as a transparent asset.",
+   "new_site_use": "Gallery image for the gift set or ornament bundle. For a larger size, the 2048 _transparent.webp could be flattened onto a matching light gray, but it may be upscaled. Adobe-Express-file-2 is the working cutout.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "1.png",
+    "1.webp"
+   ],
+   "best_file": "1.png",
+   "dimensions": "1216x842",
+   "category": "lifestyle-photo",
+   "product": "nephite-christmas",
+   "description": "Warm lifestyle photo of an older woman with short dark hair and glasses reading the 'Nephite Christmas' hardcover to two young blonde girls in gray sweaters, seated in a leather chair against a white wall. The cover text is readable ('Nephite Christmas', 'Written by Tiffany Wheeler', 'Illustrated by Kelley Hicken'). There is slight grain and softness from processing. Whether the woman is the author is not confirmed.",
+   "new_site_use": "Emotional lifestyle band ('a new family Christmas tradition'), beside reviews, or as a secondary hero or ad-landing image. Could be the About photo if the client confirms the woman is Tiffany.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "9.png",
+    "9.webp"
+   ],
+   "best_file": "9.png",
+   "dimensions": "866x600",
+   "category": "lifestyle-photo",
+   "product": "nephite-christmas",
+   "description": "Candid photo of a mother with long brown hair in a cream sweater reading with a young boy in a teal Fair Isle holiday sweater. The boy points at an open picture book at the lower right, and a light couch is behind them. The book is only partly visible (blue edge, illustrated page). That it is Nephite Christmas is an inference.",
+   "new_site_use": "Small lifestyle tile, a 'why families love it' section, or a review-card background. The resolution is too low for a full-width hero.",
+   "quality": "usable",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "8.png",
+    "8.webp"
+   ],
+   "best_file": "8.png",
+   "dimensions": "866x600",
+   "category": "lifestyle-photo",
+   "product": "coloring-book",
+   "description": "Overhead shot of a child in a red long-sleeve shirt coloring a Nephite Christmas coloring book page (bordered line art of a boy lying down) with a red crayon on a wooden table. The coloring book cover ('Coloring and Activit[y]...', boy in red headband) lies upside down beside it.",
+   "new_site_use": "Lifestyle shot in the coloring book product gallery, or proof for the 'includes activity book' bundle messaging. The resolution is low.",
+   "quality": "usable",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "coloring-book-cover-thumbnail.png",
+    "coloring-book-cover-thumbnail.jpg",
+    "coloring-book-cover-thumbnail.webp",
+    "coloring-book-cover-thumbnail0.webp",
+    "coloring-book-cover-for-website-print.webp"
+   ],
+   "best_file": "coloring-book-cover-thumbnail.png",
+   "dimensions": "1080x1080",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Flat front cover of the physical coloring book, centered on a square canvas. The .png has transparent side margins; the .jpg and .webp files have white ones. Cover text: 'Join me for a Nephite Christmas Adventure!' and 'Coloring and Activity Book'. The cartoon boy (red headband, teal tank top) waves in front of a Mesoamerican stepped temple and palm trees under a starry blue sky. There is no badge. coloring-book-cover-thumbnail.webp and thumbnail0.webp are pixel-identical.",
+   "new_site_use": "Product card or gallery image for the printed coloring book, and an add-on or upsell thumbnail in the cart or bundle bar.",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "coloring-book-download-cover-thumbnail.png",
+    "coloring-book-download-cover-thumbnail.webp",
+    "coloring-book-cover-for-website-download.webp",
+    "Coloring-Book-Download-Cover-.webp",
+    "Coloring-Book-Download-Cover-1-1.webp"
+   ],
+   "best_file": "coloring-book-download-cover-thumbnail.png",
+   "dimensions": "1080x1080",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "The same coloring book cover art ('Join me for a Nephite Christmas Adventure!' / 'Coloring and Activity Book') on a square canvas, with a white diagonal corner badge at the bottom right reading 'PDF Download'. The thumbnail .png and .webp have transparent sides. for-website-download.webp (1080) and Coloring-Book-Download-Cover-.webp and -1-1.webp (1020x1020) have light gray or white sides.",
+   "new_site_use": "Product image for a digital PDF download of the coloring book, if it stays a product (for example a low-price add-on or an email lead magnet).",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "coloring-book-cover-thumbnail-copy.webp",
+    "CB1.png",
+    "CB1.webp"
+   ],
+   "best_file": "coloring-book-cover-thumbnail-copy.webp",
+   "dimensions": "827x1080",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Full-bleed portrait version of the coloring book front cover ('Join me for a Nephite Christmas Adventure!' / 'Coloring and Activity Book'): the waving boy in front of a temple and palms, with no badge. CB1 (789x1018) is the same art with a slightly different crop and is the first of the CB1-CB6 page set. Both have alpha channels but are effectively opaque.",
+   "new_site_use": "First slide of the coloring book peek-inside carousel (followed by CB2-CB6), or a portrait product thumbnail.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Coloring-Book-Download-Cover-0.webp"
+   ],
+   "best_file": "Coloring-Book-Download-Cover-0.webp",
+   "dimensions": "789x1018",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Full-bleed portrait coloring book cover (same art as CB1) with a white diagonal 'PDF Download' badge in the bottom-right corner.",
+   "new_site_use": "Portrait thumbnail for the PDF download variant. Otherwise redundant with the square download group.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "CB2.png",
+    "CB2.webp"
+   ],
+   "best_file": "CB2.png",
+   "dimensions": "789x1023",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Black-and-white interior title page of the coloring book: 'Nephite Christmas' in hand lettering, a line-art dove perched on a stack of engraved metal plates (likely the gold plates), and 'Coloring and Activity Book'. It has a busy patterned border of small line icons (doves, sheep, figures, suns, leaves).",
+   "new_site_use": "Coloring book peek-inside gallery.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "CB3.png",
+    "CB3.webp"
+   ],
+   "best_file": "CB3.png",
+   "dimensions": "789x1019",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Activity page 'Decode Nephi's Message': a symbol cipher key grid (A-X) on a scroll with an encoded message below, a Mesoamerican stepped temple, palm trees, two suns and a crescent moon, inside a geometric tribal-pattern border. Page number 1, with 'Solution on pg 26'.",
+   "new_site_use": "Coloring book peek-inside gallery. It shows the book's activity value beyond coloring.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "CB4.png",
+    "CB4.webp"
+   ],
+   "best_file": "CB4.png",
+   "dimensions": "789x1023",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Activity page 'Connect the Dots': a numbered dot-to-dot (about 1-45) forming a bearded man in a robe, with his face and hair partly drawn, inside a border of stars, palm trees, suns and spiral motifs. Page 8.",
+   "new_site_use": "Coloring book peek-inside gallery.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "CB5.png",
+    "CB5.webp"
+   ],
+   "best_file": "CB5.png",
+   "dimensions": "789x1021",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Coloring page: the headband boy holds a picture or paper while a girl with pigtails points at it. A sun, bushes and a crenellated wall or tower with a banner are behind them, inside a geometric pattern border. Page 14.",
+   "new_site_use": "Coloring book peek-inside gallery.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "CB6.png",
+    "CB6.webp"
+   ],
+   "best_file": "CB6.png",
+   "dimensions": "789x1024",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Coloring page: a woman shading her eyes and a headband boy pointing up at bright stars and a crescent moon in the night sky (likely the sign of Christ's birth), inside a swirl and diamond pattern border. Page 22.",
+   "new_site_use": "Coloring book peek-inside gallery. Also works as a quiet decorative element for the Nephite Christmas story section.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Animated-cropped-waving-boy.gif"
+   ],
+   "best_file": "Animated-cropped-waving-boy.gif",
+   "dimensions": "600x600",
+   "category": "character-art",
+   "product": "nephite-christmas",
+   "description": "Animated GIF (41 frames at 0.10 s each, about 4.1 s loop) of the Nephite Christmas cartoon boy (red headband, teal tank top) on a transparent background. He waves, then strikes a thoughtful pose (fist to chin, eyes closed), then waves again. He appears to hold a pencil at the bottom edge. There is a faint white fringe on one ear edge. File size is 1.6 MB.",
+   "new_site_use": "Playful accent near the CTA or story section, empty-cart state, or 404 page. Convert to animated WebP or MP4/WebM (or a sprite) to cut the 1.6 MB weight, and do not put it above the fold on mobile.",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "ChatGPT-Image-Feb-12-2026-07_25_58-AM.png",
+    "ChatGPT-Image-Feb-12-2026-07_25_58-AM.webp"
+   ],
+   "best_file": "ChatGPT-Image-Feb-12-2026-07_25_58-AM.png",
+   "dimensions": "1536x1024",
+   "category": "decorative-illustration",
+   "product": "nephite-christmas",
+   "description": "AI-generated (per filename) soft watercolor background: a lavender and periwinkle misty sky with white star dots, a hazy silhouette of a Mesoamerican stepped temple and palm trees at lower left, fading to off-white textured watercolor paper on the right. No text.",
+   "new_site_use": "Background texture for the hero or Nephite Christmas section. The empty right side leaves room for headline and CTA. It suits a light, dreamy brand palette.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "16513748483500245155_2048.jpeg"
+   ],
+   "best_file": "16513748483500245155_2048.jpeg",
+   "dimensions": "2048x2048",
+   "category": "misc",
+   "product": "other",
+   "description": "Print-on-demand (Printify-style) mockup of a landscape canvas print seen nearly head-on on white. The artwork shows a woman in a blue head covering (likely Mary Magdalene) looking up in awe at the open garden tomb with its rolled stone and pink flowers, while a glowing white-robed figure (the resurrected Christ) stands at the right edge. The style matches the Easter Journey illustrations.",
+   "new_site_use": "Skip for launch unless canvas wall art is sold. The artwork could be cropped as an Easter story image, but the canvas texture is visible, so the original art file would be better.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "13926739497957928813_2048.jpeg"
+   ],
+   "best_file": "13926739497957928813_2048.jpeg",
+   "dimensions": "2048x2048",
+   "category": "misc",
+   "product": "other",
+   "description": "Angled 3/4 view of the same canvas print (Mary Magdalene at the empty tomb, pink flowers, white-robed risen Christ) on a white background. Print-on-demand mockup.",
+   "new_site_use": "Skip unless there is a canvas or wall-art product. Otherwise it is a secondary gallery image for that product.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "10260435129459230675_2048.jpeg"
+   ],
+   "best_file": "10260435129459230675_2048.jpeg",
+   "dimensions": "2048x2048",
+   "category": "misc",
+   "product": "other",
+   "description": "Room-scene mockup: a small canvas of Mary Magdalene at the empty tomb hangs on a white wall above a gray shelf holding stacked pastel books, a black bowl in a wire frame, and a yellow desk lamp.",
+   "new_site_use": "Skip unless canvas wall art is sold. Could be a lifestyle image for that product.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "11343436479279271422_2048.jpeg"
+   ],
+   "best_file": "11343436479279271422_2048.jpeg",
+   "dimensions": "2048x2048",
+   "category": "misc",
+   "product": "other",
+   "description": "Room-scene mockup: the small Mary Magdalene empty-tomb canvas hangs on a textured greige wall next to a light switch, with a white twisted vase of bare branches and a stack of magazines on a wood console.",
+   "new_site_use": "Skip unless canvas wall art is sold.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "16637536903398360573_2048.jpeg"
+   ],
+   "best_file": "16637536903398360573_2048.jpeg",
+   "dimensions": "2048x2048",
+   "category": "puzzle",
+   "product": "puzzle",
+   "description": "Print-on-demand mockup of a gray jigsaw puzzle box with the lid shown and loose pieces inside. The lid art shows a smiling bearded man in teal and cream robes holding a scroll or parchment, with olive trees and Jerusalem stone walls behind him, in the Easter Journey illustration style. Box label: '11x14 Puzzle', '252 pcs', 'Ages 9+', plus a barcode.",
+   "new_site_use": "Only if a puzzle product is sold (secondary merch or upsell). Skip for the core funnel.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "1711526216898823065_2048.jpeg"
+   ],
+   "best_file": "1711526216898823065_2048.jpeg",
+   "dimensions": "2048x2048",
+   "category": "puzzle",
+   "product": "puzzle",
+   "description": "Flat, fully assembled puzzle mockup of the same artwork (bearded man holding a scroll among olive trees and Jerusalem walls) on white, with the puzzle cut lines visible.",
+   "new_site_use": "Main puzzle product image if that product exists. Otherwise skip.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "6225826769189115882_2048.jpeg"
+   ],
+   "best_file": "6225826769189115882_2048.jpeg",
+   "dimensions": "2048x2048",
+   "category": "puzzle",
+   "product": "puzzle",
+   "description": "Angled mockup of the same puzzle (bearded man with scroll), nearly complete, with three missing pieces and loose pieces scattered on a white surface.",
+   "new_site_use": "Secondary puzzle gallery image if that product exists. Otherwise skip.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "box-of-misprints.jpg",
+    "box-of-misprints.webp"
+   ],
+   "best_file": "box-of-misprints.jpg",
+   "dimensions": "1671x1671",
+   "category": "misc",
+   "product": "nephite-christmas",
+   "description": "Composite image of the 'Nephite Christmas' hardcover ('Written by Tiffany Wheeler', 'Illustrated by Kelley Hicken') standing in front of a plain closed cardboard shipping box on white. The filename suggests it was used to sell a box of misprinted copies at a discount. The composite looks slightly artificial.",
+   "new_site_use": "Skip for the core funnel. Possible use for a 'bulk / case pack' or seconds/misprint listing if the client still offers one.",
+   "quality": "usable",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "7-1.webp"
+   ],
+   "best_file": "7-1.webp",
+   "dimensions": "2250x1125",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Homepage slider built from the 500A2551 flat-lay photo (book plus coloring book) with white overlay text: 'Draw Closer to Christ this Christmas with our Nephite Christmas Bundle!', 'ON SALE NOW! Both Books for only $25!' and 'Order online with code BUNDLE25'.",
+   "new_site_use": "Skip as outdated: the price and discount code are time-bound. Use the clean 500A2551 photo instead. The copy angle ('Draw Closer to Christ this Christmas') is reusable as headline inspiration. Data point: the book plus coloring book bundle was previously $25.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "2-scaled.jpg",
+    "2-scaled-scaled.webp"
+   ],
+   "best_file": "2-scaled.jpg",
+   "dimensions": "2560x1440",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "16:9 promo banner. Left: a cropped 500A2551 flat-lay (Nephite Christmas hardcover plus coloring book). Right, on light gray: 'BLACK FRIDAY SALE', '24 HR FLASH SALE', 'BOGO Free!' and 'FRIDAY ONLY' in red and black type.",
+   "new_site_use": "Skip as an outdated Black Friday promo. The same photo is available clean as 500A2551-scaled.jpeg. The layout could be a template for a future seasonal announcement bar.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Black-Friday-Sale.jpg",
+    "Black-Friday-Sale.webp"
+   ],
+   "best_file": "Black-Friday-Sale.jpg",
+   "dimensions": "1200x628",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Facebook-link-size promo graphic: the Nephite Christmas cartoon boy waving at the left, with watercolor pine, berry and pinecone garland borders at top and bottom. A red stitched circle reads 'Nephite Christmas', '$5 off', 'BLACK FRIDAY SALE', '11/28-12/2' (Black Friday 2025), 'SHOP NOW' and 'Tiffany-Wheeler.com'.",
+   "new_site_use": "Skip as an outdated dated promo (11/28-12/2). The waving-boy character and watercolor pine garland are reusable brand art if the source files exist, and the layout is a template for future seasonal ads.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Easter-Journey-for-canva18-scaled.jpg"
+   ],
+   "best_file": "Easter-Journey-for-canva18-scaled.jpg",
+   "dimensions": "2560x1578",
+   "category": "interior-page-or-spread",
+   "product": "easter-journey",
+   "description": "Full two-page interior spread from Easter Journey, pages 32-33. On the left an angel figure (white hair, white beard, white robe, arms spread) stands before a silvery olive tree at sunrise. On the right is the empty garden tomb with its round stone rolled aside, and pink tulips in the foreground. The heading 'The Tomb' sits top-right with a paragraph of the angel's words (a scripture-style paraphrase that ends with the proclamation that He is risen). Page numbers 32 and 33 are visible.",
+   "new_site_use": "peek-inside: the strongest real-spread candidate in this batch for the 'Take a Peek Inside' open-book section. Also a good Easter product-gallery slide.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Easter-Journey-for-canva18-scaled-1.jpg",
+    "Easter-Journey-for-canva18-scaled-1.webp"
+   ],
+   "best_file": "Easter-Journey-for-canva18-scaled-1.jpg",
+   "dimensions": "1500x1500",
+   "category": "interior-page-or-spread",
+   "product": "easter-journey",
+   "description": "Square crop of the same pages 32-33 spread. It shows mostly the left page (the angel in a white robe, the olive tree, tulips, page number 32). The right-page text is cut off mid-line at the right edge ('The Tom...', 'Angel: Be n...').",
+   "new_site_use": "Product gallery or social square only if the cut-off text is acceptable. Prefer the full spread (canva18-scaled.jpg) or re-crop it so the text is not truncated.",
+   "quality": "usable",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Easter-Journey-Cover-2.jpg",
+    "Easter-Journey-Cover-2.webp"
+   ],
+   "best_file": "Easter-Journey-Cover-2.jpg",
+   "dimensions": "656x800",
+   "category": "book-cover",
+   "product": "easter-journey",
+   "description": "Easter Journey front cover, tightly cropped with no padding. Title: script 'Easter' over serif 'JOURNEY'. A smiling older bearded man (the narrator/merchant character: red robe, green tunic, cream scarf) gestures toward the viewer. Behind him, crowds wave palm fronds and Jesus rides a donkey through a Jerusalem street and gate. Credit lines: 'Written by Tiffany Wheeler' / 'Illustrated by Kelley Hicken'.",
+   "new_site_use": "Product card cover and 3D mockup source. This is the clean edge-to-edge cover. At 656px wide, request the print-resolution cover file from the client for hero use.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Easter-Journey-Cover-20.jpg",
+    "Easter-Journey-Cover-1.webp"
+   ],
+   "best_file": "Easter-Journey-Cover-20.jpg",
+   "dimensions": "800x800",
+   "category": "book-cover",
+   "product": "easter-journey",
+   "description": "The same Easter Journey cover centered in an 800x800 square with light-gray (#f6f6f6) side padding. The cover art inside is about 650px wide. Same text as the cover: 'Easter Journey', 'Written by Tiffany Wheeler', 'Illustrated by Kelley Hicken'.",
+   "new_site_use": "Square Shopify product thumbnail or collection grid. The tight crop (Cover-2) or the transparent version is better for custom layouts.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Easter-Journey-Cover.png",
+    "Easter-Journey-Cover.webp",
+    "Easter-Journey-Cover0.webp"
+   ],
+   "best_file": "Easter-Journey-Cover.png",
+   "dimensions": "800x800",
+   "category": "book-cover",
+   "product": "easter-journey",
+   "description": "The same Easter Journey cover in an 800x800 square with transparent side padding (about 18% of the canvas is transparent). Cover.webp and Cover0.webp are byte-identical (same md5).",
+   "new_site_use": "Product cards or hero composites on colored backgrounds where transparent padding helps. Still low-res for a large hero.",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "Easter-Journey-Download-Cover-3.jpg"
+   ],
+   "best_file": "Easter-Journey-Download-Cover-3.jpg",
+   "dimensions": "800x800",
+   "category": "book-cover",
+   "product": "easter-journey",
+   "description": "Easter Journey cover on an 800x800 light-gray (#f6f6f6) square with a white corner triangle at bottom-right reading 'PDF Download'. This is the digital/ebook listing image.",
+   "new_site_use": "Product image for an Easter Journey PDF/digital variant, if the new store sells digital. Otherwise skip.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Easter-Journey-Download-Cover.png",
+    "Easter-Journey-Download-Cover.webp",
+    "Easter-Journey-Download-Cover0.webp"
+   ],
+   "best_file": "Easter-Journey-Download-Cover.png",
+   "dimensions": "800x800",
+   "category": "book-cover",
+   "product": "easter-journey",
+   "description": "Transparent-padded version of the Easter Journey 'PDF Download' cover. The side padding is transparent and the bottom-right triangle is semi-transparent white (alpha about 0.8) with the text 'PDF Download'. Download-Cover.webp and Download-Cover0.webp are byte-identical.",
+   "new_site_use": "Digital-variant product image on colored backgrounds. Otherwise skip.",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "Kickstarter-image-final.webp"
+   ],
+   "best_file": "Kickstarter-image-final.webp",
+   "dimensions": "1024x576",
+   "category": "promo-banner-or-slider",
+   "product": "easter-journey",
+   "description": "Wide 16:9 version of the Easter Journey cover art. It is extended with an extra smiling older woman waving a palm frond at the right and more crowd on the left, with Jesus on a donkey in the center background. The 'Easter Journey' title art is at top-center, partly overlapped by the narrator's head. No sale text, no dates, and no Kickstarter wording is visible. The filename suggests it was the Kickstarter campaign image (inference).",
+   "new_site_use": "Evergreen: Easter Journey OG/social share image or mobile hero. Only 1024px wide and fairly compressed, so ask for a higher-res master for a desktop hero.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Easterlogo.png",
+    "Easterlogo.webp"
+   ],
+   "best_file": "Easterlogo.png",
+   "dimensions": "821x432",
+   "category": "logo-or-title-art",
+   "product": "easter-journey",
+   "description": "Standalone 'Easter Journey' title lettering on a transparent background: white script 'Easter' above cream/ivory serif small-caps 'JOURNEY', with a soft dark drop shadow.",
+   "new_site_use": "Title overlay on an Easter hero or banner, or the Easter section header. It needs a mid or dark background because the lettering is white/cream.",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "Feature-merchant.jpg",
+    "Feature-merchant.webp"
+   ],
+   "best_file": "Feature-merchant.jpg",
+   "dimensions": "1600x900",
+   "category": "decorative-illustration",
+   "product": "easter-journey",
+   "description": "Wide illustration of a Jerusalem market street at dusk: a cobblestone lane, produce stalls and baskets, candles and lanterns, and an arched gate in the distance. At right, the Easter Journey narrator/merchant (gray hair and beard, red robe, green tunic) smiles, gestures toward the viewer and holds out a red fruit. No text.",
+   "new_site_use": "Easter section background or hero banner. It has open space on the left for headline and CTA. Also usable for About the Book / story-intro.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "merchant-square.jpg",
+    "merchant-square.webp"
+   ],
+   "best_file": "merchant-square.jpg",
+   "dimensions": "800x800",
+   "category": "character-art",
+   "product": "easter-journey",
+   "description": "Square close crop of the merchant/narrator character in the market street. He smiles with an open hand extended, and a vendor and produce stall are behind him. No text.",
+   "new_site_use": "Character spotlight ('Meet your guide'), Easter product-card secondary image, or social square.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "feature-image.jpg",
+    "feature-image.webp"
+   ],
+   "best_file": "feature-image.jpg",
+   "dimensions": "2000x1125",
+   "category": "decorative-illustration",
+   "product": "easter-journey",
+   "description": "Wide dusk scene of a stone city gate and tower (Jerusalem) at left. Three robed women walk toward the arched gate on a lit stone path lined with small torches, among olive trees and boulders under an orange-pink sunset. No text. The women heading to the tomb/garden suggests Easter Journey art (inference).",
+   "new_site_use": "Easter hero or section background. The darker right side can hold overlay text. Also good as a full-bleed texture strip.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Flipped-Jerusalem-Gate-copy.jpg"
+   ],
+   "best_file": "Flipped-Jerusalem-Gate-copy.jpg",
+   "dimensions": "2000x1125",
+   "category": "decorative-illustration",
+   "product": "easter-journey",
+   "description": "Horizontally mirrored copy of feature-image.jpg: the gate and tower are at right and the women walk toward the right-hand gate. No text.",
+   "new_site_use": "The same uses as feature-image, for layouts where the text needs to sit on the left. Pick one of the pair per layout.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Crosses-Wallpaper-scaled.jpg",
+    "Crosses-Wallpaper-scaled-scaled.webp"
+   ],
+   "best_file": "Crosses-Wallpaper-scaled.jpg",
+   "dimensions": "2560x1907",
+   "category": "digital-wallpaper-or-printable",
+   "product": "easter-journey",
+   "description": "Illustrated landscape: three crosses on a rocky green hilltop (Golgotha) under a stormy teal-to-magenta sky. No text. The filename marks it as a downloadable wallpaper, painted in the Easter Journey style.",
+   "new_site_use": "Free Easter wallpaper lead magnet (email capture), or a subdued background for the Easter section or footer band.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "He-is-Risen-Wallpaper-scaled.jpg",
+    "He-is-Risen-Wallpaper-scaled-scaled.webp"
+   ],
+   "best_file": "He-is-Risen-Wallpaper-scaled.jpg",
+   "dimensions": "2560x1907",
+   "category": "digital-wallpaper-or-printable",
+   "product": "easter-journey",
+   "description": "Resurrected Jesus (smiling, dark hair and beard, white robe) in the foreground left. The open empty tomb and grassy rocks are behind him, with pink tulips at lower right and a sunrise glow at top-left. No text, despite the 'He is Risen' filename.",
+   "new_site_use": "Easter hero or section art, a peek-inside style highlight, or the wallpaper freebie for email capture.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Jesus-Wallpaper-scaled.jpg",
+    "Jesus-Wallpaper-scaled-scaled.webp"
+   ],
+   "best_file": "Jesus-Wallpaper-scaled.jpg",
+   "dimensions": "2560x1907",
+   "category": "digital-wallpaper-or-printable",
+   "product": "easter-journey",
+   "description": "Jesus (dark hair and beard, gray-green mantle with a red stole) holding a parchment scroll and looking upward. An olive tree and Jerusalem stone walls are behind him under a teal sky. No text.",
+   "new_site_use": "Easter section imagery, story or about-the-book block, or the wallpaper freebie.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Mary-Wallpaper-scaled.jpg",
+    "Mary-Wallpaper-scaled-scaled.webp"
+   ],
+   "best_file": "Mary-Wallpaper-scaled.jpg",
+   "dimensions": "2560x1907",
+   "category": "digital-wallpaper-or-printable",
+   "product": "easter-journey",
+   "description": "A tearful young woman in a blue head covering (likely Mary Magdalene) at the empty tomb, with the burial slab inside and the rolled stone at left. A white-robed figure is partly visible at right and pink flowers are at lower left. No text.",
+   "new_site_use": "Peek-inside or story highlight for Easter Journey, or the wallpaper freebie.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Jesus-and-the-blind-man-square.png"
+   ],
+   "best_file": "Jesus-and-the-blind-man-square.png",
+   "dimensions": "1500x1500",
+   "category": "interior-page-or-spread",
+   "product": "easter-journey",
+   "description": "Illustration of Jesus gently holding the face of a kneeling bearded man in blue robes (the healing of the blind man), between weathered sandstone columns with city ruins and a blue sky behind. No text. The PNG has an alpha channel but is fully opaque. It appears to be an interior illustration crop (inference).",
+   "new_site_use": "Peek-inside gallery tile or Easter product gallery image showing story content and emotional tone.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Mary-in-Garden-square.png"
+   ],
+   "best_file": "Mary-in-Garden-square.png",
+   "dimensions": "1500x1500",
+   "category": "interior-page-or-spread",
+   "product": "easter-journey",
+   "description": "Close portrait of a tearful, hopeful woman with graying dark hair in a tan patterned head covering and a red robe. She stands in a garden with stone arches, a tree and red flowers. No text. The filename says Mary. The PNG has an alpha channel but is fully opaque.",
+   "new_site_use": "Peek-inside tile or Easter product gallery image.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "James-square.png"
+   ],
+   "best_file": "James-square.png",
+   "dimensions": "1080x1080",
+   "category": "character-art",
+   "product": "easter-journey",
+   "description": "Cutout of the character James (per the filename): a dark-haired, bearded man in a cream tunic with a blue stole, scratching his head in a puzzled pose. About half the canvas is transparent background. No text.",
+   "new_site_use": "Character callout or decorative accent in the Easter section, e.g. beside an FAQ or the 'who's in the story' block. Works on any background color.",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "dove2.png",
+    "dove2.webp"
+   ],
+   "best_file": "dove2.png",
+   "dimensions": "1856x2464",
+   "category": "decorative-illustration",
+   "product": "easter-journey",
+   "description": "Painterly white dove in flight with spread wings, a blue-gray tail and pink feet, cut out on a transparent background. No text. It is assigned to Easter Journey because the painting style matches (inference).",
+   "new_site_use": "Decorative accent: hero corner flourish, section divider, or next to the Easter product card. Works on any background.",
+   "quality": "excellent",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "lamp.png",
+    "lamp.webp"
+   ],
+   "best_file": "lamp.png",
+   "dimensions": "2136x2136",
+   "category": "decorative-illustration",
+   "product": "easter-journey",
+   "description": "Painterly terracotta oil lamp with carved spiral motifs, a handle and a lit flame at the spout, with a soft drop shadow, on a transparent background (about 88% of the canvas is transparent). No text. Assigned to Easter Journey on painting style (inference). It could also suit general scripture-themed decoration.",
+   "new_site_use": "Decorative accent or icon-style illustration, e.g. in the trust row, section headers, or 'light of the world' copy. Trim the transparent padding before use.",
+   "quality": "excellent",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "Front-cover.webp",
+    "Front-cover-1.webp"
+   ],
+   "best_file": "Front-cover.webp",
+   "dimensions": "1020x1020",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Cover of the companion coloring book, centered on white padding. Text: 'Join me for a Nephite Christmas Adventure!' and, on a scroll banner, 'Coloring and Activity Book'. The Nephite boy character (red headband, teal tank top) waves in front of palm trees and a Mesoamerican-style stepped stone temple. Front-cover-1.webp is the same image but has a white blotch artifact on the top-right edge, so it should not be used.",
+   "new_site_use": "Coloring book product card or gallery image, add-on or upsell tile, and the bundle bar (Nephite Christmas + coloring book).",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Nativity-feature-image-2.jpg",
+    "Nativity-feature-image-2.webp",
+    "Nativity-feature-image-1.webp"
+   ],
+   "best_file": "Nativity-feature-image-2.jpg",
+   "dimensions": "1050x1050",
+   "category": "nativity-kit",
+   "product": "nativity-kit",
+   "description": "Photo of three printable paper nativity figures standing on paper-ring bases on a white/pale-blue backdrop: kneeling Joseph (blue robe, yellow trim), baby Jesus in a straw manger, and praying Mary (pink robe, purple veil). A purple corner triangle at bottom-right reads 'PDF Download'. Nativity-feature-image-1.webp and -2.webp are byte-identical.",
+   "new_site_use": "Product image for the printable nativity craft (digital add-on, gift-with-purchase, or upsell). Use it in the bundle and upsell area, not the hero.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Digital-Bundle-Download.png",
+    "Digital-Bundle-Download.webp"
+   ],
+   "best_file": "Digital-Bundle-Download.png",
+   "dimensions": "1050x1050",
+   "category": "bundle-product-shot",
+   "product": "nephite-christmas",
+   "description": "Composite of the Nephite Christmas digital bundle on a transparent background: the coloring book cover ('Join me for a Nephite Christmas Adventure!' / 'Coloring and Acti...', partly hidden), the Nephite Christmas book cover ('Nephite Christmas', 'Written by Tiffany Wheeler', 'Illustrated by Kelley Hicken') with a 'PDF Download' corner, and the paper nativity figures (Joseph, manger, Mary) in front. Large black text 'Instant Download' at top-right. The black text disappears on dark backgrounds.",
+   "new_site_use": "Product image for a digital bundle SKU, if one is offered. Useful as a model for a 'What's included' graphic. Use it on a light background only.",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "December-16th-scaled.jpg",
+    "December-16th-scaled-scaled.webp"
+   ],
+   "best_file": "December-16th-scaled.jpg",
+   "dimensions": "2560x1440",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Promo slider. Left half: styled lifestyle photo of the Nephite Christmas hardcover (cover credits Tiffany Wheeler / Kelley Hicken) and the 'Nephite Christmas Adventure!' Coloring and Activity book on white wood planks, with a kraft gift box, pine sprig and gold star ornaments. Right half text: 'ORDER BEFORE DECEMBER 19TH', 'FINAL WEEK', 'BLOWOUT SALE', 'BOGO', '50% off'.",
+   "new_site_use": "Skip for evergreen: dated promo (Dec 19 deadline, BOGO 50%). The left-half book photo is strong, reusable lifestyle art. Crop it, or find the original photo in the library, for a hero, gift section or social proof.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "dec9slider-scaled.jpg",
+    "dec9slider-scaled-scaled.webp"
+   ],
+   "best_file": "dec9slider-scaled.jpg",
+   "dimensions": "2560x1440",
+   "category": "promo-banner-or-slider",
+   "product": "brand",
+   "description": "Store-wide Christmas sale slider. Left: soft flat illustration of the Holy Family (Joseph in a teal robe, Mary in a white veil, swaddled baby Jesus) under a bright star on a night sky. Right, on navy: '20% OFF EVERYTHING!', 'FREE ACTIVITY BOOK WITH $50 Purchase', 'FREE NATIVITY CRAFT DOWNLOAD with $75 purchase', and an orange 'SHOP NOW' button.",
+   "new_site_use": "Skip for evergreen: Dec 9 sale banner. The Holy Family art on the left is reusable for a Christmas section if the client has it without text. The tiered free-gift offer (free activity book at $50, free nativity craft at $75) is a useful precedent for an AOV threshold offer.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "December-19th-1-scaled.jpg",
+    "December-19th-1-scaled-scaled.webp"
+   ],
+   "best_file": "December-19th-1-scaled.jpg",
+   "dimensions": "2560x1440",
+   "category": "promo-banner-or-slider",
+   "product": "brand",
+   "description": "Shipping-deadline slider. Left: stock photo of a smiling delivery man in a navy cap and polo holding a cardboard box in front of a van. Right, on tan: 'HURRY!', 'FINAL DAY TO ORDER AND RECIEVE IT BEFORE CHRISTMAS*' (note the 'RECIEVE' typo), 'DECEMBER 19TH', '*FOR MOST STATES -NOT GUARANTEED'.",
+   "new_site_use": "Skip: dated, generic stock photo, and it contains a typo. The concept is worth reusing seasonally as a shipping-cutoff announcement bar or countdown (text only).",
+   "quality": "usable",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Conference-Sale.jpg",
+    "Conference-Sale.webp"
+   ],
+   "best_file": "Conference-Sale.jpg",
+   "dimensions": "1200x628",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Ad or social graphic (1200x628 link-ad size). On a cream background, the Nephite boy character (red headband, teal top) waves at left, with olive branches and berry dots. A sage-green dashed circle holds the text: 'Nephite Christmas' logo, 'GENERAL CONFERENCE 20% OFF SALE', 'Order this weekend and save!', 'CODE: GENCONF', a 'SHOP NOW' button and 'Tiffany-Wheeler.com'.",
+   "new_site_use": "Skip for evergreen (time-bound discount code). The waving boy artwork and palette (cream, sage, deep red) are a useful brand reference. General Conference weekend (April/October) is a recurring promo window for this LDS audience.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "IMG_6712.webp"
+   ],
+   "best_file": "IMG_6712.webp",
+   "dimensions": "1366x768",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Halloween sale banner, the full version. Black silhouette haunted house, bare trees and crosses in front of a full moon on orange. The Nephite Christmas hardcover and coloring book are composited at lower left. Text: 'HALLOWEEN SALE' (with jack-o-lanterns), 'FREE Coloring Book with each Book Purchased!', 'Grab this \"SCARY GOOD\" deal before it's too late!', an 'ORDER NOW' button, and '*Offer ends on Halloween!'.",
+   "new_site_use": "Skip: seasonal Halloween promo. The 'free coloring book with each book' offer is a useful bundle/GWP precedent.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Halloween-promo.webp"
+   ],
+   "best_file": "Halloween-promo.webp",
+   "dimensions": "1366x808",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Halloween sale banner variant with the same art as IMG_6712 but a slightly taller canvas. Text: 'HALLOWEEN SALE', 'FREE Coloring Book with each Book Purchased!', and 'Grab this \"SCARY GOOD\" deal before it's too late!'. No button and no end-date line.",
+   "new_site_use": "Skip: seasonal Halloween promo.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Halloween.webp"
+   ],
+   "best_file": "Halloween.webp",
+   "dimensions": "1366x808",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "The simplest Halloween sale banner variant, with the same art. Text: 'HALLOWEEN SALE' and 'FREE Coloring Book with each Book Purchased!' only.",
+   "new_site_use": "Skip: seasonal Halloween promo.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "IMG_2693.jpg",
+    "IMG_2693.webp"
+   ],
+   "best_file": "IMG_2693.jpg",
+   "dimensions": "1105x1493",
+   "category": "lifestyle-photo",
+   "product": "other",
+   "description": "Photo of a DIY Easter 'resurrection garden': a terracotta pot of fresh grass with three twig crosses, a small clay-pot 'tomb' with a round stone rolled in front, and pebbles, on a lace tablecloth. Overlaid text: 'RESURRECTION GARDEN' / 'GRASS SEEDS'. A small line-art logo (kitchen utensils or jars) in the bottom-right corner looks like a third-party blog watermark, so it may not be the client's own photo.",
+   "new_site_use": "Skip unless the client confirms she sells a resurrection-garden seed add-on and owns this photo. If so, use it as an Easter add-on product image. Verify rights because of the watermark.",
+   "quality": "usable",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Kelley-Heckin.jpg",
+    "Kelley-Heckin.webp"
+   ],
+   "best_file": "Kelley-Heckin.jpg",
+   "dimensions": "600x723",
+   "category": "author-or-people-photo",
+   "product": "author",
+   "description": "Natural-color outdoor headshot of a smiling woman with shoulder-length auburn/brown hair in a purple button-up top, with a blurred wooded background. She is the illustrator Kelley Hicken: the covers credit 'Illustrated by Kelley Hicken', and the filename misspells it 'Heckin'.",
+   "new_site_use": "About page 'Meet the Illustrator' block (small, since the file is only 600px wide). Not the author, so don't use it as Tiffany's photo.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "KelleyHickenHeadshot.webp"
+   ],
+   "best_file": "KelleyHickenHeadshot.webp",
+   "dimensions": "1000x1008",
+   "category": "author-or-people-photo",
+   "product": "author",
+   "description": "A second, near-square headshot of illustrator Kelley Hicken, apparently from the same photo shoot as Kelley-Heckin.jpg. It is heavily filtered: over-sharpened, grainy and high-contrast, with darker hair tones and a warm, faded wooded background.",
+   "new_site_use": "Backup only. Prefer Kelley-Heckin.jpg for the illustrator bio. The heavy filter looks dated and low quality.",
+   "quality": "usable",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "nephite-christmas-easter-journey-bundle.png",
+    "nephite-christmas-easter-journey-bundle.webp"
+   ],
+   "best_file": "nephite-christmas-easter-journey-bundle.png",
+   "dimensions": "1254x1254",
+   "category": "bundle-product-shot",
+   "product": "both-bundle",
+   "description": "3D mockup of both hardcover books standing side by side on a plain warm-cream background with soft shadows. Left is Nephite Christmas: purple night cover with the Mesoamerican stone arch, a boy in a red headband and teal tunic holding a torch, 'Written by Tiffany Wheeler / Illustrated by Kelley Hicken'. Right is 'Easter JOURNEY' (script 'Easter' over serif 'JOURNEY'): a painterly Jerusalem street scene with a smiling grey-bearded man in a brown robe, a woman and a man waving palm fronds, and Jesus on a donkey in the background, 'Written by Tiffany Wheeler / Illustrated by Kelley Hicken'. Observed: the Easter Journey cover is painted in a more realistic style than the flat cartoon style of Nephite Christmas. Inference: the mockup may be AI-generated or composited, and the Easter cover may not be final, so confirm with the client. PNG and WEBP match (pixel diff about 0.2).",
+   "new_site_use": "Bundle bar 'Complete Set' image and a strong hero candidate for 'Get Both Books'. Also works as the OG image and ad creative. The clean cream background makes it easy to place.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Nephite-Christmas-2025-white-banner.png",
+    "Nephite-Christmas-2025-white-banner.webp"
+   ],
+   "best_file": "Nephite-Christmas-2025-white-banner.png",
+   "dimensions": "2250x1500",
+   "category": "lifestyle-photo",
+   "product": "nephite-christmas",
+   "description": "Real product flat-lay photo: the Nephite Christmas hardcover overlapping the 'Join me for a Nephite Christmas Adventure! Coloring and Activity Book' on white-painted wood planks. Wooden bead garland, a wooden snowflake, a gold star and a gold candle holder sit at the edges. The left and top of the frame fade to solid white, leaving room for headline and CTA text. No promo text is baked in; the only text is on the book covers. '2025' appears only in the filename. The PNG has an alpha channel but is fully opaque.",
+   "new_site_use": "Top hero candidate for Nephite Christmas or the Christmas landing page: headline and CTA go over the white fade on the left. Also good for the product gallery. It is evergreen.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Nephite-Christmas-2025-ads-website-banner.png",
+    "Nephite-Christmas-2025-ads-website-banner.webp"
+   ],
+   "best_file": "Nephite-Christmas-2025-ads-website-banner.png",
+   "dimensions": "2250x1125",
+   "category": "lifestyle-photo",
+   "product": "nephite-christmas",
+   "description": "Same flat-lay product photo as the white banner (the Nephite Christmas hardcover plus the Coloring and Activity Book on white wood with bead garland, wooden snowflake, gold star and gold candle holder), as a full-bleed 2:1 crop with no fade and no overlay text. '2025' appears only in the filename; nothing dated is visible.",
+   "new_site_use": "Hero background, product gallery lifestyle shot, 'book + coloring book' upsell visual, OG image or ad creative. It is evergreen.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Nephite-Christmas-2025-ads-website-banner-1.webp"
+   ],
+   "best_file": "Nephite-Christmas-2025-ads-website-banner-1.webp",
+   "dimensions": "2250x1500",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Same flat-lay photo (the Nephite Christmas book plus the coloring book on white wood) with a solid periwinkle/blue-violet band over the top ~28% that fades into the photo, meant as a text area. The band holds no text. Only a WEBP exists.",
+   "new_site_use": "Optional: a mobile hero or ad variant with text in the violet band. The white-banner PNG or the full-bleed banner PNG is usually the better source. The band color could hint at a brand accent.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "nephite-christmas-23-1.jpg",
+    "nephite-christmas-23-1.webp",
+    "nephite-christmas-23-1-1.jpg",
+    "nephite-christmas-23-1-1.webp"
+   ],
+   "best_file": "nephite-christmas-23-1.jpg",
+   "dimensions": "2000x1333",
+   "category": "lifestyle-photo",
+   "product": "nephite-christmas",
+   "description": "Real product photo: the Nephite Christmas hardcover lying at a slight angle on a bright red background, with a cream cable-knit stocking on the left, a frosted/flocked pine branch at top right and red glass ornaments at the bottom. The cover text 'Nephite Christmas', 'Written by Tiffany Wheeler' and 'Illustrated by Kelley Hicken' is readable. The -23-1 and -23-1-1 files are byte-identical (same md5 for both jpg and webp).",
+   "new_site_use": "Main product-gallery lifestyle image for Nephite Christmas. Also a hero or ad creative and a gift-giving section image. The red makes a festive, high-contrast thumbnail.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Nephite-Christmas-Thumbnail-copy.png",
+    "Nephite-Christmas-Thumbnail-copy.webp",
+    "Nephite-Christmas.jpg",
+    "Nephite-Christmas.webp",
+    "Nephite-Christmas-1.webp"
+   ],
+   "best_file": "Nephite-Christmas-Thumbnail-copy.png",
+   "dimensions": "800x643",
+   "category": "book-cover",
+   "product": "nephite-christmas",
+   "description": "Flat front cover of Nephite Christmas (landscape format): a purple night sky with stars, a carved Mesoamerican stone archway with a temple silhouette and a bird inside it, torches, and a boy in a red headband and teal tunic holding a torch with his hand on his hip. Title lettering: 'Nephite' in sans plus 'Christmas' in white script. Credit: 'Written by Tiffany Wheeler / Illustrated by Kelley Hicken'. Observed: the title on the cover is 'Nephite Christmas', not 'A Nephite Christmas'. Variants: Thumbnail-copy.png/.webp (800x643) and Nephite-Christmas.jpg (800x644) are full-bleed; Nephite-Christmas.webp and Nephite-Christmas-1.webp are 800x800 with the cover centered on light-gray/white padding. The largest version is only 800px wide.",
+   "new_site_use": "Product card cover, cart and line-item thumbnail, 'Take a peek' first image. Ask the client for a high-res or print cover file for the hero and retina (none here is larger than 800px).",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "NC-Book.png",
+    "NC-Book.webp",
+    "Nephite-Christmas-Thumbnail.png",
+    "Nephite-Christmas-Thumbnail.webp"
+   ],
+   "best_file": "Nephite-Christmas-Thumbnail.png",
+   "dimensions": "800x800",
+   "category": "book-cover",
+   "product": "nephite-christmas",
+   "description": "The same Nephite Christmas flat cover art on an 800x800 transparent canvas. In Nephite-Christmas-Thumbnail the cover is centered vertically, with transparent bands above and below (~20% transparent). In NC-Book the cover is top-aligned, with the transparent band only at the bottom. Text: 'Nephite Christmas', 'Written by Tiffany Wheeler', 'Illustrated by Kelley Hicken'.",
+   "new_site_use": "A square product-card or Shopify product image when transparent padding is wanted. Otherwise prefer the full-bleed cover. The same low-resolution caveat applies (800px).",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "Nephite-Christmas-Download-cover.png",
+    "Nephite-Christmas-Download-cover.webp",
+    "Nephite-Christmas-Download-cover-1.webp",
+    "Nephite-Christmas-Download-cover0.webp",
+    "Nephite-Christmas-Download-cover1.webp"
+   ],
+   "best_file": "Nephite-Christmas-Download-cover.png",
+   "dimensions": "792x792",
+   "category": "book-cover",
+   "product": "nephite-christmas",
+   "description": "Nephite Christmas flat cover with a translucent white triangle in the bottom-right corner reading 'PDF Download'. It marks a digital/PDF edition of the book. Canvas variants: Download-cover.png/.webp are 792x792 with transparent top and bottom padding; Download-cover-1.webp and Download-cover0.webp are 792x792 with light-gray/white padding and are near-identical; Download-cover1.webp is 800x644 full-bleed.",
+   "new_site_use": "Product image for a digital PDF edition, only if one is sold. Skip for the physical-book funnel, because the 'PDF Download' badge would confuse physical buyers.",
+   "quality": "usable",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "NC-Coloring-c.png",
+    "NC-Coloring-c.webp",
+    "NC-Coloring.webp"
+   ],
+   "best_file": "NC-Coloring-c.png",
+   "dimensions": "800x800",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Cover of the companion coloring book. The Nephite Christmas boy (red headband, teal shirt) waves in front of a Mesoamerican stepped temple and palm trees under a pale blue sky with sparkles, holding a scroll banner. Text: 'Join me for a Nephite Christmas Adventure!' and on the banner 'Coloring and Activity Book'. The portrait cover sits on an 800x800 transparent canvas: centered in the -c files, left-aligned in NC-Coloring.webp.",
+   "new_site_use": "Product card or gallery image for the coloring book as an add-on or upsell (order bump, 'complete the gift' section, bundle add-on).",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "Nativity-Spread.png",
+    "Nativity-Spread.webp"
+   ],
+   "best_file": "Nativity-Spread.png",
+   "dimensions": "1473x600",
+   "category": "interior-page-or-spread",
+   "product": "nephite-christmas",
+   "description": "Two-page interior spread from Nephite Christmas. Left page: the boy (red headband, teal tunic) bends over and draws on a small card in a dark blue-teal night scene, with a bird silhouette. Right page: a starry night sky with a bright star and the Holy Family (Joseph, Mary, baby Jesus) embracing. Rhyming text in white on both pages. The right page begins 'For of Mary tomorrow I shall be born', continuing about Bethlehem of Judea on the first Christmas morn; the left page says his words shall be fulfilled that night and that he comes to do his Father's will. The PNG alpha channel is effectively opaque.",
+   "new_site_use": "'Take a Peek Inside' open-book spread for Nephite Christmas and a product-gallery interior image. Resolution is moderate (about 736px per page), fine for web and not for zoom.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "NephiteBackground.jpg"
+   ],
+   "best_file": "NephiteBackground.jpg",
+   "dimensions": "1600x975",
+   "category": "decorative-illustration",
+   "product": "nephite-christmas",
+   "description": "Book-style illustration with no text: a purple-to-indigo night sky with stars, a bright four-point star and a crescent moon, a Mesoamerican stepped temple, palm trees, two lit torches, and a carved stone wall in the foreground with a Greek-key/fret pattern and dove motifs.",
+   "new_site_use": "Section background texture or hero backdrop for Nephite Christmas, for example behind the product card or peek-inside section. Also usable as an ad background.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "NC-Kid_Art.jpg"
+   ],
+   "best_file": "NC-Kid_Art.jpg",
+   "dimensions": "1200x934",
+   "category": "interior-page-or-spread",
+   "product": "nephite-christmas",
+   "description": "Three illustrated prints scattered on white: a young shepherd with a crook and sheep, a center print of the Holy Family under a bright star on a dark blue night sky, and three wise men on camels. A painted bowl of green paint and a brush with paint splatter sit at top. No text. Inference: these are 'Jacob's paintings' from the story, or art prints included with the book.",
+   "new_site_use": "Peek-inside or 'what's inside' feature visual, a story-theme section or a decorative accent. It also works in ads.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "NC-Jesus_Art.jpg"
+   ],
+   "best_file": "NC-Jesus_Art.jpg",
+   "dimensions": "900x1139",
+   "category": "interior-page-or-spread",
+   "product": "nephite-christmas",
+   "description": "Two overlapping illustrated prints on white: Jesus in a white head covering and robe (portrait), and the resurrected Jesus in white robes stepping out of an open tomb with red flowers in the foreground. No text. Inference: part of the Nephite Christmas story art (the boy's drawings of the prophesied life of Christ), in the NC cartoon style.",
+   "new_site_use": "Peek-inside or story section accent. It can bridge Christmas and Easter in a 'the whole story of Christ' bundle message.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "NC-JacobDraws.jpg"
+   ],
+   "best_file": "NC-JacobDraws.jpg",
+   "dimensions": "800x930",
+   "category": "character-art",
+   "product": "nephite-christmas",
+   "description": "Character cut-out on a plain white background: the Nephite Christmas boy (inferred name Jacob, from the filename; red headband, messy brown hair, teal tunic) leans over and draws on a small card with a stick brush or pen. No text.",
+   "new_site_use": "Decorative character accent (for example beside the product blurb, an 'about the story' section or empty-cart/404 art). The white background blends onto a white page.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "NC-JacobFatherHug.jpg"
+   ],
+   "best_file": "NC-JacobFatherHug.jpg",
+   "dimensions": "900x985",
+   "category": "character-art",
+   "product": "nephite-christmas",
+   "description": "Character illustration: the boy in the red headband and teal tunic hugging his bald, bearded father (grey sleeveless tunic), both with eyes closed, on a soft teal-to-white gradient background. No text.",
+   "new_site_use": "Emotional 'family reading together / meaningful gift' section accent or an ad visual. Could pair with reviews.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Nativity-feature-image.webp",
+    "Nativity-feature-image0.webp"
+   ],
+   "best_file": "Nativity-feature-image.webp",
+   "dimensions": "1050x1050",
+   "category": "nativity-kit",
+   "product": "nativity-kit",
+   "description": "Product photo of colored, assembled paper nativity figures standing on paper-ring bases on a white surface: Joseph kneeling in a blue robe, baby Jesus in a straw manger, and Mary kneeling in pink and praying. A purple triangle in the bottom-right corner reads 'PDF Download'. The two files are byte-identical.",
+   "new_site_use": "Product image for the printable nativity (PDF) if it is sold. Better as a free lead magnet or freebie with purchase ('Free printable nativity with your order'). The baked-in 'PDF Download' badge limits other uses.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Nativity-Instructions-feature-image.webp"
+   ],
+   "best_file": "Nativity-Instructions-feature-image.webp",
+   "dimensions": "1085x1085",
+   "category": "nativity-kit",
+   "product": "nativity-kit",
+   "description": "Square listing image of the printable nativity instructions page, with a black corner triangle reading 'PDF Download'. Heading: 'Instructions to assemble nativity pieces:' followed by Steps 1-5: print on cardstock and color; cut along the outer gray line including slits; cut a paper strip (template provided); tape or glue the strip into a circle; insert the circle into the slits. Illustrated with the baby-in-manger piece and the paper strip and ring.",
+   "new_site_use": "Secondary gallery image for the nativity printable, if it is sold. Otherwise skip.",
+   "quality": "usable",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Nativity-Instructions.png",
+    "Nativity-Instructions.webp",
+    "Nativity-Instructions0.webp"
+   ],
+   "best_file": "Nativity-Instructions.png",
+   "dimensions": "789x1085",
+   "category": "nativity-kit",
+   "product": "nativity-kit",
+   "description": "The printable nativity instruction sheet itself, a portrait page with no badge. Heading: 'Instructions to assemble nativity pieces:' followed by Steps 1-5 (print on cardstock and color, cut along the outer gray line and slits, cut the strip from the template, tape into a circle, insert into the slits), with illustrations of the manger piece, strip and ring. The alpha channel is effectively opaque (white page). The .webp and 0.webp files are byte-identical.",
+   "new_site_use": "Page image for the nativity printable or lead magnet, or a 'what you get' preview. Otherwise skip.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Nativity-Jacob-and-Dad.png",
+    "Nativity-Jacob-and-Dad.webp"
+   ],
+   "best_file": "Nativity-Jacob-and-Dad.png",
+   "dimensions": "789x1019",
+   "category": "nativity-kit",
+   "product": "nativity-kit",
+   "description": "Black-and-white line-art coloring template for the printable nativity: a boy with a headband sitting cross-legged and praying, and a man with a headband kneeling and praying, each inside a gray cut line with base slits. No text. The Nephite characters are part of the nativity set.",
+   "new_site_use": "Preview image for a printable nativity or lead magnet ('what's inside'). Otherwise skip.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Nativity-Jesus-Mary-and-Joseph.png",
+    "Nativity-Jesus-Mary-and-Joseph.webp"
+   ],
+   "best_file": "Nativity-Jesus-Mary-and-Joseph.png",
+   "dimensions": "789x1082",
+   "category": "nativity-kit",
+   "product": "nativity-kit",
+   "description": "Line-art coloring template: baby Jesus in the straw manger, Mary kneeling and praying, and Joseph kneeling (rotated sideways to fit the page), each with gray cut lines and base slits. No text.",
+   "new_site_use": "Preview image for a printable nativity or lead magnet. Otherwise skip.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Nativity-Nephi-Mom-and-Sister.png",
+    "Nativity-Nephi-Mom-and-Sister.webp"
+   ],
+   "best_file": "Nativity-Nephi-Mom-and-Sister.png",
+   "dimensions": "789x1020",
+   "category": "nativity-kit",
+   "product": "nativity-kit",
+   "description": "Line-art coloring template with three figures rotated sideways: a kneeling woman praying (Mom), a bearded man kneeling with clasped hands (per the filename, Nephi), and a small girl with a ponytail kneeling and praying (Sister). Gray cut lines and base slits. No text.",
+   "new_site_use": "Preview image for a printable nativity or lead magnet. Otherwise skip.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "NC-Ornament-c.png",
+    "NC-Ornament-c.webp",
+    "NC-Ornament.webp"
+   ],
+   "best_file": "NC-Ornament-c.png",
+   "dimensions": "800x800",
+   "category": "ornament",
+   "product": "ornament",
+   "description": "Photo of a round white ceramic/porcelain ornament hanging by a gold ribbon on a flocked Christmas tree with bokeh lights. The ornament reads 'Nephite Christmas' in black (the same lettering as the book title) above a gold eight-point star. It is a portrait crop on an 800x800 transparent canvas: centered in the -c files, left-aligned in NC-Ornament.webp.",
+   "new_site_use": "Product card for the ornament as an add-on or order bump ('add the matching ornament'). The source photo is fairly soft and low-res.",
+   "quality": "usable",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "NephiteChristmas-Ornament.jpg",
+    "NephiteChristmas-Ornament.webp"
+   ],
+   "best_file": "NephiteChristmas-Ornament.jpg",
+   "dimensions": "500x750",
+   "category": "ornament",
+   "product": "ornament",
+   "description": "The same ornament photo as NC-Ornament, as a full portrait 2:3 frame: the white round 'Nephite Christmas' ornament with a gold star on a gold ribbon, flocked tree background. Only 500px wide.",
+   "new_site_use": "Small upsell tile or add-on thumbnail for the ornament. Too small for large display.",
+   "quality": "usable",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "NephiteChristmas-Ornament2.jpg",
+    "NephiteChristmas-Ornament2.webp"
+   ],
+   "best_file": "NephiteChristmas-Ornament2.jpg",
+   "dimensions": "500x538",
+   "category": "ornament",
+   "product": "ornament",
+   "description": "A tighter, near-square crop of the same ornament photo ('Nephite Christmas' white ornament with a gold star on a gold ribbon, flocked tree). The rendering looks slightly smoothed or upscaled; inference: possibly AI-processed.",
+   "new_site_use": "Square thumbnail for the ornament add-on or cart upsell. Otherwise redundant with NC-Ornament-c.",
+   "quality": "usable",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "NephiteChristmasTitle_transparent.png",
+    "NephiteChristmasTitle_transparent.webp",
+    "NephiteChristmasTitle.jpg"
+   ],
+   "best_file": "NephiteChristmasTitle_transparent.png",
+   "dimensions": "500x380",
+   "category": "logo-or-title-art",
+   "product": "nephite-christmas",
+   "description": "Title lettering 'Nephite Christmas' in black ('Nephite' in a hand-drawn sans, 'Christmas' in script) above an illustration of a grey dove perched on golden plates (engraved metal tablets with rings). The _transparent PNG/WEBP have a transparent background; NephiteChristmasTitle.jpg is the same art on white.",
+   "new_site_use": "Product title lockup or section header art on light backgrounds. It is raster and small (500x380), so ask for a vector or high-res version. The black lettering will not work on dark backgrounds.",
+   "quality": "usable",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "olive.png",
+    "olive.webp"
+   ],
+   "best_file": "olive.png",
+   "dimensions": "800x1062",
+   "category": "decorative-illustration",
+   "product": "easter-journey",
+   "description": "Painterly illustration of an olive branch with sage-green leaves and green olives on a transparent background (~58% transparent). No text. Inference: an Easter Journey decorative element (Mount of Olives/Gethsemane theme); its painted style resembles the Easter Journey cover more than the Nephite Christmas cartoon style.",
+   "new_site_use": "Decorative accent or corner flourish for the Easter Journey section or product page, or a divider ornament. The transparent background makes it easy to place.",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "Nectar-Slider.png",
+    "Nectar-Slider.webp"
+   ],
+   "best_file": "Nectar-Slider.png",
+   "dimensions": "1920x1080",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "16:9 slider banner: a photo of smiling children in winter coats and scarves at a doorway with Christmas lights, one holding out a plate of cookies. It looks like a stock or AI-generated photo, not the client's own. A small Nephite Christmas cover is composited at left. A red circle at right reads 'Buy 2 books, get 20% off your whole order with code: SHARE'. The filename suggests the old WordPress Salient theme's Nectar Slider (inference).",
+   "new_site_use": "Skip for evergreen: it carries a baked-in promo code (SHARE / 20% off 2 books) and generic stock-style photography. The 'buy 2, save' offer idea could be reused as bundle-bar copy if the client still runs it.",
+   "quality": "usable",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Page1-scaled.jpg"
+   ],
+   "best_file": "Page1-scaled.jpg",
+   "dimensions": "2560x2061",
+   "category": "interior-page-or-spread",
+   "product": "nephite-christmas",
+   "description": "Full-bleed interior page from Nephite Christmas (probably the opening page). A Nephite/Mesoamerican village at night: thatched huts, a stepped stone temple on a hill, a crescent moon and a starry blue-violet sky. A mother dances with her daughter, a boy sits by a hut, a pregnant woman carries a basket of produce on her head, an elder cooks over a fire, a man rests under a tree, and pumpkins, corn and a white dove fill the scene. White text at top left: an opening line in the style of 'Twas the night before Christmas' (legible in the file). Rich, painterly and high resolution.",
+   "new_site_use": "Peek-inside gallery (lead spread for Nephite Christmas). Also a strong candidate for a Christmas hero or section background: the sky at top left leaves room for text.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "palm.png",
+    "palm.webp"
+   ],
+   "best_file": "palm.png",
+   "dimensions": "800x1062",
+   "category": "decorative-illustration",
+   "product": "easter-journey",
+   "description": "Illustrated green palm frond with a brown stem, drawn diagonally in a painted/inked style, on a transparent background (about 39% of pixels opaque). No text. Palm Sunday motif; tying it to the Easter book is an inference.",
+   "new_site_use": "Decorative accent for Easter sections, such as a corner flourish beside the Easter product card or bundle bar. Small, lightweight webp available.",
+   "quality": "good",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "Peace-Dove-Ornament.png",
+    "Peace-Dove-Ornament.webp"
+   ],
+   "best_file": "Peace-Dove-Ornament.png",
+   "dimensions": "650x650",
+   "category": "ornament",
+   "product": "ornament",
+   "description": "Product photo of a white flat dove-shaped ornament with cut-out stars (one large 4-point star in the center, small stars around it), hung by a gold ribbon against a blurred Christmas tree with bokeh lights. The PNG has an alpha channel but is effectively opaque. No text. It may be a composited mockup.",
+   "new_site_use": "Product gallery or cross-sell card for the Peace Dove Ornament; could also be a free-gift-with-purchase visual. The 650px size limits it to small or medium display.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "ray-hennessy-butterfly.jpg",
+    "ray-hennessy-butterfly.webp"
+   ],
+   "best_file": "ray-hennessy-butterfly.jpg",
+   "dimensions": "1920x1278",
+   "category": "misc",
+   "product": "brand",
+   "description": "Soft-focus pastel photo of a pale blue butterfly on a grass seed head, with fluffy grass plumes and a warm peach and mint bokeh background. No text. The filename suggests an Unsplash-style stock photo credited to photographer Ray Hennessy (inference). It matches the butterfly in the logo.",
+   "new_site_use": "Optional soft background for the About or newsletter section. Low priority for conversion; confirm the stock license. Could skip.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "scary.png",
+    "scary.webp"
+   ],
+   "best_file": "scary.png",
+   "dimensions": "1366x848",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Halloween sale banner: an orange sky with silhouetted haunted house, bare trees, crosses and a full moon over black ground, with two jack-o-lanterns. It shows the Nephite Christmas hardcover (cover reads 'Nephite Christmas', 'written by Tiffany Wheeler', 'illustrated by Kelley Hicken') with the coloring book behind it ('Join me for a Nephite Christmas Adventure!' ... 'Coloring and Activit[y]'). Text: 'HALLOWEEN SALE' / 'FREE Coloring Book when the bundle is purchased!' / '*Sale price for bundle includes the $7.99 discount.'",
+   "new_site_use": "Skip for evergreen (seasonal Halloween promo). Useful as a record of an earlier offer: book plus free coloring book bundle, with the coloring book valued at $7.99.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Scary-deal.webp"
+   ],
+   "best_file": "Scary-deal.webp",
+   "dimensions": "1366x848",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "The same Halloween sale banner art as scary.png, but with different fine print: 'HALLOWEEN SALE' / 'FREE Coloring Book when the bundle is purchased!' / '*Offer automatically applied when bundle is purchased.' (confirmed as a different image by visual comparison).",
+   "new_site_use": "Skip for evergreen (seasonal Halloween promo).",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Screenshot-2025-07-15-at-7.19.33-PM.png",
+    "Screenshot-2025-07-15-at-7.19.33-PM.webp"
+   ],
+   "best_file": "Screenshot-2025-07-15-at-7.19.33-PM.png",
+   "dimensions": "321x411",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Low-resolution screen grab of an activity page, 'Make Your Own Cubed Dove': a grey papercraft net of a dove with dotted fold lines and a separate beak piece. Instructions: 'Cut out bird shape and beak. Fold along the dotted lines. Tape or glue together along the white flaps.' It appears to come from the Nephite Christmas Coloring & Activity Book (inference).",
+   "new_site_use": "Small peek-inside thumbnail for the coloring or activity book only. Too low-res for anything larger; request the source PDF or page exports.",
+   "quality": "poor",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Screenshot-2025-07-15-at-7.19.50-PM.png",
+    "Screenshot-2025-07-15-at-7.19.50-PM.webp"
+   ],
+   "best_file": "Screenshot-2025-07-15-at-7.19.50-PM.png",
+   "dimensions": "316x410",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Low-resolution screen grab of an activity page: step-by-step 'Origami Dove' folding diagrams (square to finished dove, about 9 steps) inside a black-and-white Mesoamerican-pattern border. Text: 'Origami Dove'.",
+   "new_site_use": "Small peek-inside thumbnail for the coloring or activity book. Request a higher-res source.",
+   "quality": "poor",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Screenshot-2025-07-15-at-7.20.06-PM.png",
+    "Screenshot-2025-07-15-at-7.20.06-PM.webp"
+   ],
+   "best_file": "Screenshot-2025-07-15-at-7.20.06-PM.png",
+   "dimensions": "319x410",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Low-resolution screen grab of a line-art coloring page: a bearded, balding man in a belted robe stands on a stone wall or doorway with his hands raised, preaching. Geometric step-pattern blocks sit below him and a patterned border surrounds the page, with a small page number at the bottom. Possibly Samuel the Lamanite on the wall (inference).",
+   "new_site_use": "Small peek-inside thumbnail for the coloring book. Request a higher-res source.",
+   "quality": "poor",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Screenshot-2025-07-15-at-7.33.54-PM.png",
+    "Screenshot-2025-07-15-at-7.33.54-PM.webp"
+   ],
+   "best_file": "Screenshot-2025-07-15-at-7.33.54-PM.png",
+   "dimensions": "321x414",
+   "category": "coloring-book",
+   "product": "coloring-book",
+   "description": "Low-resolution screen grab of a line-art coloring page: a mother, a girl and the headband-wearing boy (the Nephite Christmas main character) kneel in prayer, with a dove-and-stars tapestry on the wall and other praying figures in the foreground. A border of stars, palms and spirals frames the page, with a small page number at the bottom.",
+   "new_site_use": "Small peek-inside thumbnail for the coloring book; it features the main character, so it is the best of the four screenshots. Request a higher-res source.",
+   "quality": "poor",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "SHARE-slider.webp"
+   ],
+   "best_file": "SHARE-slider.webp",
+   "dimensions": "1920x1080",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Lifestyle-style slider: two smiling children in scarves and winter coats hold a plate of chocolate chip cookies at a doorway with warm Christmas bokeh lights. The photo looks like stock or AI-generated imagery (inference), with the Nephite Christmas cover inset at lower left. Red circle text: 'Buy 2 books, get 20% off your whole order with code: SHARE'.",
+   "new_site_use": "Skip for evergreen unless the SHARE code is still active. The 'buy 2 to share or gift' idea fits bundle messaging, but the text is baked into the image.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "slider-nativity-best.png",
+    "slider-nativity-best.webp"
+   ],
+   "best_file": "slider-nativity-best.png",
+   "dimensions": "1920x1080",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Illustrated nativity slider: Joseph, Mary and the swaddled baby Jesus glow in soft light on the right, with a bright four-point star and light rays against a dark navy starry sky. The left half is open dark space. A small Nephite Christmas cover is composited at the right. The only text is on the cover. Effectively opaque despite the alpha channel. Same illustration style as the book (inference: art from the book).",
+   "new_site_use": "Christmas hero background candidate: the left half is clean for headline and CTA. The baked-in cover is small, but ask for the clean nativity art without it so a live 3D cover or CTA can sit on top. Evergreen for the Christmas season.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "slider-nativity-center.webp",
+    "slider-nativity-right.webp",
+    "slider-nativity.webp",
+    "slider-nativity1.webp"
+   ],
+   "best_file": "slider-nativity1.webp",
+   "dimensions": "1920x1080",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Four layout variants of the same nativity slider art as slider-nativity-best. They differ only in where the Nephite Christmas cover sits and how big it is: -center has the cover over the family's laps, -right has it small at the far right middle, slider-nativity has it in the top-right corner, and slider-nativity1 has it larger at the lower right. These are not format duplicates of each other; the visual difference at 64px was 9-14%.",
+   "new_site_use": "Skip: redundant with slider-nativity-best. Keep only as fallbacks.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "ThanksgivingSale.jpg",
+    "ThanksgivingSale.webp"
+   ],
+   "best_file": "ThanksgivingSale.jpg",
+   "dimensions": "1200x628",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Social or link-share sized (1200x628) Thanksgiving promo on a white background framed by orange maple leaves. The waving boy character (red headband, teal shirt) sits beside a large red dashed circle. Text: 'Nephite Christmas' (script logo) / '10% Off THANKSGIVING SALE' / 'Order Early for Christmas!' / 'SHOP NOW' button / 'Tiffany-Wheeler.com'. No year shown.",
+   "new_site_use": "Skip for evergreen (seasonal promo). The waving-boy character art is reusable if a clean source exists, and the 'Order early for Christmas' shipping-urgency angle is worth reusing in copy.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "the-promised-messiah-an-easter-journey-puzzle-of-the-savior.jpg",
+    "the-promised-messiah-an-easter-journey-puzzle-of-the-savior.webp"
+   ],
+   "best_file": "the-promised-messiah-an-easter-journey-puzzle-of-the-savior.jpg",
+   "dimensions": "1200x1200",
+   "category": "puzzle",
+   "product": "puzzle",
+   "description": "Product mockup of a grey puzzle box with its lid on top and loose pieces inside, on white. The lid art shows Jesus smiling and holding a parchment scroll, with an olive tree and Jerusalem-style stone walls under a teal sky. The label bar reads '11x14 Puzzle' / '252 pcs Ages 9+', with a barcode. It looks like a print-on-demand mockup (inference). The filename gives the product as 'The Promised Messiah: An Easter Journey - Puzzle of the Savior'.",
+   "new_site_use": "Main image for the Puzzle of the Savior product page, and an Easter add-on cross-sell tile.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "the-promised-messiah-an-easter-journey-puzzle-of-the-savior-1.jpg",
+    "the-promised-messiah-an-easter-journey-puzzle-of-the-savior-1.webp"
+   ],
+   "best_file": "the-promised-messiah-an-easter-journey-puzzle-of-the-savior-1.jpg",
+   "dimensions": "1200x1200",
+   "category": "puzzle",
+   "product": "puzzle",
+   "description": "Angled view of the assembled Puzzle of the Savior (the same Jesus-with-scroll art) with two pieces missing and five loose pieces scattered on white. No text.",
+   "new_site_use": "Secondary image in the puzzle product gallery.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "the-promised-messiah-an-easter-journey-puzzle-of-the-savior-2.jpg",
+    "the-promised-messiah-an-easter-journey-puzzle-of-the-savior-2.webp"
+   ],
+   "best_file": "the-promised-messiah-an-easter-journey-puzzle-of-the-savior-2.jpg",
+   "dimensions": "1200x1200",
+   "category": "puzzle",
+   "product": "puzzle",
+   "description": "Flat front view of the fully assembled Puzzle of the Savior with the piece grid visible: Jesus smiling with a scroll, olive tree and stone city walls. No text. It also shows the Easter-book character art style clearly.",
+   "new_site_use": "Puzzle product gallery. The art could also serve as an Easter-book character visual if a clean source is obtained.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Thin_Book_Hard_Cover_Mockup_5-scaled.png"
+   ],
+   "best_file": "Thin_Book_Hard_Cover_Mockup_5-scaled.png",
+   "dimensions": "2560x1777",
+   "category": "book-3d-mockup",
+   "product": "easter-journey",
+   "description": "Open hardcover mockup, cut out on a transparent background with a soft drop shadow (about 48% of pixels opaque). The left page shows a woman in a green head covering, seen from behind, looking at the risen Christ in a white robe at a sunlit tomb entrance. The right page has a torn-parchment text block with a first-person monologue by Mary, mother of Jesus, affirming that her son is the Son of God and saying she will go to the tomb before the Sabbath. It ends with a chorus line 'ALL: Shalom!', which suggests the Easter book uses a readers-theater or script format. Beside the text is a portrait of a young woman in a headscarf. The text is sharp and legible at full resolution.",
+   "new_site_use": "Peek-inside gallery and product gallery for the Easter book. The transparent cutout also works in the hero or bundle bar next to the Nephite Christmas book.",
+   "quality": "excellent",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "TiffanyWheeler-About2.jpg",
+    "TiffanyWheeler-About2.webp"
+   ],
+   "best_file": "TiffanyWheeler-About2.jpg",
+   "dimensions": "600x564",
+   "category": "author-or-people-photo",
+   "product": "author",
+   "description": "Professional headshot of Tiffany Wheeler: a blonde woman smiling, seated on a slatted bench in a navy short-sleeve button shirt with large wooden hoop earrings. Bright, airy light background. No text.",
+   "new_site_use": "'Meet the Author' block on the homepage or product page, and the About page. Only 600px wide, fine for a small or medium circle or card crop.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "TiffanyWheeler-AboutUs.jpg"
+   ],
+   "best_file": "TiffanyWheeler-AboutUs.jpg",
+   "dimensions": "500x652",
+   "category": "author-or-people-photo",
+   "product": "author",
+   "description": "Portrait of Tiffany Wheeler standing and leaning against a light stone pillar, smiling, in a navy button shirt and wooden hoop earrings with a bracelet. The same photo session as the other author images. No text.",
+   "new_site_use": "About page portrait or author bio card. Low resolution, so use it small.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "TiffanyWheeler-Hero1.jpg"
+   ],
+   "best_file": "TiffanyWheeler-Hero1.jpg",
+   "dimensions": "1920x1083",
+   "category": "author-or-people-photo",
+   "product": "author",
+   "description": "Wide hero photo from the same session: Tiffany stands on the right against a textured light concrete wall with a visible horizontal seam or groove line, leaving large empty space on the left. No text.",
+   "new_site_use": "Superseded by TiffanyWheeler-Hero3 (the same shot with a cleaner background). Keep as a fallback only.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "TiffanyWheeler-Hero3.jpg"
+   ],
+   "best_file": "TiffanyWheeler-Hero3.jpg",
+   "dimensions": "1920x1083",
+   "category": "author-or-people-photo",
+   "product": "author",
+   "description": "The same wide shot as Hero1, but the wall seam has been retouched out, leaving a smooth, near-white textured background with Tiffany on the right and clean empty space on the left for text. No text.",
+   "new_site_use": "About page hero or 'Meet the author' banner. The left side is ready for text overlay. Not recommended as the main ad-landing hero, which should lead with the books.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "TiffanyWheeler-WhiteLogo.png",
+    "TiffanyWheeler-WhiteLogo.webp"
+   ],
+   "best_file": "TiffanyWheeler-WhiteLogo.png",
+   "dimensions": "600x215",
+   "category": "logo-or-title-art",
+   "product": "brand",
+   "description": "Primary brand wordmark in white: lowercase script 'tiffany wheeler' with a single-line-drawn butterfly rising from the 'y' stroke, on a transparent background.",
+   "new_site_use": "Footer or dark-background logo. Raster at only 600px, so request a vector SVG for crisp header and footer use.",
+   "quality": "usable",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "TiffanyWheelerLogo.png"
+   ],
+   "best_file": "TiffanyWheelerLogo.png",
+   "dimensions": "600x215",
+   "category": "logo-or-title-art",
+   "product": "brand",
+   "description": "The same wordmark (lowercase script 'tiffany wheeler' with a single-line butterfly) in the brand periwinkle blue #6771C8, on a transparent background. The same #6771C8 blue appears in the reseller-permit graphic, which confirms it as the brand color.",
+   "new_site_use": "Header logo on light backgrounds, and a favicon or OG source. Request an SVG. Use #6771C8 as a brand token.",
+   "quality": "usable",
+   "transparent_bg": true
+  },
+  {
+   "files": [
+    "TiffanyWheeler.png"
+   ],
+   "best_file": "TiffanyWheeler.png",
+   "dimensions": "350x83",
+   "category": "logo-or-title-art",
+   "product": "brand",
+   "description": "An older or alternate wordmark: 'Tiffany Wheeler' in a black script font with capital T and W and no butterfly, on a solid white background (no alpha).",
+   "new_site_use": "Skip: tiny, not transparent, and superseded by the butterfly wordmark.",
+   "quality": "poor",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Tomb-Wallpaper-scaled.jpg",
+    "Tomb-Wallpaper-scaled-scaled.webp"
+   ],
+   "best_file": "Tomb-Wallpaper-scaled.jpg",
+   "dimensions": "2560x1907",
+   "category": "digital-wallpaper-or-printable",
+   "product": "easter-journey",
+   "description": "Illustrated Easter scene: the garden tomb with its large round stone rolled beside a dark opening, a sunrise glowing pink and orange behind the hill, a silvery olive tree on the left, and coral-pink tulips in the foreground. Painted and sketched texture in the same style as the Easter book. No text. The filename suggests it was a downloadable wallpaper (possibly a freebie).",
+   "new_site_use": "Easter hero or section background (the sky at top center is clear for text), and a lead-magnet 'free Easter wallpaper' email-capture image. Evergreen.",
+   "quality": "excellent",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Unbelievers-Threaten-Spread.png",
+    "Unbelievers-Threaten-Spread.webp"
+   ],
+   "best_file": "Unbelievers-Threaten-Spread.png",
+   "dimensions": "1473x600",
+   "category": "interior-page-or-spread",
+   "product": "nephite-christmas",
+   "description": "Nephite Christmas interior spread. On the left, an angry bald, bearded man in grey raises a fist and holds a dagger while villagers look on. In the center are a jungle waterfall and turquoise pool with a deer, and on the right a dove flies above a mother kneeling and hugging two frightened children, one of them the headband boy. White rhyming text at the top left and center describes an uproar as disbelievers spread lies, followed by a quoted taunt that the Savior isn't coming and their faith is in vain (full text legible in the file). Effectively opaque.",
+   "new_site_use": "Peek-inside carousel for Nephite Christmas: it shows the story's tension and the rhyming text. Medium resolution (600px tall), fine for a gallery.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "upload-reseller-permit.jpg",
+    "upload-reseller-permit.webp"
+   ],
+   "best_file": "upload-reseller-permit.jpg",
+   "dimensions": "1200x1200",
+   "category": "misc",
+   "product": "other",
+   "description": "Text-only square graphic on off-white (#F7F7F7): 'Upload' in large periwinkle (#6670C9) serif / 'Reseller Permit' in black / '(Required for all wholesale purchases)'. It was used as a WooCommerce product image for the wholesale ordering flow.",
+   "new_site_use": "Skip as an image. It signals that a wholesale or reseller channel exists; plan a Wholesale page or Shopify B2B form instead.",
+   "quality": "usable",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Website-Slider-Signings-1-scaled.jpg",
+    "Website-Slider-Signings-1-scaled-scaled.webp"
+   ],
+   "best_file": "Website-Slider-Signings-1-scaled.jpg",
+   "dimensions": "2560x1440",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Slider on a pale blue-grey background with the waving boy character on the left. Text: 'Didn't order in time to get it before Christmas?' / 'Find Nephite Christmas at' / [BYU store logo, 'EST. 1906'] / [Eborn Books of Provo logo] / 'BARNES&NOBLE' / 'The Commons at Southtowne 10433 S. State Street, Sandy, UT 84070'.",
+   "new_site_use": "Skip for evergreen (late-December message). The retailer list (BYU Store, Eborn Books of Provo, Barnes & Noble Sandy UT) is useful social proof for an 'Also available at' trust line; confirm permission before using third-party logos.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Website-Slider-Signings-1-scaled0.jpg",
+    "Website-Slider-Signings-1-scaled-scaled0.webp"
+   ],
+   "best_file": "Website-Slider-Signings-1-scaled0.jpg",
+   "dimensions": "2560x1440",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Black Friday slider on navy with a white glow. It features a real photo of the physical Nephite Christmas hardcover, angled (cover credits 'Tiffany Wheeler' and 'Kelley Hicken'). Text: 'BLACK FRIDAY' / 'PRE-SALE' / 'BOGO 50% OFF!' / 'All Nephite Christmas Products!' / yellow button 'Get Yours Today!'.",
+   "new_site_use": "Skip for evergreen (Black Friday promo). The real hardcover photo would be useful if an isolated source exists; request the original product photo.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Website-Slider-Signings-scaled-scaled.webp"
+   ],
+   "best_file": "Website-Slider-Signings-scaled-scaled.webp",
+   "dimensions": "2560x1440",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Book-signing event slider on a sage grey background with the waving boy character. Text: 'Come Say Hello!' / [BYU store logo] 'November 20 & 21 12 PM-3 PM' / 'BARNES&NOBLE November 22, 2025 11AM - 2 PM' / 'The Commons at Southtowne 10433 S. State Street, Sandy, UT 84070'.",
+   "new_site_use": "Skip: an outdated event (November 2025). It does confirm in-store signings at BYU Store and Barnes & Noble, which can be used as credibility copy.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "Website-Slider-Signings.zip-5.png",
+    "Website-Slider-Signings.zip-5.webp"
+   ],
+   "best_file": "Website-Slider-Signings.zip-5.png",
+   "dimensions": "1920x1080",
+   "category": "promo-banner-or-slider",
+   "product": "nephite-christmas",
+   "description": "Black Friday slider on black with olive-leaf sprigs, red berry dots and the waving boy character. Text: 'BLACK FRIDAY SALE' / '$5 OFF Per Book' / 'FREE ORNAMENT WITH $50 Purchase' / 'FREE DOWNLOAD with $75 purchase'.",
+   "new_site_use": "Skip for evergreen (Black Friday). It documents a past tiered free-gift offer (ornament at $50, download at $75), a useful model for a cart free-gift progress bar.",
+   "quality": "good",
+   "transparent_bg": false
+  },
+  {
+   "files": [
+    "woocommerce-placeholder.png"
+   ],
+   "best_file": "woocommerce-placeholder.png",
+   "dimensions": "1200x1200",
+   "category": "misc",
+   "product": "other",
+   "description": "The default WooCommerce product placeholder: a grey sketched picture-frame icon with a mountain and sun on white. No text.",
+   "new_site_use": "Skip: a platform default, not client content.",
+   "quality": "poor",
+   "transparent_bg": false
+  }
+ ],
+ "batch_notes": [
+  "All 62 files were viewed (through previews) and sorted into 32 groups. Duplicates were confirmed by RMSE comparison as well as viewing. coloring-book-cover-thumbnail.webp and coloring-book-cover-thumbnail0.webp are pixel-identical.\n\nKEY FACTS OBSERVED:\n(1) The Christmas book's printed title is 'Nephite Christmas', with no 'A'.\n(2) The Easter cover reads 'Easter Journey'. No 'Promised Messiah' subtitle appears on these assets.\n(3) Both books credit 'Written by Tiffany Wheeler' and 'Illustrated by Kelley Hicken'.\n(4) The Nephite Christmas line includes a hardcover, a companion 'Join me for a Nephite Christmas Adventure! Coloring and Activity Book' (sold as print and as a 'PDF Download'), and a white ceramic 'Nephite Christmas' star ornament. Bundle images exist for book + coloring book and for book + coloring book + ornament.\n(5) Prior pricing and promo data: 'Both Books for only $25! ... code BUNDLE25' (here 'both books' means hardcover + coloring book), '$5 off Black Friday 11/28-12/2' (2025), and 'Black Friday 24 HR Flash Sale BOGO Free! Friday Only'.\n(6) Print-on-demand merch exists for Easter-style art: a canvas of Mary Magdalene at the empty tomb (4 mockups) and an '11x14 Puzzle, 252 pcs, Ages 9+' of a bearded man holding a scroll (3 mockups).\n\nHERO CANDIDATES:\n- 500A2551-scaled.jpeg (2560x1707 styled holiday flat-lay, excellent)\n- closed-book.png (2548x2097 transparent 3D Easter Journey mockup, excellent)\n- book-cover-scaled.jpg (2095x2560 flat Easter cover)\n- Adobe-Express-file-1 and -2 (transparent Nephite Christmas bundle cutouts, but only 1055px)\n- the ChatGPT watercolor temple/stars background (1536x1024) as a hero texture\n\nA composite of Adobe-Express-file-1 and closed-book.png on the watercolor background would match the client's 'both books' mockup.\n\nGAPS IN THIS BATCH:\n- No transparent or 3D mockup of the Nephite Christmas hardcover on its own; only flat or overhead photos, or cutouts paired with the coloring book.\n- No photo of both hardcovers (Christmas and Easter) together.\n- No Easter Journey lifestyle photos or interior spreads.\n- No Nephite Christmas hardcover interior spreads (only coloring-book pages CB2-CB6).\n- Lifestyle photos 8 and 9 are only 866x600. Photo 1 is 1216x842 with some processing grain.\n- No author headshot confirmed. The older woman in 1.png could be the author or a model; ask the client.\n\nOUTDATED OR SKIP:\n- 2-scaled (BOGO), Black-Friday-Sale (11/28-12/2) and 7-1.webp (BUNDLE25 $25 slider). All are time-bound, and clean source art exists for each.\n- The canvas and puzzle mockups apply only if merch stays in the catalog.\n- box-of-misprints applies only if a misprint or bulk offer remains.\n\nDEFECTS:\n- Bundle-with-ornament_transparent.webp is mislabeled. Its background was not removed, and the alpha channel has holes in the white title lettering. Do not use it as a transparent asset.\n- Animated-cropped-waving-boy.gif is 1.6 MB with a slight white edge fringe. Convert it to WebP or MP4 before use.\n- CB1-CB6 and Coloring-Book-Download-Cover-0 carry alpha channels but are effectively opaque (min alpha about 0.89).\n\nSource folder: /Users/ryanmata/Desktop/Arrowleaf Marketing/tiffany-wheeler/assets/media-library. Previews: /private/tmp/claude-501/-Users-ryanmata-Desktop-Arrowleaf-Marketing-tiffany-wheeler/86c2c9b5-128c-496e-bb63-b781462a7d36/scratchpad/catalog-1/.",
+  "Scope: all 62 files in batch 2 were identified (dimensions, channels, opacity, md5) and put into 36 groups. Every group was viewed. Same-image grouping was confirmed with a pixel-difference check (RMSE under 0.015 at 200px). There are three sets of byte-identical duplicates: Easter-Journey-Cover.webp = Cover0.webp, Easter-Journey-Download-Cover.webp = Download-Cover0.webp, and Nativity-feature-image-1.webp = -2.webp. Note: `magick identify` fails on this machine when a frame index like \"file[0]\" is added, so call it with plain filenames.\n\nFacts observed on the art:\n- The Christmas book's title on its cover is \"Nephite Christmas\", not \"A Nephite Christmas\".\n- The Easter book's cover title is \"Easter Journey\". No \"Promised Messiah\" subtitle appears anywhere in this batch.\n- Both covers credit \"Written by Tiffany Wheeler / Illustrated by Kelley Hicken\".\n- The companion product is \"Join me for a Nephite Christmas Adventure! Coloring and Activity Book\".\n- There is also a printable paper nativity craft (\"PDF Download\") and a digital bundle (\"Instant Download\").\n- Past offers visible in promos:\n  - Halloween: free coloring book with each book.\n  - Dec 9: 20% off everything, free activity book at $50, free nativity craft at $75.\n  - Dec 16: BOGO 50% off, order before Dec 19.\n  - General Conference: 20% off with code GENCONF.\n  - These suggest bundle, gift-with-purchase and spend-threshold offers already work for this audience (inference).\n\nStandout candidates:\n- Peek inside: Easter-Journey-for-canva18-scaled.jpg, a real 2560px interior spread (pp. 32-33, \"The Tomb\"). It is the best peek-inside asset in this batch.\n- Hero / backgrounds: feature-image.jpg or Flipped-Jerusalem-Gate-copy.jpg (2000x1125, mirrored pair) and Feature-merchant.jpg (1600x900). All are textless dusk Jerusalem scenes with room for overlay copy.\n- Easter art: the four 2560x1907 textless wallpapers (Crosses, He-is-Risen, Jesus, Mary), plus Jesus-and-the-blind-man and Mary-in-Garden squares. They suit Easter sections or a free-wallpaper email-capture lead magnet.\n- Transparent accents: dove2.png, lamp.png, James-square.png and Easterlogo.png (title lettering in white/cream, so it needs a dark background).\n- December-16th-scaled.jpg: the left half is a good styled lifestyle photo of the Nephite Christmas hardcover plus coloring book. Look for the original photo without text elsewhere in the library.\n\nGaps and quality issues:\n- The only Easter Journey cover files are about 650px wide (the Cover-2 tight crop is 656x800). Request print-resolution front covers for both books for the hero and 3D mockups. Kickstarter-image-final.webp (a wide cover-art extension) is only 1024x576.\n- Front-cover-1.webp has a white blotch artifact at the top-right; use Front-cover.webp instead.\n- December-19th uses a generic stock photo and contains the typo \"RECIEVE\".\n- IMG_2693 (resurrection garden) carries what looks like a third-party watermark, so confirm rights before use.\n- There is no photo of Tiffany Wheeler in this batch; the only headshots are of the illustrator Kelley Hicken.\n- All Halloween, Conference and December promos are time-bound and should be skipped for an evergreen site.",
+  "Tool note: ImageMagick on this machine has no decode delegates (every identify call failed), so dimensions came from sips and transparency, previews and pixel-diff grouping came from Python PIL 12.3 (webp supported). Previews are in /private/tmp/claude-501/-Users-ryanmata-Desktop-Arrowleaf-Marketing-tiffany-wheeler/86c2c9b5-128c-496e-bb63-b781462a7d36/scratchpad/catalog-3/ (p_*.jpg). All 61 files fall into 27 groups; I viewed one representative per group, and each webp twin matched its png/jpg at near-zero pixel diff.\n\nSTANDOUT HERO CANDIDATES:\n(1) Nephite-Christmas-2025-white-banner.png (2250x1500): real flat-lay of the Nephite Christmas book plus the coloring book, with a white fade on the left and top that leaves room for headline and CTA. No dated text.\n(2) Nephite-Christmas-2025-ads-website-banner.png (2250x1125): the same photo full-bleed.\n(3) nephite-christmas-23-1.jpg (2000x1333): the hardcover on red with a stocking and pine. Very festive, strong for ads and the gallery.\n(4) nephite-christmas-easter-journey-bundle.png (1254x1254): both books standing on cream. The best fit for the mockup's 'Get Both Books' hero and bundle bar.\n(5) NephiteBackground.jpg (1600x975): a text-free illustrated night temple scene, good as a section or hero backdrop.\n\nPRODUCT FACTS OBSERVED:\n- The cover title reads 'Nephite Christmas' (no 'A').\n- Credits: 'Written by Tiffany Wheeler / Illustrated by Kelley Hicken'.\n- The Easter book cover in the bundle mockup reads 'Easter JOURNEY', with the same author and illustrator credits.\n- Add-on products appear in the assets: a 'Join me for a Nephite Christmas Adventure! Coloring and Activity Book', a round white 'Nephite Christmas' ornament with a gold star, a printable paper nativity kit sold as a 'PDF Download' (it includes Nephite figures: Jacob and Dad, Nephi, Mom and Sister), and a PDF download edition of the book. These suit order bumps, bundle add-ons or a free-printable lead magnet or gift-with-purchase.\n\nOUTDATED OR TIME-BOUND:\n- Nectar-Slider has a baked-in promo, 'Buy 2 books, get 20% off your whole order with code: SHARE', over stock/AI-looking photography. Skip it for evergreen.\n- The '2025' banners carry the year only in their filenames. The images are evergreen.\n\nGAPS AND RISKS:\n- Every flat Nephite Christmas cover in this batch is at most 800px wide (800x643/644 or 800x800 padded). Request print-resolution cover files for the hero, zoom and retina.\n- Title art (NephiteChristmasTitle) is only 500x380 raster. Request a vector.\n- Ornament photos are soft and low-res (500-800px).\n- The Easter Journey cover in the bundle mockup is painted in a noticeably different, more realistic style than Nephite Christmas, and the mockup may be AI-composited. Confirm that it is the final Easter cover, and get a flat high-res Easter cover.\n- This batch has no reviews, author photos or age-range or price text.\n- The only interior spread here is Nativity-Spread (1473x600, moderate resolution). NC-Kid_Art and NC-Jesus_Art (illustrated prints) can supplement 'peek inside'.\n\nDUPLICATES:\n- Byte-identical: Nativity-feature-image/0; Nativity-Instructions.webp/0.webp; nephite-christmas-23-1 and 23-1-1 (both jpg and webp).\n- NC-Coloring and NC-Ornament exist as centered (-c) and left-aligned copies on 800x800 transparent canvases. Use the -c versions.",
+  "Tooling: ImageMagick fails in this sandbox unless MAGICK_TEMPORARY_PATH points at the scratchpad. Format duplicates were confirmed by 64x64 RMSE (all png/jpg vs webp pairs under 0.5%). Scary-deal.webp is a distinct image from scary.png/webp (different fine print). The 5 slider-nativity files are cover-placement variants, not duplicates. Hero1 and Hero3 differ: Hero3 has the wall seam retouched out. Previews are in /private/tmp/claude-501/-Users-ryanmata-Desktop-Arrowleaf-Marketing-tiffany-wheeler/86c2c9b5-128c-496e-bb63-b781462a7d36/scratchpad/catalog-4/ (p_*.jpg).\n\nHERO CANDIDATES:\n- slider-nativity-best.png: Christmas nativity, left half clear for text. The small Nephite Christmas cover is baked in; ask for the clean art.\n- Tomb-Wallpaper-scaled.jpg: Easter tomb at sunrise, 2560px, evergreen, also a lead-magnet candidate.\n- Page1-scaled.jpg: gorgeous Nephite village night page, 2560px.\n- Thin_Book_Hard_Cover_Mockup_5-scaled.png: transparent open-book Easter mockup, ideal for the hero, bundle bar and peek-inside.\n- TiffanyWheeler-Hero3.jpg: author banner for the About section, not for the ad-landing hero.\n\nPEEK-INSIDE: Page1-scaled.jpg, Unbelievers-Threaten-Spread.png (Nephite Christmas), Thin_Book mockup (Easter). The 4 coloring-book screenshots are only about 320x410, so request the source PDF.\n\nOUTDATED OR SEASONAL PROMOS (skip for evergreen):\n- scary.png/webp and Scary-deal.webp (Halloween)\n- ThanksgivingSale (10% off)\n- SHARE-slider (code SHARE, 20% off 2+ books; verify whether the code is still live)\n- Website-Slider-Signings-1-scaled0 (Black Friday pre-sale, BOGO 50%)\n- Website-Slider-Signings.zip-5 (Black Friday: $5 off per book, free ornament at $50, free download at $75)\n- Website-Slider-Signings-scaled-scaled (signings Nov 20-21 at BYU Store and Nov 22, 2025 at Barnes & Noble Sandy UT)\n- Website-Slider-Signings-1-scaled ('Didn't order in time' retailer list)\nThese show past offer mechanics worth reusing as ideas: a book plus free coloring book bundle (coloring book valued at $7.99), a tiered free-gift threshold, BOGO, and a 'buy 2' code.\n\nBUSINESS FACTS OBSERVED:\n- The Nephite Christmas cover credits 'Tiffany Wheeler' (writer) and 'Kelley Hicken' (illustrator).\n- The Easter book's full title, from the puzzle filenames, is 'The Promised Messiah: An Easter Journey'. Its interior uses a script or readers-theater format ('ALL: Shalom!').\n- Extra SKUs: Peace Dove Ornament; Puzzle of the Savior (11x14, 252 pcs, Ages 9+, print-on-demand-style mockups); Nephite Christmas Coloring & Activity Book.\n- There is a wholesale channel that requires a reseller permit.\n- Retail presence: BYU Store, Eborn Books of Provo, Barnes & Noble (The Commons at Southtowne, Sandy UT). Usable as 'Also sold at' trust copy, pending logo permission.\n- Brand color: periwinkle #6771C8 (from the logo and the reseller graphic).\n- The logo is a lowercase script 'tiffany wheeler' with a line-art butterfly. It exists only as 600x215 PNG (periwinkle and white), so request an SVG. TiffanyWheeler.png is an obsolete wordmark.\n\nGAPS:\n- No clean standalone Nephite Christmas cover or waving-boy character cutout in this batch (the boy appears only baked into banners).\n- Nativity art is only available with the cover composited in.\n- The real hardcover product photo exists only inside a Black Friday banner.\n- The coloring-book pages are low-res.\n- ray-hennessy-butterfly is likely third-party stock; check the license.\n- woocommerce-placeholder and upload-reseller-permit are platform artifacts; skip."
+ ]
+}

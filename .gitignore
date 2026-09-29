@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw media library export: keep heavy source files (print PDFs, raw video) out of git.
+# optimized, web-ready copies of anything we use live in /public.
+/assets/media-library/*.pdf
+/assets/media-library/*.mov
+/assets/media-library/*.m4v
+/assets/media-library/*.mp4

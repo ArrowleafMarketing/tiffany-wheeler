@@ -1,26 +1,220 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  Design tokens. Warm storybook base (from the approved mockup) + Tiffany's brand
+  periwinkle as an accent, with seasonal accents (night/gold for Christmas,
+  sunrise/olive for Easter). See docs/design-system.md.
+*/
+@theme {
+  --color-cream: #fbf6ec;
+  --color-cream-deep: #f4ead6;
+  /* Hero ground: a shade warmer than cream, so the hero separates from the header. */
+  --color-hero: #f7efe0;
+  --color-paper: #fffdf8;
+  --color-line: #e9ddc7;
+  /* Form field borders and unchecked radios: ≥3:1 on paper and cream-deep (WCAG 1.4.11). */
+  --color-field: #8b806b;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-ink: #1d2a48;
+  --color-body: #3b4150;
+  --color-muted: #656a79;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-forest: #1f5b45;
+  --color-forest-dark: #174636;
+  --color-forest-light: #e3efe8;
+
+  --color-ember: #c4551f;
+  --color-ember-dark: #a94619;
+  --color-ember-light: #fbe6da;
+
+  --color-butter: #fcebc3;
+  --color-butter-deep: #f7d98e;
+
+  --color-periwinkle: #6771c8;
+  --color-periwinkle-text: #555fb8;
+  --color-periwinkle-light: #eceefb;
+
+  /* Filled stars; darker than a typical gold so they read at 3:1 on cream/paper. */
+  --color-star: #bf7a10;
+  --color-star-empty: #cbbfa6;
+
+  --color-night: #1f1d4d;
+  --color-night-light: #2e2c6b;
+  --color-gold: #e4b660;
+
+  --color-sunrise: #f7ddb0;
+  --color-olive: #5c6a37;
+
+  --color-berry: #a8323f;
+
+  --radius-card: 1.25rem;
+  --radius-btn: 0.75rem;
+
+  --shadow-soft: 0 1px 2px rgb(60 40 10 / 0.06), 0 6px 18px -8px rgb(60 40 10 / 0.16);
+  --shadow-lift: 0 2px 4px rgb(60 40 10 / 0.06), 0 18px 40px -16px rgb(60 40 10 / 0.3);
+  --shadow-book: 0 1px 1px rgb(20 12 0 / 0.1), 0 10px 18px -6px rgb(20 12 0 / 0.35), 0 28px 50px -24px rgb(20 12 0 / 0.45);
+
+  --animate-fade-up: fade-up 0.5s ease-out both;
+  /* Shop row's next arrow: two small pushes to the right, once. */
+  --animate-nudge: nudge 1.1s ease-in-out 2;
+  @keyframes nudge {
+    0%,
+    100% {
+      translate: 0 -50%;
+      scale: 1;
+    }
+    40% {
+      translate: 6px -50%;
+      scale: 1.08;
+    }
+  }
+  /* Announcement ticker: the track holds the messages twice, so -50% is one seamless loop. */
+  --animate-ticker: ticker 40s linear infinite;
+  @keyframes ticker {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* next/font variables are set on <html>; map them to Tailwind font utilities. */
+@theme inline {
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-hand: var(--font-caveat), ui-serif, cursive;
+}
+
+/* Short screens (landscape laptops, in-app browsers with toolbars): tighten above-the-fold sections. */
+@custom-variant short (@media (max-height: 720px));
+/* Very short screens (an in-app browser with its toolbars and a small phone). Declared after `short` so it wins. */
+@custom-variant shorter (@media (max-height: 620px));
+
+@layer base {
+  :root {
+    /* Height of the sticky chrome above the page content: announcement bar (44px) + header (64px + 1px border). */
+    --site-chrome: 6.8125rem;
+    @media (width >= 64rem) {
+      /* Header is 76px + 1px border from lg. */
+      --site-chrome: 7.5625rem;
+    }
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    /* Keep focused/anchored elements clear of the sticky header (WCAG 2.4.11). */
+    scroll-padding-top: 5.5rem;
+  }
+  /* Set by sticky buy bars while visible, so focus isn't hidden under them. */
+  html[data-sticky-bar="on"] {
+    scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  }
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background-color: var(--color-butter-deep);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-periwinkle);
+    outline-offset: 2px;
+  }
+}
+
+/* Page-width container with the site gutter. */
+@utility container-page {
+  width: 100%;
+  max-width: 76rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
+  }
+  @media (width >= 64rem) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Hide scrollbars on horizontal carousels while keeping them scrollable. */
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/*
+  Scroll-in reveal (RevealFallback in the root layout): blocks below the screen
+  fade and rise into place over 0.7s as they come on screen. Reduced motion
+  turns it off (the rule at the bottom of this file).
+*/
+.reveal-js {
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal-pending {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+/* Items in a staggered list (e.g. inside the sideways shop row) rise less, so they're never clipped. */
+[data-reveal-stagger] > .reveal-pending {
+  transform: translateY(0.75rem);
+}
+
+/*
+  Hero load-in: the text rises into place in a quick stagger (about half a
+  second in all) and the covers settle. It starts with the first paint, so it
+  never waits on anything, and reduced motion turns it off.
+*/
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+}
+@keyframes hero-settle {
+  from {
+    transform: translateY(0.75rem) scale(0.97);
+  }
+}
+@utility hero-in {
+  animation: hero-rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(var(--hero-step, 0) * 70ms);
+}
+@utility hero-settle {
+  animation: hero-settle 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

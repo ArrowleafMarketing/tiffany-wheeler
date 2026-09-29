@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "crons": [
+    { "path": "/api/revalidate/season", "schedule": "5 7 * * *" }
+  ]
+}
