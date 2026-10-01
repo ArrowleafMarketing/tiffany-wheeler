@@ -65,7 +65,8 @@ const ages: FaqItem = {
   id: "ages",
   question: "What ages are the books for?",
   answer:
-    "Nephite Christmas is a read-aloud picture book for ages 3–10. The rhyme keeps little ones listening, and older kids can read it on their own. Easter Journey is a longer read, best for ages 5–12 and great for the whole family, with speaking parts that older kids and grown-ups can take turns reading.", // CONFIRM age ranges (§5, item 22)
+    // Tiffany's wording (Oct 2026).
+    "Nephite Christmas is a read-aloud picture book for ages 3–10. The rhyme keeps little ones listening, and older kids can read it on their own. The whole family will enjoy it. Easter Journey is a longer read, best for ages 8–80. It’s great for the whole family, with speaking parts that older kids and grown-ups can take turns reading, reader’s-theater style, if they wish.",
 };
 
 const size: FaqItem = {

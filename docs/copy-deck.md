@@ -199,7 +199,7 @@ Four items from §1.4, in this order: shipping, ships from, gift note, guarantee
 | Subtitle | An interactive Holy Week journey through Jerusalem |
 | Rating | (hide until real reviews exist) |
 | Blurb | Step through the gates of Jerusalem and meet the people who knew Jesus, from the man born blind to Mary Magdalene at the empty tomb. Read it as an 8-day Easter advent, Palm Sunday to Easter morning. |
-| Age line | Ages 5–12 · great for the whole family [CONFIRM] · Hardcover · 9″ × 11″ · 46 pages [CONFIRM] |
+| Age line | Ages 8–80 · great for the whole family · Hardcover · 9″ × 11″ · 46 pages [CONFIRM] |
 | Bullet 1 | Built-in 8-day advent with questions for each day |
 | Bullet 2 | Kids join in: “We seek Jesus of Nazareth.” |
 | Bullet 3 | Seek-and-find 8 symbols of Christ |
@@ -428,7 +428,7 @@ Includes (for the email and the freebies page): Origami Dove · Cube Dove · Nep
 Heading: **Questions? We’re here to help.** Add FAQPage JSON-LD with the same text.
 
 **1. What ages are the books for?**
-Nephite Christmas is a read-aloud picture book for ages 3–10 [CONFIRM]. The rhyme keeps little ones listening, and older kids can read it on their own. Easter Journey is a longer read, best for ages 5–12 and great for the whole family [CONFIRM], with speaking parts that older kids and grown-ups can take turns reading.
+Nephite Christmas is a read-aloud picture book for ages 3–10. The rhyme keeps little ones listening, and older kids can read it on their own. The whole family will enjoy it. Easter Journey is a longer read, best for ages 8–80. It’s great for the whole family, with speaking parts that older kids and grown-ups can take turns reading, reader’s-theater style, if they wish. (Tiffany, Oct 2026)
 
 **2. How big are the books, and how many pages?**
 Nephite Christmas is a landscape hardcover with a dust jacket, about 10.75″ × 8.75″ [CONFIRM], with [CONFIRM] pages. Easter Journey is a 9″ × 11″ hardcover with a dust jacket and 46 pages [CONFIRM].
@@ -471,7 +471,7 @@ Same rules as §2.1: an eyebrow only when it carries a date, an H1 of 3 lines or
 |---|---|---|---|---|---|
 | last-minute (Dec 16–24) | (none) | Read Nephite Christmas this Christmas Eve. | No shipping. It’s in your inbox in minutes. | Instant PDF — $6.99 | Order the Hardcover — $24.99 (the pinned bar says “Hardcovers may not arrive by Christmas”) [CONFIRM] |
 | priority (Dec 16–17, only if Priority is offered) | (none) | Still time for Christmas with Priority shipping. | Choose it at checkout by {priorityBy}. | Christmas + Easter Set — $49.99, line: “One for His birth, one for His Resurrection” (no “Ships free”) | Nephite Christmas PDF — $6.99 |
-| after-christmas (Dec 26–Jan 4) | Next up: Easter, March 28 | An 8-day Easter advent, Palm Sunday to Easter morning. | Hardcover · Ages 5–12 · Questions for each day [CONFIRM] | Easter Journey — $29.99 | Christmas + Easter Set — $49.99, with the §2.1 line |
+| after-christmas (Dec 26–Jan 4) | Next up: Easter, March 28 | An 8-day Easter advent, Palm Sunday to Easter morning. | Hardcover · Ages 8–80 · Questions for each day | Easter Journey — $29.99 | Christmas + Easter Set — $49.99, with the §2.1 line |
 | easter (Jan 5–Mar 28) | Holy Week · March 21–28, 2027 | Walk through Holy Week with the people who knew Jesus. | Hardcover · A built-in 8-day Holy Week advent | Easter Journey — $29.99 | Look Inside |
 | off-season (Mar 29–Sep 14) | (none) | His birth and His Resurrection, in two picture books. | Nephite Christmas + Easter Journey, in hardcover | Christmas + Easter Set — $49.99, line: “Ships free · Save $4.99” | Shop the Books |
 
@@ -624,7 +624,7 @@ The hardcover on its own is $24.99. The Nephite Christmas Bundle adds the Colori
 > Step through the gates of Jerusalem and meet the people who knew Jesus: a friendly merchant, the man born blind, His apostles, His mother and Mary Magdalene at the empty tomb. Your family becomes part of the story, answering “We seek Jesus of Nazareth” as you go, and reading one part each day from Palm Sunday to Easter morning. It’s a Holy Week tradition that ends where Easter begins: He is risen.
 
 **Buy-box icon bullets:**
-- Ages 5–12 · great for the whole family [CONFIRM]
+- Ages 8–80 · great for the whole family
 - Hardcover with dust jacket · 9″ × 11″ · 46 pages [CONFIRM]
 - Ships from Idaho in 1–2 business days [CONFIRM]
 - Love it or your money back [CONFIRM]
@@ -647,7 +647,7 @@ The hardcover on its own is $24.99. The Nephite Christmas Bundle adds the Colori
 | Format | Hardcover with dust jacket |
 | Size | 9″ × 11″, portrait |
 | Pages | 46 pages [CONFIRM] |
-| Ages | 5–12 · great for the whole family [CONFIRM] |
+| Ages | 8–80 · great for the whole family |
 | Daily reading | About 5–10 minutes a day [CONFIRM] |
 | Author | Tiffany Wheeler |
 | Illustrator | Kelley Hicken |
@@ -962,7 +962,7 @@ Digital usage terms from §3.0a, plus the on-screen sharing line.
 - Full-spread version, for large screens and presentations
 - The 8-day Easter Journey Advent and the symbols-of-Christ seek-and-find
 
-**Specs:** PDF download · 45 pages [CONFIRM] · 2 versions · Ages 5–12 · great for the whole family [CONFIRM]
+**Specs:** PDF download · 45 pages [CONFIRM] · 2 versions · Ages 8–80 · great for the whole family
 
 Digital usage terms from §3.0a, plus the on-screen sharing line.
 
@@ -1239,7 +1239,7 @@ Each item lists where it appears. Nothing tagged `[CONFIRM]` should ship to prod
 19. **Nephite Christmas page count.** Sources say 26 (wholesale), 28 (PDF with cover) and 36 (Amazon). *Used in:* card, FAQ 2, PDP specs, set specs.
 20. **Nephite Christmas size.** 10.75″ × 8.75″ with jacket (wholesale copy) or 10″ × 8.5″ (Amazon)? *Used in:* FAQ 2, PDP specs.
 21. **Easter Journey page count.** 46 (live listing) vs 45 printed pages (PDF). *Used in:* card, FAQ 2, PDP specs; the EJ PDF says 45.
-22. **Age ranges.** Nephite Christmas 3–10; Easter Journey 5–12 and great for the whole family; coloring book 4–12; nativity craft 4+ with help; puzzle 9+. *Used in:* cards, FAQ 1, PDPs.
+22. **Age ranges.** Nephite Christmas 3–10; Easter Journey 8–80 (Tiffany confirmed both, Oct 2026); coloring book 4–12; nativity craft 4+ with help; puzzle 9+. *Used in:* cards, FAQ 1, PDPs.
 23. **“A hidden dove on every page.”** The book review found a dove on *nearly* every page. If it isn’t every page, use “a dove hidden throughout the book”. *Used in:* hero subhead, NC card, reasons, FAQ 11, NC PDP, set PDP, NC meta description.
 24. **Publisher and ISBNs.** Nephite Christmas: Rhino Media, 2024, ISBN 979-8989343553. Easter Journey: Tiffany Books LLC, 2025, ISBN 979-8989343584 (Google Books lists Rhino Media, 2026). Also the footer legal entity: Tiffany Books LLC or “Tiffany Wheeler”? *Used in:* PDP specs, footer copyright.
 25. **Which Nephite Christmas text matches the printed book?** The pages PDF and the spreads PDF differ slightly (for example “For Samuel the prophet” vs “For Samuel, the prophet”, “lift” vs “Lift”, and “shall the words be fulfilled” vs “shall his words be fulfilled”). The Peek Inside quotes follow the book report and the transcription, but the peek images come from the spreads PDF, so spread 1’s image reads “For Samuel, the prophet”. Match the caption to whichever version is printed. Spread 6 uses the transcription’s wording (“And so from the Nephites of old unto you, remember Christ came…”), not the report’s shortened “Remember, Christ came…”. *Used in:* §2.6.

@@ -149,7 +149,7 @@ export const heroCopy: Record<SeasonMode, HeroCopy> = {
   "after-christmas": {
     eyebrow: "Next up: Easter, {easterDate}",
     title: keepHyphens("An 8-day Easter advent, Palm Sunday to Easter morning."),
-    lede: "Hardcover · Ages 5–12 · Questions for each day", // CONFIRM ages (§5, item 22)
+    lede: "Hardcover · Ages 8–80 · Questions for each day", // Tiffany, Oct 2026
     primary: getEasterJourney,
     secondary: getBothBooks,
     imageAlt: EJ_FRONT_ALT,
@@ -301,7 +301,7 @@ export const productCardDetails: Record<string, { ageLine?: string; bullets?: st
     ],
   },
   [HANDLES.easterJourney]: {
-    ageLine: "Ages 5–12 · great for the whole family · Hardcover · 9″ × 11″ · 46 pages", // CONFIRM ages + pages (§5, items 21–22)
+    ageLine: "Ages 8–80 · great for the whole family · Hardcover · 9″ × 11″ · 46 pages", // ages: Tiffany, Oct 2026; CONFIRM pages (§5, item 21)
     bullets: [
       keepHyphens("Built-in 8-day advent with questions for each day"),
       "Kids join in: “We seek Jesus of Nazareth.”",

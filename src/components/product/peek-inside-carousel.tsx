@@ -74,8 +74,8 @@ function buildSlides(spreads: PeekSpread[]): Slide[] {
       ];
     }
     const [left, right] = s.mobilePages;
-    // Both halves carry the caption, so every card reads the same way; the
-    // right-hand page adds the line from the book under it.
+    // On phones a spread is two cards: the left page carries the caption, the
+    // right page the line from the book, so nothing repeats card to card.
     return [
       {
         key: `${i}`,
@@ -99,7 +99,7 @@ function buildSlides(spreads: PeekSpread[]): Slide[] {
         desktop: right,
         alt: right.alt,
         mobileFold: "left",
-        caption: s.caption,
+        caption: s.quote ? undefined : s.caption,
         quote: s.quote,
         quoteDesktopOnly: false,
       },

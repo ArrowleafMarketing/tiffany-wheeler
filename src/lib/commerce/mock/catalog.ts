@@ -176,7 +176,7 @@ const img = {
 const ncPeek: PeekSpread[] = [
   {
     image: fromStatic(ncPeek00Src, "Inside Nephite Christmas: Opening page: a Nephite village at dusk, “’Twas the night before Christmas, and all through the land…”"),
-    caption: "It all begins on the night before Christmas",
+    caption: "Christmas Eve in a Nephite village",
     quote: "“’Twas the night before Christmas, and all through the land…”",
   },
   {
@@ -185,7 +185,7 @@ const ncPeek: PeekSpread[] = [
       fromStatic(ncPeek01LSrc, "Nephite Christmas page: Samuel the prophet preaches from the temple steps as the wicked threaten"),
       fromStatic(ncPeek01RSrc, "Nephite Christmas page: Jacob holds up his drawing as a girl points and scowling men look on"),
     ],
-    caption: "A village waits for Samuel’s promised sign",
+    caption: "The faithful keep watch while doubters grow loud",
     // CONFIRM: the spread image reads “For Samuel, the prophet” (copy deck §5, item 25).
     quote: "“For Samuel the prophet said the sign would soon come, but the wait had just gotten too long for some.”",
   },
@@ -213,7 +213,7 @@ const ncPeek: PeekSpread[] = [
       fromStatic(ncPeek04LSrc, "Nephite Christmas page: Jacob drawing on a tablet"),
       fromStatic(ncPeek04RSrc, "Nephite Christmas page: Mary and Joseph hold baby Jesus under the star"),
     ],
-    caption: "Jacob draws as the Savior’s birth in Bethlehem draws near",
+    caption: "Jacob sketches the Nativity, a world away",
     quote: "“For of Mary tomorrow I shall be born, in Bethlehem of Judea, that first Christmas morn.”",
   },
   {
@@ -252,7 +252,7 @@ const ejPeek: PeekSpread[] = [
       fromStatic(ejPeek2LSrc, "Easter Journey page: Jesus holds the face of a blind man"),
       fromStatic(ejPeek2RSrc, "Easter Journey page: Story text: Outside the Doors of the Temple"),
     ],
-    caption: "The man born blind sees for the first time",
+    caption: "The man born blind tells his story",
     quote: "“Light and color overtook me, and the darkness disappeared. I could see!”",
   },
   {
@@ -506,14 +506,14 @@ export const catalog: Product[] = [
       { label: "Format", value: "Hardcover with dust jacket" },
       { label: "Size", value: "9″ × 11″, portrait" },
       { label: "Pages", value: `${EJ_PAGES} pages` }, // CONFIRM (§5, item 21)
-      { label: "Ages", value: "5–12 · great for the whole family" }, // CONFIRM (§5, item 22)
+      { label: "Ages", value: "8–80 · great for the whole family" }, // Tiffany, Oct 2026
       { label: "Daily reading", value: "About 5–10 minutes a day" }, // CONFIRM (§5, item 26)
       { label: "Author", value: "Tiffany Wheeler" },
       { label: "Illustrator", value: "Kelley Hicken" },
       { label: "Publisher", value: "Tiffany Books LLC, 2025" }, // CONFIRM (§5, item 24)
       { label: "ISBN-13", value: "979-8989343584" }, // CONFIRM (§5, item 24)
     ],
-    ageRange: "5–12", // CONFIRM (§5, item 22)
+    ageRange: "8-80", // Tiffany, Oct 2026 (schema.org typicalAgeRange format)
     badge: "Holy Week tradition",
     images: [img.ejCover, img.ejCover3d, img.ejOpenBook, img.ejBlindMan, img.ejMaryGarden, img.ejTombSpread],
     peekInside: ejPeek,
@@ -981,9 +981,9 @@ export const catalog: Product[] = [
       { label: "Format", value: "PDF download" },
       { label: "Pages", value: `${EJ_PAGES} pages` }, // CONFIRM (§5, item 21)
       { label: "Versions", value: "2 (single pages and full spreads)" },
-      { label: "Ages", value: "5–12 · great for the whole family" }, // CONFIRM (§5, item 22)
+      { label: "Ages", value: "8–80 · great for the whole family" }, // Tiffany, Oct 2026
     ],
-    ageRange: "5–12", // CONFIRM (§5, item 22)
+    ageRange: "8-80", // Tiffany, Oct 2026 (schema.org typicalAgeRange format)
     badge: "Instant download",
     images: [img.ejPdf, img.ejTombSpread, ejPeek[4].image, ejPeek[5].image],
     options: [],
