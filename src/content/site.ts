@@ -8,6 +8,7 @@ import { formatMoney } from "@/lib/money";
 import type { Season, SeasonMode } from "@/lib/season";
 import {
   BULK_DISCOUNT,
+  NC_PROMO,
   CLAIMS,
   FREE_SHIPPING_THRESHOLD,
   HANDLES,
@@ -117,7 +118,12 @@ export function announcementMessages(
     ncReviewCount > 0 && season.featured !== "easter"
       ? { text: `★★★★★ ${ncReviewCount} five-star reviews of Nephite Christmas`, href: `${productPath(HANDLES.nephiteChristmas)}#reviews` } // CONFIRM count (§5, item 12)
       : null;
-  const ordered = [first, proof, ...rest, ...tickerPromises()].filter((m): m is AnnouncementMessage => Boolean(m));
+  // The live promotion, right after the deadline, while Nephite Christmas leads.
+  const promo: AnnouncementMessage | null =
+    CLAIMS.ncPromo && season.featured !== "easter"
+      ? { text: `${NC_PROMO.percent}% off everything Nephite Christmas`, href: productPath(HANDLES.nephiteChristmas) }
+      : null;
+  const ordered = [first, promo, proof, ...rest, ...tickerPromises()].filter((m): m is AnnouncementMessage => Boolean(m));
   const seen = new Set<string>();
   return ordered.filter((m) => !seen.has(m.text) && Boolean(seen.add(m.text)));
 }
@@ -227,10 +233,14 @@ function seasonMessages(season: Season): AnnouncementMessage[] {
       return [
         freeShippingMessage,
         { text: "Free printables for your family, by email", href: "/freebies" },
-        {
-          text: `Save ${BULK_DISCOUNT.percent}% on ${BULK_DISCOUNT.minBooks}+ hardcovers for a ward`, // CONFIRM (§5, item 4)
-          href: "/bulk-orders",
-        },
+        ...(CLAIMS.bulkDiscount
+          ? [
+              {
+                text: `Save ${BULK_DISCOUNT.percent}% on ${BULK_DISCOUNT.minBooks}+ hardcovers for a ward`, // CONFIRM (§5, item 4)
+                href: "/bulk-orders",
+              },
+            ]
+          : []),
       ];
   }
 }

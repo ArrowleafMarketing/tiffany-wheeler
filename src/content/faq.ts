@@ -172,7 +172,9 @@ const bulk: FaqItem = {
   id: "bulk",
   question: "Do you offer bulk or ward orders?",
   // CONFIRM bulk discount (§5, item 4) and the contact address (§5, item 32).
-  answer: `Yes. Buy ${BULK_DISCOUNT.minBooks} or more hardcovers, mixing titles if you like, and you’ll save ${BULK_DISCOUNT.percent}% on each automatically. The Complete Set counts as two books; PDFs don’t count. It’s a favorite for grandparents, Primary teachers and ward gifts. For large orders, email ${CONTACT_EMAIL}. Stores can apply for wholesale pricing.`,
+  answer: CLAIMS.bulkDiscount
+    ? `Yes. Buy ${BULK_DISCOUNT.minBooks} or more hardcovers, mixing titles if you like, and you’ll save ${BULK_DISCOUNT.percent}% on each automatically. The Complete Set counts as two books; PDFs don’t count. It’s a favorite for grandparents, Primary teachers and ward gifts. For large orders, email ${CONTACT_EMAIL}. Stores can apply for wholesale pricing.`
+    : `Yes. The books are a favorite for grandparents, Primary teachers and ward gifts. For an order of several copies, or copies going to several homes, email ${CONTACT_EMAIL} and we’ll help. Stores can apply for wholesale pricing.`,
 };
 
 const pdf: FaqItem = {

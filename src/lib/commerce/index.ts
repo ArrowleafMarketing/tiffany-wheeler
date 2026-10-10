@@ -3,10 +3,16 @@ import "server-only";
 import { cacheLife, cacheTag } from "next/cache";
 import { mockProvider } from "./mock/provider";
 import type { CommerceProvider } from "./provider";
+import { shopifyConfigured } from "./shopify/client";
+import { shopifyProvider } from "./shopify/provider";
 import type { ProductQuery } from "./types";
 
-/** Swap to the Shopify provider once it exists (COMMERCE_PROVIDER=shopify). */
-export const commerce: CommerceProvider = mockProvider;
+/**
+ * The live store is Shopify (src/lib/commerce/shopify), used whenever its keys
+ * are set. Without them, or with COMMERCE_PROVIDER=mock, the sample catalog runs.
+ */
+export const commerce: CommerceProvider =
+  shopifyConfigured && process.env.COMMERCE_PROVIDER !== "mock" ? shopifyProvider : mockProvider;
 
 // Cached catalog reads for Server Components. Product data is shared by every
 // visitor, so it belongs in the static shell; a Shopify webhook will call

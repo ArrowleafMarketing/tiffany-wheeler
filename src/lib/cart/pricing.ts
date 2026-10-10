@@ -4,9 +4,9 @@
 // cart response carries it; only the optimistic estimate uses this file then.
 
 import type { CartLine } from "@/lib/commerce/types";
-import { BULK_DISCOUNT } from "@/lib/store-config";
+import { BULK_DISCOUNT, CLAIMS, NC_PROMO } from "@/lib/store-config";
 
-type Priced = Pick<CartLine, "bookCount" | "quantity" | "unitPrice">;
+type Priced = Pick<CartLine, "bookCount" | "quantity" | "unitPrice"> & Partial<Pick<CartLine, "productHandle">>;
 
 const cents = (n: number) => Math.round(n * 100) / 100;
 
@@ -17,6 +17,7 @@ export function bookUnits(lines: Pick<CartLine, "bookCount" | "quantity">[]): nu
 
 /** Books still needed for the bulk discount (0 once it applies). */
 export function booksToBulkDiscount(lines: Pick<CartLine, "bookCount" | "quantity">[]): number {
+  if (!CLAIMS.bulkDiscount) return 0;
   return Math.max(0, BULK_DISCOUNT.minBooks - bookUnits(lines));
 }
 
@@ -26,12 +27,25 @@ export function booksToBulkDiscount(lines: Pick<CartLine, "bookCount" | "quantit
  * Complete Set price. CONFIRM (copy deck §5, item 4)
  */
 export function bulkDiscountAmount(lines: Priced[]): number {
-  if (bookUnits(lines) < BULK_DISCOUNT.minBooks) return 0;
+  if (!CLAIMS.bulkDiscount || bookUnits(lines) < BULK_DISCOUNT.minBooks) return 0;
   const base = lines.reduce(
     (sum, l) => ((l.bookCount ?? 0) > 0 ? sum + Number(l.unitPrice.amount) * l.quantity : sum),
     0,
   );
   return cents((base * BULK_DISCOUNT.percent) / 100);
+}
+
+/**
+ * Estimate of NC_PROMO (10% off Nephite Christmas items), for the cart's
+ * optimistic totals. The real amount always comes from Shopify's cart.
+ */
+export function promoDiscountAmount(lines: Priced[]): number {
+  if (!CLAIMS.ncPromo) return 0;
+  const base = lines.reduce(
+    (sum, l) => (l.productHandle && NC_PROMO.handles.includes(l.productHandle) ? sum + Number(l.unitPrice.amount) * l.quantity : sum),
+    0,
+  );
+  return cents((base * NC_PROMO.percent) / 100);
 }
 
 /** The discount's title, as the Shopify automatic discount will be named (copy deck §4.1). CONFIRM (§5, item 4) */

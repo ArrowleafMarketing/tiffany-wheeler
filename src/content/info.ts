@@ -64,6 +64,8 @@ const freeShip = formatMoney(FREE_SHIPPING_THRESHOLD, { trim: true }); // "$45"
 const flatRate = formatMoney(FLAT_RATE_SHIPPING); // "$5.99" CONFIRM (§5, item 3)
 const bulkMin = BULK_DISCOUNT.minBooks;
 const bulkPct = BULK_DISCOUNT.percent;
+/** Bulk-discount promises only while that discount exists in Shopify (CLAIMS.bulkDiscount). */
+const BULK = CLAIMS.bulkDiscount;
 
 const GUARANTEE = CLAIMS.moneyBackGuarantee; // CONFIRM (§5, item 5)
 const FREE_SHIPPING = CLAIMS.freeShipping; // CONFIRM (§5, items 2 and 3)
@@ -303,7 +305,7 @@ export const contactCopy = {
       line: GUARANTEE ? "Our 30-day love-it-or-your-money-back promise" : "Returns, exchanges and damaged items",
     }, // CONFIRM (§5, item 5)
     { label: "FAQ", href: "/faq", line: "Ages, sizes, PDFs and more" },
-    { label: "Bulk & Ward Orders", href: "/bulk-orders", line: `Save ${bulkPct}% on ${bulkMin} or more hardcovers` }, // CONFIRM (§5, item 4)
+    { label: "Bulk & Ward Orders", href: "/bulk-orders", line: BULK ? `Save ${bulkPct}% on ${bulkMin} or more hardcovers` : "Gifts for the whole family or the whole ward" }, // CONFIRM (§5, item 4)
     { label: "Wholesale for Retailers", href: "/bulk-orders#wholesale", line: "Carry the books in your store" },
   ] satisfies InfoLink[],
 };
@@ -799,23 +801,37 @@ export type WholesaleFormCopy = typeof wholesaleFormCopy;
 export const bulkOrdersCopy = {
   meta: {
     title: "Bulk, Ward & Wholesale Orders",
-    description: `Save ${bulkPct}% on ${bulkMin} or more hardcovers, applied automatically at checkout. Gifts for grandparents, Primary and ward, plus wholesale pricing for stores.`, // CONFIRM (§5, item 4)
+    description: BULK
+      ? `Save ${bulkPct}% on ${bulkMin} or more hardcovers, applied automatically at checkout. Gifts for grandparents, Primary and ward, plus wholesale pricing for stores.` // CONFIRM (§5, item 4)
+      : "Several copies for grandchildren, Primary or the ward, plus wholesale pricing for stores.",
   },
   eyebrow: "Bulk & ward orders",
   title: "Gifts for the whole family, or the whole ward",
-  intro: `Buy ${bulkMin} or more hardcovers and save ${bulkPct}% on each, applied automatically at checkout.`, // CONFIRM (§5, item 4)
+  intro: BULK
+    ? `Buy ${bulkMin} or more hardcovers and save ${bulkPct}% on each, applied automatically at checkout.` // CONFIRM (§5, item 4)
+    : `Sending copies to several homes, or ordering for a ward or classroom? We’ll help you get it right.`,
   cta: { label: "Shop the Books", href: "#shop-books" },
   how: {
-    title: "How the bulk discount works",
+    title: BULK ? "How the bulk discount works" : "How bulk orders work",
     steps: [
-      {
-        title: `Add ${bulkMin} or more hardcovers`,
-        line: "Mix and match Nephite Christmas and Easter Journey however you like. The Complete Set counts as two books; PDFs don’t count.",
-      },
-      {
-        title: `Save ${bulkPct}% on each`,
-        line: "The discount comes off automatically at checkout. No code needed.",
-      },
+      BULK
+        ? {
+            title: `Add ${bulkMin} or more hardcovers`,
+            line: "Mix and match Nephite Christmas and Easter Journey however you like. The Complete Set counts as two books; PDFs don’t count.",
+          }
+        : {
+            title: "Add the books to your cart",
+            line: "Mix and match Nephite Christmas and Easter Journey however you like, up to 10 of each.",
+          },
+      BULK
+        ? {
+            title: `Save ${bulkPct}% on each`,
+            line: "The discount comes off automatically at checkout. No code needed.",
+          }
+        : {
+            title: "Send each copy where it’s going",
+            line: "Add a gift note in your cart. For copies going to several addresses, email us and we’ll set it up.",
+          },
       {
         title: "Need a lot?",
         line: `Ordering more than ${CART_MAX_QUANTITY} of one title, or sending copies to several homes? Email ${CONTACT_EMAIL} and we’ll help.`,
@@ -835,7 +851,9 @@ export const bulkOrdersCopy = {
   shop: {
     id: "shop-books",
     title: "Shop the books",
-    subtitle: `Add ${bulkMin} or more hardcovers to your cart, in any mix, and ${bulkPct}% comes off each at checkout. The Complete Set counts as two.`, // CONFIRM (§5, item 4)
+    subtitle: BULK
+      ? `Add ${bulkMin} or more hardcovers to your cart, in any mix, and ${bulkPct}% comes off each at checkout. The Complete Set counts as two.` // CONFIRM (§5, item 4)
+      : "Hardcovers for every home on your list.",
     /** Hardcovers only: PDFs don't count toward the bulk discount. */
     handles: [HANDLES.nephiteChristmas, HANDLES.easterJourney, HANDLES.completeSet],
   },

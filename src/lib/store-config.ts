@@ -30,6 +30,14 @@ export const CLAIMS = {
   bythewayComplimentaryCopy: null as boolean | null,
   /** "Bestseller" badge on Nephite Christmas (§5 item 18). False = "Family favorite". */
   bestsellerBadge: false,
+  /**
+   * The automatic "5+ hardcovers, 10% off" bulk discount (BULK_DISCOUNT). Off since
+   * Oct 2026: the store runs NC_PROMO instead, and Shopify has no bulk discount. Turn
+   * this on only after creating the matching automatic discount in Shopify.
+   */
+  bulkDiscount: false,
+  /** NC_PROMO (10% off every Nephite Christmas item) is live as a Shopify automatic discount. */
+  ncPromo: true,
 } as const;
 
 /** Free US shipping at or above this subtotal. One book misses it; the set clears it. CONFIRM */
@@ -57,6 +65,28 @@ export const TRANSIT_TIME = `${TRANSIT_BUSINESS_DAYS.min}–${TRANSIT_BUSINESS_D
 
 /** "Bulk purchases of 5 or more get an automatic 10% off each book" (live site). Counts hardcovers; the set counts as 2. */
 export const BULK_DISCOUNT = { minBooks: 5, percent: 10 } as const;
+
+/**
+ * "10% off Nephite Christmas": a Shopify automatic discount on these products
+ * (everything Nephite Christmas except the Complete Set). Shopify applies it in
+ * the cart and at checkout; this mirrors it for the cart's optimistic estimate
+ * and the copy. Keep it in sync with the discount in the Shopify admin.
+ */
+export const NC_PROMO = {
+  percent: 10,
+  title: "10% off Nephite Christmas",
+  handles: [
+    "nephite-christmas",
+    "nephite-christmas-bundle",
+    "nephite-christmas-bundle-with-ornament",
+    "nephite-christmas-coloring-activity-book",
+    "nephite-christmas-ornament",
+    "nephite-christmas-peace-dove-ornament",
+    "nephite-christmas-nativity-craft",
+    "nephite-christmas-pdf",
+    "nephite-christmas-digital-bundle",
+  ] as readonly string[],
+} as const;
 
 /** Max quantity per cart line, and max gift-note length. */
 export const CART_MAX_QUANTITY = 10;
