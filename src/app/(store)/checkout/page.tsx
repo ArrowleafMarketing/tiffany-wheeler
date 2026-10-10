@@ -137,7 +137,7 @@ async function OrderSummary({ searchParams }: { searchParams: PageProps<"/checko
                 {note ? <p className="mt-0.5 text-xs text-muted">{note}</p> : null}
                 <p className="mt-0.5 text-sm text-muted">{copy.quantity(line.quantity)}</p>
               </div>
-              <Price price={line.total} compareAtPrice={compareAt} size="sm" className="shrink-0 justify-end text-right" />
+              <Price price={line.total} compareAtPrice={compareAt} reason={line.compareAtReason} size="sm" className="shrink-0 justify-end text-right" />
             </li>
           );
         })}

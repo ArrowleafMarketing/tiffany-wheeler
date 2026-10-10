@@ -83,6 +83,7 @@ export default async function NotFound() {
                         <Price
                           price={variant.price}
                           compareAtPrice={variant.compareAtPrice}
+                          reason={variant.compareAtReason}
                           size="sm"
                           className="mt-1 lg:justify-center"
                         />

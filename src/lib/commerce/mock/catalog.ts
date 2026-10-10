@@ -7,9 +7,9 @@
 // Rules this file follows:
 // - Copy is final and verbatim. "[CONFIRM]" tags are stripped from the strings and
 //   tracked with a `// CONFIRM` comment on the same line (see copy deck §5).
-// - compareAtPrice is null everywhere except the Complete Set, whose $54.98 is the
-//   real sum of the two hardcovers (FTC). The other bundles equal the sum of their
-//   parts, so they sell convenience and show no strike-through (copy deck §3.0 note).
+// - compareAtPrice is null here: sale and "if bought separately" prices come from
+//   the price rule (src/lib/commerce/compare-at-rule.ts), which works out bundle
+//   comparisons from the books' live prices.
 // - Easter Journey has no reviews: `ratings: []`, never invented.
 // - Ids are Shopify-style gids so the Shopify provider can drop in later.
 //
@@ -325,8 +325,6 @@ const NC_RATING_FOR_BUNDLES: Rating = { ...NC_SITE_RATING, borrowedFrom: "Nephit
 const NC_PRICE = 24.99;
 const EJ_PRICE = 29.99;
 const SET_PRICE = 49.99;
-/** The set's compare-at is the real sum of the two hardcovers (FTC). */
-const SET_SEPARATELY = Math.round((NC_PRICE + EJ_PRICE) * 100) / 100;
 const SET_SHIPS_FREE = CLAIMS.freeShipping && SET_PRICE >= FREE_SHIPPING_THRESHOLD;
 
 /**
@@ -453,7 +451,7 @@ export const catalog: Product[] = [
       },
       {
         question: "Book, bundle or set: which should I get?",
-        answer: `The hardcover on its own is ${formatMoney(NC_PRICE)}. The Nephite Christmas Bundle adds the Coloring & Activity Book, and the Bundle with Ornament adds the star ornament too. The Complete Set pairs it with Easter Journey for ${formatMoney(SET_PRICE)}${SET_SHIPS_FREE ? " and ships free" : ""}.`, // CONFIRM prices and free shipping (§5, items 1–2)
+        answer: `The hardcover comes on its own, or in a bundle. The Nephite Christmas Bundle adds the Coloring & Activity Book, and the Bundle with Ornament adds the star ornament too. The Complete Set pairs it with Easter Journey for ${formatMoney(SET_PRICE)}${SET_SHIPS_FREE ? " and ships free" : ""}.`, // CONFIRM prices and free shipping (§5, items 1–2)
       },
     ],
     // No Complete Set here: the buy-box picker and the cart's "Upgrade to the Set"
@@ -583,8 +581,6 @@ export const catalog: Product[] = [
     variants: onlyVariant(HANDLES.completeSet, {
       title: "Both hardcovers",
       price: SET_PRICE, // CONFIRM (§5, item 1)
-      // Real sum of the separate hardcover prices ($24.99 + $29.99), never a former price.
-      compareAtPrice: money(SET_SEPARATELY),
       components: [component(HANDLES.nephiteChristmas), component(HANDLES.easterJourney)],
     }),
     // UI labels this "Reviews of Nephite Christmas (included in this set)" (§3.0a).

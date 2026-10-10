@@ -31,6 +31,7 @@ function itemFor(product: Product, variant: Variant, extra: Partial<BuyItem> = {
     label: product.title,
     price: variant.price,
     compareAtPrice: variant.compareAtPrice,
+    compareAtReason: variant.compareAtReason,
     shipsFree: shipsFreeAt(variant),
     rating: ownRating(product),
     available: variant.availableForSale,

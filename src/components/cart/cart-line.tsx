@@ -102,6 +102,7 @@ export function CartLineItem({ line, madeToOrder, onNavigate, secondCopy }: Prop
             <Price
               price={line.unitPrice}
               compareAtPrice={line.compareAtUnitPrice}
+              reason={line.compareAtReason}
               size="sm"
               className="justify-end"
             />

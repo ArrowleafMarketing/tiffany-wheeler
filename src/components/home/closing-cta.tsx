@@ -60,9 +60,9 @@ export async function ClosingCta() {
               <Price
                 price={setVariant.price}
                 compareAtPrice={setVariant.compareAtPrice}
+                reason={setVariant.compareAtReason}
                 size="lg"
-                showSavings
-                compareAtLabel={hasCompare ? null : undefined}
+                hideBundleLabel={hasCompare}
               />
               {hasCompare && setVariant.compareAtPrice ? (
                 <p className="text-sm text-body">

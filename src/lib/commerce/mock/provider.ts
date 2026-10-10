@@ -14,7 +14,8 @@ import type {
   ProductQuery,
   Variant,
 } from "../types";
-import { catalog } from "./catalog";
+import { applyCompareAtRule } from "../compare-at-rule";
+import { catalog as rawCatalog } from "./catalog";
 import { publishedReviews } from "./reviews";
 
 /*
@@ -29,6 +30,9 @@ type Encoded = { l: [variantId: string, quantity: number][]; n?: string; a?: Att
 const PREFIX = "mock:";
 const MAX_LINES = 30;
 const MAX_QTY = 99;
+
+/** The sample catalog with the price rule applied (sale and bundle comparisons). */
+const catalog = applyCompareAtRule(rawCatalog);
 
 const variantIndex = new Map<string, { product: Product; variant: Variant }>();
 for (const product of catalog) {
@@ -91,6 +95,7 @@ function build(state: Encoded): Cart {
       requiresShipping: variant.requiresShipping,
       unitPrice: variant.price,
       compareAtUnitPrice: variant.compareAtPrice,
+      compareAtReason: variant.compareAtReason,
       total: money(unit * quantity),
       attributes: [],
       bookCount: bookCount(product, variant),

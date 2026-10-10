@@ -34,8 +34,10 @@ export type Variant = {
   availableForSale: boolean;
   requiresShipping: boolean;
   price: Money;
-  /** Only set when it is a real, defensible former/separate price. */
+  /** Only set when it is a real, defensible former/separate price (see compare-at-rule.ts). */
   compareAtPrice: Money | null;
+  /** Why there's a compare-at: a sale (Shopify compare-at) or a bundle's separate total. */
+  compareAtReason?: "sale" | "bundle";
   selectedOptions: SelectedOption[];
   /** For fixed bundles: the component variants and quantities. */
   components?: { variantId: string; productHandle: string; quantity: number }[];
@@ -127,6 +129,8 @@ export type CartLine = {
   requiresShipping: boolean;
   unitPrice: Money;
   compareAtUnitPrice: Money | null;
+  /** Same meaning as Variant.compareAtReason. */
+  compareAtReason?: "sale" | "bundle";
   total: Money;
   attributes: Attribute[];
   /**

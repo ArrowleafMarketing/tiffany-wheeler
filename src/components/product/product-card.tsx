@@ -200,7 +200,7 @@ export function ProductCard({
           ) : null}
           {ratingRow}
           <div className="mt-auto flex items-center justify-between gap-2 pt-0.5">
-            {buyable ? <Price price={buyable.price} compareAtPrice={buyable.compareAtPrice} size="sm" /> : null}
+            {buyable ? <Price price={buyable.price} compareAtPrice={buyable.compareAtPrice} reason={buyable.compareAtReason} size="sm" /> : null}
             {button}
           </div>
         </div>
@@ -287,8 +287,8 @@ export function ProductCard({
             <Price
               price={buyable.price}
               compareAtPrice={buyable.compareAtPrice}
+              reason={buyable.compareAtReason}
               size={featured ? "lg" : "md"}
-              showSavings
             />
           ) : null}
           {button}

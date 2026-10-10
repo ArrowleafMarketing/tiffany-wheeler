@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
     // Season/delivery dates: short enough that pages roll over soon after
     // midnight MT; the daily cron (/api/revalidate/season) makes it exact.
     season: { stale: 300, revalidate: 900, expire: 3600 },
+    // Shopify catalog (prices, sales, availability): a price or sale changed in the
+    // Shopify admin shows on the site within about 5 minutes.
+    catalog: { stale: 60, revalidate: 300, expire: 3600 },
   },
   images: {
     formats: ["image/avif", "image/webp"],

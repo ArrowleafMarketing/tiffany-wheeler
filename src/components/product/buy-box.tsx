@@ -39,8 +39,9 @@ export type BuyItem = {
   /** Gift-picker tile: pill on the tile's top edge ("Best value"). */
   tag?: string;
   price: Money;
-  /** A real, sum-of-parts compare-at (always shown as "separately"). */
+  /** A real compare-at from the price rule (compare-at-rule.ts). */
   compareAtPrice: Money | null;
+  compareAtReason?: "sale" | "bundle";
   /** Ships free at this price (only set while the free-shipping claim is confirmed). */
   shipsFree?: boolean;
   /** This product's own site rating (never a borrowed one); for compact stars. */
@@ -188,6 +189,7 @@ export function BuyPicker({ name, className }: { name: string; className?: strin
         shipsFree: picker.kind === "gift" ? item.shipsFree : undefined,
         price: item.price,
         compareAtPrice: item.compareAtPrice,
+        compareAtReason: item.compareAtReason,
         disabled: !item.available,
       }))}
     />
@@ -214,9 +216,8 @@ export function BuyBox({ slots, className }: { slots?: Slots; className?: string
         <Price
           price={current.price}
           compareAtPrice={current.compareAtPrice}
-          compareAtLabel="if bought separately"
+          reason={current.compareAtReason}
           size="xl"
-          showSavings
         />
       </div>
 

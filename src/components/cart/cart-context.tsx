@@ -15,8 +15,7 @@ import {
 import { cartCopy } from "@/content/cart";
 import { track, type AnalyticsItem } from "@/lib/analytics";
 import type { CartOp, CartResponse, SwappedLine } from "@/lib/cart/ops";
-import { bulkDiscountAmount, BULK_DISCOUNT_TITLE, promoDiscountAmount } from "@/lib/cart/pricing";
-import { NC_PROMO } from "@/lib/store-config";
+import { bulkDiscountAmount, BULK_DISCOUNT_TITLE } from "@/lib/cart/pricing";
 import type { Attribute, Cart, CartLine, LineInput } from "@/lib/commerce/types";
 import { money, toNumber } from "@/lib/money";
 import { HANDLES } from "@/lib/store-config";
@@ -115,10 +114,8 @@ function recalc(cart: Cart, lines: CartLine[]): Cart {
     compare += toNumber(l.compareAtUnitPrice ?? l.unitPrice) * l.quantity;
     return { ...l, total: money(unit * l.quantity) };
   });
-  // Estimates only; the server's cart (Shopify) replaces them a moment later.
-  const promo = promoDiscountAmount(next);
-  const bulk = bulkDiscountAmount(next) + promo;
-  const title = cart.discounts?.[0]?.title ?? (promo > 0 ? NC_PROMO.title : BULK_DISCOUNT_TITLE);
+  const bulk = bulkDiscountAmount(next);
+  const title = cart.discounts?.[0]?.title ?? BULK_DISCOUNT_TITLE;
   return {
     ...cart,
     lines: next,

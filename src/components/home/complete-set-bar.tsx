@@ -66,7 +66,7 @@ export async function CompleteSetBar() {
             <p className="mt-3 text-sm font-semibold text-ink">{copy.includes}</p>
 
             <div className="mt-4 flex flex-col items-start gap-1.5 sm:items-center md:items-start">
-              <Price price={variant.price} compareAtPrice={variant.compareAtPrice} size="xl" showSavings compareAtLabel={null} />
+              <Price price={variant.price} compareAtPrice={variant.compareAtPrice} reason={variant.compareAtReason} size="xl" hideBundleLabel />
               {priceLabel.length ? <p className="text-sm text-body">{priceLabel.join(" · ")}</p> : null}
               {rating ? (
                 <p className="flex flex-wrap items-center gap-x-2 text-sm text-body sm:justify-center md:justify-start">

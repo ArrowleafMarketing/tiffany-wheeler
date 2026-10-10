@@ -40,7 +40,7 @@ export function BookMiniCard({ product, badge, note, lead, emphasis, className }
 
   const buy = buyable ? (
     <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
-      <Price price={buyable.price} compareAtPrice={buyable.compareAtPrice} size="md" />
+      <Price price={buyable.price} compareAtPrice={buyable.compareAtPrice} reason={buyable.compareAtReason} size="md" />
       <AddToCartButton
         variantId={buyable.id}
         productHandle={product.handle}

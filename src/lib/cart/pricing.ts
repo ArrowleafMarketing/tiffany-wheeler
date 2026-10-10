@@ -4,9 +4,9 @@
 // cart response carries it; only the optimistic estimate uses this file then.
 
 import type { CartLine } from "@/lib/commerce/types";
-import { BULK_DISCOUNT, CLAIMS, NC_PROMO } from "@/lib/store-config";
+import { BULK_DISCOUNT, CLAIMS } from "@/lib/store-config";
 
-type Priced = Pick<CartLine, "bookCount" | "quantity" | "unitPrice"> & Partial<Pick<CartLine, "productHandle">>;
+type Priced = Pick<CartLine, "bookCount" | "quantity" | "unitPrice">;
 
 const cents = (n: number) => Math.round(n * 100) / 100;
 
@@ -33,19 +33,6 @@ export function bulkDiscountAmount(lines: Priced[]): number {
     0,
   );
   return cents((base * BULK_DISCOUNT.percent) / 100);
-}
-
-/**
- * Estimate of NC_PROMO (10% off Nephite Christmas items), for the cart's
- * optimistic totals. The real amount always comes from Shopify's cart.
- */
-export function promoDiscountAmount(lines: Priced[]): number {
-  if (!CLAIMS.ncPromo) return 0;
-  const base = lines.reduce(
-    (sum, l) => (l.productHandle && NC_PROMO.handles.includes(l.productHandle) ? sum + Number(l.unitPrice.amount) * l.quantity : sum),
-    0,
-  );
-  return cents((base * NC_PROMO.percent) / 100);
 }
 
 /** The discount's title, as the Shopify automatic discount will be named (copy deck §4.1). CONFIRM (§5, item 4) */

@@ -1,5 +1,6 @@
 import { useId } from "react";
 import { Price } from "@/components/ui/price";
+import { percentOff } from "@/lib/commerce/compare-at-rule";
 import { SHIPPING_NOTES } from "@/content/pdp";
 import type { Money } from "@/lib/commerce/types";
 import { cn } from "@/lib/cn";
@@ -10,6 +11,7 @@ export type PickerOption = {
   label: string;
   price: Money;
   compareAtPrice?: Money | null;
+  compareAtReason?: "sale" | "bundle";
   /** Tiles: the third line when there's no compare-at ("+ $5.99 shipping"). */
   note?: string;
   /** Tiles: one pill on the tile's top edge ("Best value"). */
@@ -77,7 +79,7 @@ export function OptionPicker({ legend, name, options, value, onChange, helper, l
                   {label}
                 </span>
                 <span className="pl-8">
-                  <Price price={option.price} compareAtPrice={option.compareAtPrice} size="sm" />
+                  <Price price={option.price} compareAtPrice={option.compareAtPrice} reason={option.compareAtReason} size="sm" />
                 </span>
               </label>
             );
@@ -109,7 +111,7 @@ export function OptionPicker({ legend, name, options, value, onChange, helper, l
               </span>
               {/* One note line on every tile, so both tiles are the same height. */}
               <span className="min-h-4 text-xs leading-4 text-muted">
-                {compareAt ? (
+                {compareAt && option.compareAtReason === "bundle" ? (
                   <>
                     <s className="tabular-nums decoration-1">
                       <span className="sr-only">Price if bought separately </span>
@@ -117,6 +119,17 @@ export function OptionPicker({ legend, name, options, value, onChange, helper, l
                     </s>
                     <span aria-hidden> separately</span>
                   </>
+                ) : compareAt ? (
+                  // A sale (price rule): the old price struck, and the same sticker as everywhere else.
+                  <span className="inline-flex items-center gap-1.5">
+                    <s className="tabular-nums decoration-1">
+                      <span className="sr-only">Regular price </span>
+                      {formatMoney(compareAt)}
+                    </s>
+                    <span className="-rotate-2 rounded-md bg-ember px-1.5 text-xs font-bold uppercase leading-4 tracking-[0.06em] text-white">
+                      {percentOff(option.price, compareAt)}% off
+                    </span>
+                  </span>
                 ) : (
                   option.note
                 )}

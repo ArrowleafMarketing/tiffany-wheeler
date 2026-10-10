@@ -83,7 +83,7 @@ export async function ShopRow({ season: override }: { season?: Season } = {}) {
                 {/* Always two lines tall, so every price and button sits at the same height. */}
                 <p className="mt-0.5 line-clamp-2 min-h-[2.5rem] text-sm leading-5 text-body">{p.subtitle}</p>
                 <div className="mt-2 flex flex-col items-start gap-2.5">
-                  <Price price={variant.price} compareAtPrice={variant.compareAtPrice} />
+                  <Price price={variant.price} compareAtPrice={variant.compareAtPrice} reason={variant.compareAtReason} />
                   <AddToCartButton
                     variantId={variant.id}
                     productHandle={p.handle}

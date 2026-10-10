@@ -8,7 +8,6 @@ import { formatMoney } from "@/lib/money";
 import type { Season, SeasonMode } from "@/lib/season";
 import {
   BULK_DISCOUNT,
-  NC_PROMO,
   CLAIMS,
   FREE_SHIPPING_THRESHOLD,
   HANDLES,
@@ -110,7 +109,7 @@ const freeShippingMessage: AnnouncementMessage = CLAIMS.freeShipping
  */
 export function announcementMessages(
   season: Season,
-  { ncReviewCount = 0 }: { ncReviewCount?: number } = {},
+  { ncReviewCount = 0, ncPercentOff = 0 }: { ncReviewCount?: number; ncPercentOff?: number } = {},
 ): AnnouncementMessage[] {
   const [first, ...rest] = seasonMessages(season);
   // Named for its book, so it never reads as Easter Journey's; only while Nephite Christmas leads.
@@ -118,10 +117,11 @@ export function announcementMessages(
     ncReviewCount > 0 && season.featured !== "easter"
       ? { text: `★★★★★ ${ncReviewCount} five-star reviews of Nephite Christmas`, href: `${productPath(HANDLES.nephiteChristmas)}#reviews` } // CONFIRM count (§5, item 12)
       : null;
-  // The live promotion, right after the deadline, while Nephite Christmas leads.
+  // A Nephite Christmas sale (its compare-at price in Shopify), right after the deadline,
+  // while Nephite Christmas leads. It appears and disappears with the sale itself.
   const promo: AnnouncementMessage | null =
-    CLAIMS.ncPromo && season.featured !== "easter"
-      ? { text: `${NC_PROMO.percent}% off everything Nephite Christmas`, href: productPath(HANDLES.nephiteChristmas) }
+    ncPercentOff > 0 && season.featured !== "easter"
+      ? { text: `${ncPercentOff}% off Nephite Christmas`, href: productPath(HANDLES.nephiteChristmas) }
       : null;
   const ordered = [first, promo, proof, ...rest, ...tickerPromises()].filter((m): m is AnnouncementMessage => Boolean(m));
   const seen = new Set<string>();

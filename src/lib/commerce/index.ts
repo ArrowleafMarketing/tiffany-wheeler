@@ -15,19 +15,19 @@ export const commerce: CommerceProvider =
   shopifyConfigured && process.env.COMMERCE_PROVIDER !== "mock" ? shopifyProvider : mockProvider;
 
 // Cached catalog reads for Server Components. Product data is shared by every
-// visitor, so it belongs in the static shell; a Shopify webhook will call
-// revalidateTag("products", { expire: 0 }) when anything changes.
+// visitor, so it belongs in the static shell. The "catalog" profile (next.config.ts)
+// refreshes it from Shopify every few minutes, so sales set there show up quickly.
 
 export async function getProduct(handle: string) {
   "use cache";
-  cacheLife("hours");
+  cacheLife("catalog");
   cacheTag("products", `product:${handle}`);
   return commerce.getProduct(handle);
 }
 
 export async function getProducts(query: ProductQuery = {}) {
   "use cache";
-  cacheLife("hours");
+  cacheLife("catalog");
   cacheTag("products");
   return commerce.getProducts(query);
 }

@@ -2,6 +2,7 @@ import "server-only";
 
 import { money, toNumber } from "@/lib/money";
 import { GIFT_NOTE_MAX } from "@/lib/store-config";
+import { applyCompareAtRule } from "../compare-at-rule";
 import { catalog } from "../mock/catalog";
 import { publishedReviews } from "../mock/reviews";
 import type { CommerceProvider } from "../provider";
@@ -48,7 +49,7 @@ async function loadCatalog(): Promise<Product[]> {
     });
   }
 
-  return catalog
+  const merged = catalog
     .filter((p) => remote.has(p.handle))
     .map((product) => ({
       ...product,
@@ -67,6 +68,16 @@ async function loadCatalog(): Promise<Product[]> {
           };
         }),
     }));
+  return applyCompareAtRule(merged);
+}
+
+/** The merged catalog, reused for a few minutes so cart requests don't refetch it each time. */
+let memo: { at: number; products: Promise<Product[]> } | null = null;
+function catalogSoon(): Promise<Product[]> {
+  if (!memo || Date.now() - memo.at > 5 * 60_000) {
+    memo = { at: Date.now(), products: loadCatalog().catch((e) => ((memo = null), Promise.reject(e))) };
+  }
+  return memo.products;
 }
 
 function matches(product: Product, query: ProductQuery): boolean {
@@ -112,7 +123,9 @@ function bookCount(handle: string): number {
   return (p.variants[0]?.components ?? []).reduce((n, c) => (productByHandle.get(c.productHandle)?.kind === "book" ? n + c.quantity : n), 0);
 }
 
-function toCart(s: SCart): Cart {
+function toCart(s: SCart, products: Product[]): Cart {
+  // Cart lines follow the same price rule as the product pages.
+  const ruled = new Map(products.flatMap((p) => p.variants.map((v) => [v.id, v] as const)));
   const discountsByTitle = new Map<string, number>();
   const lines: CartLine[] = s.lines.nodes.map((l) => {
     for (const d of l.discountAllocations) {
@@ -121,7 +134,8 @@ function toCart(s: SCart): Cart {
     }
     const local = productByHandle.get(l.merchandise.product.handle);
     const unit = toMoney(l.cost.amountPerQuantity);
-    const compare = l.cost.compareAtAmountPerQuantity;
+    const rule = ruled.get(l.merchandise.id);
+    const compare = rule?.compareAtPrice ? { amount: rule.compareAtPrice.amount, currencyCode: "USD" } : l.cost.compareAtAmountPerQuantity;
     return {
       id: l.id,
       quantity: l.quantity,
@@ -133,6 +147,7 @@ function toCart(s: SCart): Cart {
       requiresShipping: l.merchandise.requiresShipping,
       unitPrice: unit,
       compareAtUnitPrice: compare && Number(compare.amount) > Number(unit.amount) ? toMoney(compare) : null,
+      compareAtReason: compare && Number(compare.amount) > Number(unit.amount) ? (rule?.compareAtReason ?? "sale") : undefined,
       total: toMoney(l.cost.subtotalAmount),
       attributes: l.attributes,
       bookCount: bookCount(l.merchandise.product.handle),
@@ -161,16 +176,16 @@ async function mutate(name: string, operation: string, variables: Record<string,
   const payload = data[name];
   assertNoUserErrors(payload.userErrors);
   if (!payload.cart) throw new Error("Cart not returned");
-  return toCart(payload.cart);
+  return toCart(payload.cart, await catalogSoon());
 }
 
 export const shopifyProvider: CommerceProvider = {
   async getProduct(handle) {
-    return (await loadCatalog()).find((p) => p.handle === handle) ?? null;
+    return (await catalogSoon()).find((p) => p.handle === handle) ?? null;
   },
 
   async getProducts(query = {}) {
-    const found = (await loadCatalog()).filter((p) => matches(p, query));
+    const found = (await catalogSoon()).filter((p) => matches(p, query));
     if (!query.handles) return found;
     return query.handles.map((h) => found.find((p) => p.handle === h)).filter((p): p is Product => Boolean(p));
   },
@@ -182,7 +197,7 @@ export const shopifyProvider: CommerceProvider = {
   async getCart(cartId) {
     if (!cartId.startsWith("gid://shopify/Cart/")) return null;
     const data = await storefront<{ cart: SCart | null }>(`${CART_FIELDS}\nquery GetCart($id: ID!) { cart(id: $id) { ...CartFields } }`, { id: cartId });
-    return data.cart ? toCart(data.cart) : null;
+    return data.cart ? toCart(data.cart, await catalogSoon()) : null;
   },
 
   async createCart(input = {}) {
