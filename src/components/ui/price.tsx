@@ -1,4 +1,4 @@
-import { percentOff } from "@/lib/commerce/compare-at-rule";
+import { dealSticker } from "@/lib/commerce/compare-at-rule";
 import type { Money } from "@/lib/commerce/types";
 import { cn } from "@/lib/cn";
 import { formatMoney, toNumber } from "@/lib/money";
@@ -34,11 +34,7 @@ const sizes = {
  */
 export function Price({ price, compareAtPrice, reason = "sale", size = "md", hideBundleLabel, noSticker, className }: Props) {
   const was = compareAtPrice && toNumber(compareAtPrice) > toNumber(price) ? compareAtPrice : null;
-  const sticker = was
-    ? reason === "bundle"
-      ? `Save ${formatMoney(toNumber(was) - toNumber(price), { trim: true })}`
-      : `${percentOff(price, was)}% off`
-    : null;
+  const sticker = dealSticker(price, was, reason);
   return (
     <span className={cn("relative inline-flex flex-wrap items-center gap-x-2 gap-y-1", className)}>
       <span className={cn("font-display font-semibold leading-none text-ink tabular-nums", sizes[size])}>

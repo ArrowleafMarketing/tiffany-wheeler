@@ -1,4 +1,4 @@
-import { money, toNumber } from "@/lib/money";
+import { formatMoney, money, toNumber } from "@/lib/money";
 import type { Money, Product, Variant } from "./types";
 
 /**
@@ -22,6 +22,12 @@ const CENT = 0.004;
 export function percentOff(price: Money, compareAt: Money): number {
   const was = toNumber(compareAt);
   return was > 0 ? Math.round(((was - toNumber(price)) / was) * 100) : 0;
+}
+
+/** The sticker text for a deal: "10% off" for a sale, "Save $2.49" for a bundle; null without a real compare-at. */
+export function dealSticker(price: Money, compareAt: Money | null | undefined, reason: CompareAtReason = "sale"): string | null {
+  if (!compareAt || toNumber(compareAt) <= toNumber(price) + CENT) return null;
+  return reason === "bundle" ? `Save ${formatMoney(toNumber(compareAt) - toNumber(price), { trim: true })}` : `${percentOff(price, compareAt)}% off`;
 }
 
 /** Applies the rule to every variant: sets `compareAtPrice` and `compareAtReason`. */

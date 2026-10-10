@@ -16,7 +16,8 @@ import {
   type HeroSetLinePart,
 } from "@/content/home-top";
 import { getProduct } from "@/lib/commerce";
-import type { Product, Variant } from "@/lib/commerce/types";
+import { dealSticker } from "@/lib/commerce/compare-at-rule";
+import type { Money, Product, Variant } from "@/lib/commerce/types";
 import { cn } from "@/lib/cn";
 import { formatMoney, toNumber } from "@/lib/money";
 import { formatDate, formatHolyWeek, formatLongDate, nextEaster } from "@/lib/delivery";
@@ -56,51 +57,85 @@ function heroTokens(season: Season): Record<string, string> {
   };
 }
 
+/** A real deal on the button's price, from the price rule (compare-at-rule.ts). */
+type Deal = { was: Money; sticker: string; reason: "sale" | "bundle" };
+
 type Resolved =
-  | { kind: "add"; label: string; product: Product; tone: ButtonVariant }
-  | { kind: "link"; label: string; href: string };
+  | { kind: "add"; label: string; product: Product; tone: ButtonVariant; deal: Deal | null }
+  | { kind: "link"; label: string; href: string; deal: Deal | null };
 
 function resolve(action: HeroAction, products: Map<string, Product>, primary: boolean): Resolved | null {
   const priced = action.priceOf ? products.get(action.priceOf) : undefined;
-  const price = priced?.variants.find((v) => v.availableForSale)?.price ?? priced?.variants[0]?.price;
-  const label = price ? `${action.label} — ${formatMoney(price)}` : action.label;
+  const pv = priced?.variants.find((v) => v.availableForSale) ?? priced?.variants[0];
+  const label = pv ? `${action.label} — ${formatMoney(pv.price)}` : action.label;
+  const sticker = pv ? dealSticker(pv.price, pv.compareAtPrice, pv.compareAtReason) : null;
+  const deal: Deal | null =
+    pv?.compareAtPrice && sticker ? { was: pv.compareAtPrice, sticker, reason: pv.compareAtReason ?? "sale" } : null;
   if (action.add) {
     const product = products.get(action.add);
     if (!product) return null;
     // The set is the "best value" (ember) action; any other purchase is the green primary.
     const tone: ButtonVariant = !primary ? "outline" : action.add === HANDLES.completeSet ? "accent" : "primary";
-    return { kind: "add", label, product, tone };
+    return { kind: "add", label, product, tone, deal };
   }
-  return action.href ? { kind: "link", label, href: action.href } : null;
+  return action.href ? { kind: "link", label, href: action.href, deal } : null;
 }
 
 function HeroButton({ action, className, describedBy }: { action: Resolved; className?: string; describedBy?: string }) {
   // A little shorter on short phone screens so both buttons stay on the first screen,
   // and narrower padding under 360px so "Christmas + Easter Set — $49.99" stays on one line.
-  const common = cn("w-full sm:w-auto short:max-sm:h-12 max-[359px]:px-4", className);
+  // Under 380px the padding and text tighten so a price plus its struck old price stay on one line.
+  const common = cn("w-full short:max-sm:h-12 max-[379px]:px-3.5 max-[379px]:text-[0.9375rem]", className);
+  // Same deal display as every other price (Price, compare-at-rule.ts): the old
+  // price struck and lighter inside the button, and the sticker on its corner.
+  const label = (
+    <>
+      {action.label}
+      {action.deal ? (
+        <s className="ml-1.5 text-[0.85em] font-medium tabular-nums opacity-70 decoration-1 max-[339px]:hidden">
+          <span className="sr-only">{action.deal.reason === "bundle" ? ", if bought separately " : ", regular price "}</span>
+          {formatMoney(action.deal.was)}
+        </s>
+      ) : null}
+    </>
+  );
+  const sticker = action.deal ? (
+    <span
+      aria-hidden
+      className="pointer-events-none absolute -top-2.5 right-3 z-10 -rotate-3 whitespace-nowrap rounded-md bg-ember px-1.5 py-0.5 text-xs font-bold uppercase leading-tight tracking-[0.06em] text-white shadow-[0_1px_2px_rgb(120_40_10/0.35)]"
+    >
+      {action.deal.sticker}
+    </span>
+  ) : null;
   if (action.kind === "link") {
     return (
-      <ButtonLink href={action.href} variant="outline" size="lg" className={common}>
-        {action.label}
-      </ButtonLink>
+      <span className="relative block sm:inline-block">
+        <ButtonLink href={action.href} variant="outline" size="lg" className={common}>
+          {label}
+        </ButtonLink>
+        {sticker}
+      </span>
     );
   }
   const variant = action.product.variants.find((v) => v.availableForSale) ?? action.product.variants[0];
   return (
-    <AddToCartButton
-      variantId={variant.id}
-      productHandle={action.product.handle}
-      productTitle={action.product.title}
-      variantTitle={variant.title}
-      price={toNumber(variant.price)}
-      available={variant.availableForSale}
-      variant={action.tone}
-      size="lg"
-      className={common}
-      describedBy={describedBy}
-    >
-      {action.label}
-    </AddToCartButton>
+    <span className="relative block sm:inline-block">
+      <AddToCartButton
+        variantId={variant.id}
+        productHandle={action.product.handle}
+        productTitle={action.product.title}
+        variantTitle={variant.title}
+        price={toNumber(variant.price)}
+        available={variant.availableForSale}
+        variant={action.tone}
+        size="lg"
+        className={common}
+        describedBy={describedBy}
+      >
+        {label}
+      </AddToCartButton>
+      {sticker}
+    </span>
   );
 }
 
