@@ -6,10 +6,8 @@ import { RichText } from "@/components/info/rich-text";
 import { ButtonLink } from "@/components/ui/button";
 import { returnsCopy as copy } from "@/content/info";
 
-// CONFIRM every guarantee and return term on this page with Tiffany (copy deck
-// §5, item 5): 30-day refund window, who pays return shipping, digital
-// downloads non-refundable after download (except file errors / duplicate
-// charges), made-to-order items replaced only if damaged.
+// Terms are Tiffany's policy (Oct 2026); the copy lives in returnsCopy
+// (src/content/info.ts).
 
 export const metadata: Metadata = {
   title: copy.meta.title,

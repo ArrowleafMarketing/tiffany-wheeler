@@ -154,16 +154,15 @@ export const BUY_BOX_FACTS: Record<string, readonly ("ages" | "hardcover" | "pag
  */
 export const BUY_BOX_TRUST = {
   physical: ["shipping", "guarantee", "ships-from", "gift-note"],
-  /** Print-on-demand items don't ship from Idaho and aren't covered by the guarantee. */
+  /** Print-on-demand items don't ship from Idaho and are final sale. */
   madeToOrder: ["shipping", "gift-note"],
 } as const;
 
 /**
- * Product kinds the money-back guarantee covers on /returns ("every physical book
- * and bundle"; the printed coloring book is a book). Ornaments stay out until the
- * returns page covers them. CONFIRM guarantee scope (§5, item 5)
+ * Product kinds /returns accepts back within the return window (books, bundles,
+ * activity books, ornaments). Digital and made-to-order items are final sale.
  */
-export const GUARANTEE_KINDS: readonly ProductKind[] = ["book", "bundle", "activity"];
+export const GUARANTEE_KINDS: readonly ProductKind[] = ["book", "bundle", "activity", "ornament"];
 
 /**
  * Site FAQs the product page borrows from src/content/faq.ts, matched by id

@@ -30,6 +30,7 @@ import {
   FREE_SHIPPING_THRESHOLD,
   HANDLES,
   HANDLING_TIME,
+  RETURN_WINDOW_DAYS,
   SHIPS_FROM,
   SITE_URL,
   TRANSIT_TIME,
@@ -67,19 +68,19 @@ const bulkPct = BULK_DISCOUNT.percent;
 /** Bulk-discount promises only while that discount exists in Shopify (CLAIMS.bulkDiscount). */
 const BULK = CLAIMS.bulkDiscount;
 
-const GUARANTEE = CLAIMS.moneyBackGuarantee; // CONFIRM (§5, item 5)
 const FREE_SHIPPING = CLAIMS.freeShipping; // CONFIRM (§5, items 2 and 3)
 const PICKUP = CLAIMS.localPickup; // CONFIRM (§5, item 9)
-const RETURNS_LABEL = GUARANTEE ? "Returns & Guarantee" : "Returns";
+const RETURNS_LABEL = "Returns & Exchanges";
+const returnWindow = `${RETURN_WINDOW_DAYS} days`;
 /** Names the date topics on /shipping, with pickup only when it's offered. */
 const SHIPPING_LINK_LINE = PICKUP ? "Rates, order-by dates and local pickup" : "Rates and Christmas order-by dates";
 
-/** Legal entity named in the policies (same value as the footer copyright). CONFIRM (§5, item 24) */
+/** Legal entity named in the policies (same value as the footer copyright). */
 const ENTITY = FOOTER.copyrightHolder;
 const SITE_HOST = SITE_URL.replace(/^https?:\/\//, "").replace(/\/$/, "");
 
-/** How quickly we answer email. CONFIRM with Tiffany (not in the deck). */
-const REPLY_TIME = "1–2 business days"; // CONFIRM
+/** How quickly we answer email. */
+const REPLY_TIME = "1–2 business days";
 /** How quickly we answer wholesale applications. CONFIRM with Tiffany. */
 const WHOLESALE_REPLY_TIME = "2–3 business days"; // CONFIRM
 
@@ -87,7 +88,7 @@ const WHOLESALE_REPLY_TIME = "2–3 business days"; // CONFIRM
 export const CHURCH_DISCLAIMER = FOOTER.disclaimer;
 
 /** "Last updated" date on the policy pages. Change it whenever a policy changes. */
-export const POLICIES_UPDATED = "September 22, 2026";
+export const POLICIES_UPDATED = "October 13, 2026";
 
 // ── Delivery dates (used by /shipping) ──────────────────────────────────────
 
@@ -293,7 +294,7 @@ export const contactCopy = {
     title: "Email us",
     line: "The quickest way to reach us:",
     address: CONTACT_EMAIL, // CONFIRM customer-service address (§5, item 32)
-    reply: `We reply within ${REPLY_TIME}.`, // CONFIRM reply time
+    reply: `We reply within ${REPLY_TIME}.`,
   },
   formTitle: "Send a message",
   quickTitle: "Quick answers",
@@ -302,7 +303,7 @@ export const contactCopy = {
     {
       label: RETURNS_LABEL,
       href: "/returns",
-      line: GUARANTEE ? "Our 30-day love-it-or-your-money-back promise" : "Returns, exchanges and damaged items",
+      line: `${returnWindow} to return unused items`,
     }, // CONFIRM (§5, item 5)
     { label: "FAQ", href: "/faq", line: "Ages, sizes, PDFs and more" },
     { label: "Bulk & Ward Orders", href: "/bulk-orders", line: BULK ? `Save ${bulkPct}% on ${bulkMin} or more hardcovers` : "Gifts for the whole family or the whole ward" }, // CONFIRM (§5, item 4)
@@ -322,7 +323,7 @@ export const faqPageCopy = {
   intro: "The questions families ask most about the books, shipping and orders.",
   more: {
     title: "Still have a question?",
-    line: `Email ${CONTACT_EMAIL} or send Tiffany a message. We reply within ${REPLY_TIME}.`, // CONFIRM reply time
+    line: `Email ${CONTACT_EMAIL} or send Tiffany a message. We reply within ${REPLY_TIME}.`,
     cta: { label: "Contact Tiffany", href: "/contact" },
   },
   relatedLabel: "Related help pages",
@@ -331,7 +332,7 @@ export const faqPageCopy = {
     {
       label: RETURNS_LABEL,
       href: "/returns",
-      line: GUARANTEE ? "How our 30-day guarantee works" : "Returns, exchanges and damaged items",
+      line: "Returns, exchanges and damaged items",
     },
     { label: "Bulk & Ward Orders", href: "/bulk-orders", line: "Grandparents, Primary and ward gifts" },
   ] satisfies InfoLink[],
@@ -466,7 +467,7 @@ export const shippingCopy = {
     id: "problems",
     title: "Late, lost or damaged?",
     blocks: [
-      `Email ${CONTACT_EMAIL} with your order number (and a photo if something arrived damaged), and we’ll make it right. See [Returns & Guarantee](/returns).`,
+      `Email ${CONTACT_EMAIL} with your order number (and a photo if something arrived damaged), and we’ll make it right. See [Returns & Exchanges](/returns).`,
     ] satisfies InfoBlock[],
   },
 };
@@ -546,151 +547,91 @@ export type ReturnsCopy = {
   help: { title: string; line: string; cta: InfoLink };
 };
 
-const returnsShared = {
-  damaged: {
-    id: "damaged",
-    title: "Damaged or wrong item",
-    blocks: [
-      `If anything arrives damaged, or we sent the wrong item, email ${CONTACT_EMAIL} with a photo and your order number. We’ll send a replacement free, and you won’t need to send the damaged item back.`, // CONFIRM
-    ],
-  },
-  digital: {
-    id: "digital",
-    title: "Digital downloads",
-    blocks: [
-      "Because digital files can’t be returned, PDF downloads can’t be refunded once they’ve been downloaded.", // CONFIRM digital excluded (§5, item 5)
-      "If a file won’t open, is missing pages, or you were charged by mistake (for example, you bought the same PDF twice), email us and we’ll fix it or refund you.", // CONFIRM
-    ],
-  },
-  madeToOrder: {
-    id: "made-to-order",
-    title: "Made-to-order puzzle and canvas",
-    blocks: [
-      "The puzzle and canvas print are made just for you, so they can’t be returned for a change of mind. If one arrives damaged or with a printing flaw, send us a photo and we’ll replace it free.", // CONFIRM (§5, item 29)
-    ],
-  },
-  wholesale: {
-    id: "wholesale",
-    title: "Wholesale orders",
-    blocks: [
-      "Store and wholesale orders follow the wholesale terms on our [Wholesale for Retailers](/bulk-orders#wholesale) page.",
-    ],
-  },
-  help: {
-    title: "Need help with an order?",
-    line: `Email ${CONTACT_EMAIL} and we’ll make it right. We reply within ${REPLY_TIME}.`, // CONFIRM reply time
-    cta: { label: "Contact Tiffany", href: "/contact" },
-  },
-} satisfies Record<string, InfoSectionCopy | ReturnsCopy["help"]>;
-
 /**
- * CLAIMS.moneyBackGuarantee: the 30-day love-it-or-your-money-back guarantee.
- * CONFIRM every term with Tiffany (§5, item 5). It replaces the live policy,
- * which says sale items can't be refunded. Scope: every physical book, bundle
- * and gift except the made-to-order puzzle and canvas (same as the FAQ).
+ * Tiffany's return policy (Oct 2026): 60 days, unused items only, return
+ * shipping deducted from the refund, damaged or defective items free, digital
+ * downloads and gift cards final sale. Keep the FAQ (faq.ts `guarantee`), the
+ * trust items and the terms' returns section in step with this page.
  */
-const guaranteeReturnsCopy: ReturnsCopy = {
+export const returnsCopy: ReturnsCopy = {
   meta: {
-    title: "Returns & Guarantee",
-    description:
-      "Love it or your money back: if a book, bundle or gift isn’t a fit for your family, email us within 30 days of delivery for a full refund. Damaged items are replaced free.",
-  },
-  eyebrow: "Our guarantee",
-  title: "Love it or your money back",
-  intro:
-    "If a book, bundle or gift isn’t a fit for your family, email us within 30 days of delivery for a full refund. No hassle.", // CONFIRM (§5, item 5)
-  promises: [
-    { title: "30-day guarantee", line: "A full refund on any book, bundle or gift." }, // CONFIRM
-    { title: "Damaged? Replaced free", line: "Send a photo and we’ll send a new one." },
-    { title: "Downloads that work", line: "If a file won’t open, we’ll fix it." },
-  ],
-  sections: [
-    {
-      id: "guarantee",
-      title: "How the 30-day guarantee works",
-      blocks: [
-        {
-          list: [
-            `Email ${CONTACT_EMAIL} within 30 days of delivery with your order number. A quick note about what didn’t work for you helps, but it isn’t required.`, // CONFIRM
-            "We’ll refund the item’s price to your original payment method.", // CONFIRM
-            "If we need the item back, we’ll email you a prepaid return label, so returning it costs you nothing.", // CONFIRM who pays return shipping (§5, item 5)
-          ],
-          ordered: true,
-        },
-        "The guarantee covers every physical book, bundle and gift, including anything bought with the bulk discount. The only exceptions are the made-to-order puzzle and canvas print, and digital downloads (see below).", // CONFIRM
-      ],
-    },
-    returnsShared.damaged,
-    returnsShared.digital,
-    returnsShared.madeToOrder,
-    {
-      id: "refund-timing",
-      title: "When you’ll see your refund",
-      blocks: [
-        "Once we approve a refund, we process it within 7 days. Your bank or card company may take a few more days to post it.", // CONFIRM (the live policy says 7 days)
-      ],
-    },
-    {
-      id: "gifts",
-      title: "Gifts",
-      blocks: [
-        "Received one of our books as a gift and want to return it? Email us and we’ll offer an exchange or store credit, so the gift giver isn’t notified.", // CONFIRM
-      ],
-    },
-    returnsShared.wholesale,
-  ],
-  help: returnsShared.help,
-};
-
-/**
- * Without a confirmed guarantee: the live store's return policy
- * (docs/discovery/live-site-pages-text.txt, "refund_returns"), in plain English.
- */
-const standardReturnsCopy: ReturnsCopy = {
-  meta: {
-    title: "Returns",
-    description:
-      "Return unused items within 30 days of delivery. Damaged or wrong items are replaced free. How refunds, exchanges and gifts work.",
+    title: "Returns & Exchanges",
+    description: `Return unused items within ${returnWindow} of delivery. Damaged or defective items are replaced or refunded free. Digital downloads and gift cards are final sale.`,
   },
   eyebrow: "Returns",
   title: "Returns & exchanges",
-  intro: "Changed your mind? Unused items in their original condition can be returned within 30 days of delivery.",
+  intro: `Not quite right for your family? Send unused items back within ${returnWindow} of delivery for a refund.`,
   promises: [
-    { title: "30-day returns", line: "Unused, in the condition it arrived." },
-    { title: "Damaged? Replaced free", line: "Send a photo and we’ll send a new one." },
+    { title: `${returnWindow} to return`, line: "Unused, in the condition it arrived." },
+    { title: "Damaged? It’s on us", line: "A free replacement or a full refund." },
     { title: "Downloads that work", line: "If a file won’t open, we’ll fix it." },
   ],
   sections: [
     {
-      id: "returns",
-      title: "How returns work",
+      id: "how-to-return",
+      title: "How to return an item",
       blocks: [
         {
           list: [
-            `Email ${CONTACT_EMAIL} within 30 days of delivery with your order number, and we’ll send the return address.`,
-            "Send the item back unused, in the condition you received it. Return shipping is paid by you.",
-            "Once it arrives, we’ll email you and refund the item’s price to your original payment method within 7 days.",
+            `Email ${CONTACT_EMAIL} within ${returnWindow} of delivery with your order number and what you’d like to return.`,
+            "We’ll email you a prepaid return label. Its cost comes out of your refund.",
+            "Pack the item unused, in the condition you received it, and drop it off.",
+            "Once it reaches us, we’ll refund the item’s price, minus return shipping, to your original payment method.",
           ],
           ordered: true,
         },
       ],
     },
-    returnsShared.damaged,
-    returnsShared.digital,
-    returnsShared.madeToOrder,
     {
-      id: "gifts",
-      title: "Gifts",
+      id: "what-can-be-returned",
+      title: "What can be returned",
       blocks: [
-        "If an order was marked as a gift and shipped to you, you’ll get store credit for a return, and the gift giver isn’t notified.",
+        "Books, bundles, activity books and ornaments can be returned if they’re unused and in the condition they arrived: no writing, coloring, bent pages or other wear.",
+        "These are final sale:",
+        {
+          list: [
+            "Digital downloads (PDFs)",
+            "Gift cards",
+            "The made-to-order puzzle and canvas print, which are printed just for you",
+          ],
+        },
       ],
     },
-    returnsShared.wholesale,
+    {
+      id: "damaged",
+      title: "Damaged, defective or wrong item",
+      blocks: [
+        `If anything arrives damaged or defective, or isn’t what you ordered, email ${CONTACT_EMAIL} with a photo and your order number. We’ll send a replacement or a full refund, whichever you prefer, at no cost to you. If we need the item back, we’ll send a free return label.`,
+        "The same goes for downloads: if a PDF won’t open or is missing pages, or you were charged twice, we’ll fix it or refund you.",
+      ],
+    },
+    {
+      id: "refunds",
+      title: "Refunds and exchanges",
+      blocks: [
+        {
+          list: [
+            "Refunds go back to your original payment method within 7 days of your return reaching us. Your bank may take a few more days to post it.",
+            "Return shipping comes out of your refund, and original shipping charges aren’t refunded, unless the item arrived damaged, defective or wrong.",
+            "Want something different instead? Return the item for a refund and place a new order. It’s the quickest way to get what you want.",
+          ],
+        },
+      ],
+    },
+    {
+      id: "wholesale",
+      title: "Wholesale orders",
+      blocks: [
+        "Store and wholesale orders follow the wholesale terms on our [Wholesale for Retailers](/bulk-orders#wholesale) page.",
+      ],
+    },
   ],
-  help: returnsShared.help,
+  help: {
+    title: "Need help with an order?",
+    line: `Email ${CONTACT_EMAIL} and we’ll make it right. We reply within ${REPLY_TIME}.`,
+    cta: { label: "Contact Tiffany", href: "/contact" },
+  },
 };
-
-export const returnsCopy: ReturnsCopy = GUARANTEE ? guaranteeReturnsCopy : standardReturnsCopy;
 
 // ── /freebies ───────────────────────────────────────────────────────────────
 
@@ -884,9 +825,8 @@ export const bulkOrdersCopy = {
 };
 
 // ── /privacy, /terms, /accessibility ────────────────────────────────────────
-// LEGAL REVIEW NEEDED: plain-English small-business templates for a US store
-// on Shopify checkout with email marketing and Meta/Google pixels. They make no
-// compliance-certification claims. Have a lawyer review before launch.
+// Plain-English policies for a small US store on Shopify checkout with email
+// marketing and Meta/Google pixels. They make no compliance-certification claims.
 
 export type LegalPageCopy = {
   meta: { title: string; description: string };
@@ -990,6 +930,13 @@ export const privacyCopy: LegalPageCopy = {
       ],
     },
     {
+      id: "location",
+      title: "Where your information is kept",
+      blocks: [
+        "We’re based in the United States, and our providers store information in the US and other countries. By using the site, you understand your information may be processed outside the country where you live.",
+      ],
+    },
+    {
       id: "children",
       title: "Children’s privacy",
       blocks: [
@@ -1037,6 +984,7 @@ export const termsCopy: LegalPageCopy = {
       title: "Who we are",
       blocks: [
         `This store is run by ${ENTITY} in Idaho (“we” or “us”). You can reach us at ${CONTACT_EMAIL}.`,
+        "Our [Privacy Policy](/privacy) explains how we handle your information.",
       ],
     },
     {
@@ -1052,7 +1000,7 @@ export const termsCopy: LegalPageCopy = {
       title: "Prices and product details",
       blocks: [
         "We work hard to show accurate prices, photos and descriptions, though colors can look a little different on screens. If we make a mistake on your order, we’ll let you know and give you the choice to continue or cancel.",
-        "Discounts and promotions, including the bulk discount, work as described on the site, can’t be combined unless we say so, and have no cash value.", // CONFIRM bulk stacking (§5, item 4)
+        "Sales, discounts and promo codes work as described on the site, can’t be combined unless we say so, have no cash value, and may end at any time. Prices and products can change without notice, but never on an order you’ve already placed.",
       ],
     },
     {
@@ -1064,16 +1012,25 @@ export const termsCopy: LegalPageCopy = {
     },
     {
       id: "returns",
-      title: "Returns and our guarantee",
-      blocks: ["See our [Returns & Guarantee](/returns) page."],
+      title: "Returns and refunds",
+      blocks: [
+        `You can return unused items within ${returnWindow} of delivery, and return shipping comes out of your refund. Damaged, defective or wrong items are replaced or refunded free. Digital downloads and gift cards are final sale. The details are on our [Returns & Exchanges](/returns) page.`,
+      ],
+    },
+    {
+      id: "gift-cards",
+      title: "Gift cards",
+      blocks: [
+        "Gift cards can be used only on this site, can’t be exchanged for cash except where the law requires it, and can’t be refunded. Please keep your code safe: we can’t replace a lost or stolen gift card.",
+      ],
     },
     {
       id: "digital",
       title: "Digital downloads",
       blocks: [
         "When you buy a PDF, you get a personal license to download it and print as many copies as you need for personal, family or classroom use. Please don’t copy, share, resell or post the files. Thank you!",
-        "Sharing a book PDF on screen at a family, church or classroom gathering is welcome.", // CONFIRM (§5, item 30)
-        "Digital downloads can’t be refunded once downloaded, except as described on our [Returns & Guarantee](/returns) page.", // CONFIRM (§5, item 5)
+        "Sharing a book PDF on screen at a family, church or classroom gathering is welcome.",
+        "Digital downloads are final sale. If a file won’t open or is missing pages, email us and we’ll fix it or refund you.",
       ],
     },
     {
@@ -1102,6 +1059,7 @@ export const termsCopy: LegalPageCopy = {
       title: "Using the site",
       blocks: [
         "Please don’t misuse the site. That means no hacking, scraping or interfering with how it works, and no using it for anything unlawful.",
+        "The site may link to other websites, such as YouTube or social media. We don’t control them and aren’t responsible for their content or how they handle your information.",
       ],
     },
     {
@@ -1115,7 +1073,14 @@ export const termsCopy: LegalPageCopy = {
       id: "law",
       title: "Governing law",
       blocks: [
-        "These terms are governed by the laws of the State of Idaho. If something goes wrong, please email us first. Most problems can be solved with a quick note.", // CONFIRM governing law
+        "These terms are governed by the laws of the State of Idaho. If something goes wrong, please email us first. Most problems can be solved with a quick note.",
+      ],
+    },
+    {
+      id: "fine-print",
+      title: "The fine print",
+      blocks: [
+        "These terms, together with the policies they link to, are the whole agreement between you and us about using the site. If any part can’t be enforced, the rest still applies. If we don’t enforce a term right away, we can still enforce it later.",
       ],
     },
     {
@@ -1183,7 +1148,7 @@ export const accessibilityCopy: LegalPageCopy = {
       id: "feedback",
       title: "Tell us about a problem",
       blocks: [
-        `If something on this site is hard to use, please tell us. Email ${CONTACT_EMAIL} with the page and what went wrong, and we’ll help you place your order another way in the meantime. We aim to reply within ${REPLY_TIME}.`, // CONFIRM reply time
+        `If something on this site is hard to use, please tell us. Email ${CONTACT_EMAIL} with the page and what went wrong, and we’ll help you place your order another way in the meantime. We aim to reply within ${REPLY_TIME}.`,
       ],
     },
   ],

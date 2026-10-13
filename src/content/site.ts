@@ -12,6 +12,7 @@ import {
   FREE_SHIPPING_THRESHOLD,
   HANDLES,
   HANDLING_TIME,
+  RETURN_WINDOW_DAYS,
   SHIPS_FROM,
   productPath,
 } from "@/lib/store-config";
@@ -131,7 +132,7 @@ export function announcementMessages(
 /** Store-wide promises that remove a reason to wait, each gated on its claim. */
 function tickerPromises(): AnnouncementMessage[] {
   return [
-    CLAIMS.moneyBackGuarantee ? { text: "Love it or your money back · 30 days", href: "/returns" } : null, // CONFIRM (§5, item 5)
+    CLAIMS.moneyBackGuarantee ? { text: `Love it or return it · ${RETURN_WINDOW_DAYS} days`, href: "/returns" } : null,
     { text: "Sending it as a gift? Add a free gift note", href: "/faq" },
   ].filter((m): m is AnnouncementMessage => m !== null);
 }
@@ -278,7 +279,7 @@ export const FOOTER = {
       links: [
         { label: "FAQ", href: "/faq" },
         { label: "Shipping & Christmas Delivery", href: "/shipping#christmas-delivery" },
-        { label: CLAIMS.moneyBackGuarantee ? "Returns & Guarantee" : "Returns", href: "/returns" },
+        { label: "Returns & Exchanges", href: "/returns" },
         { label: "Contact Tiffany", href: "/contact" },
         { label: "Bulk & Ward Orders", href: "/bulk-orders" },
       ],
@@ -315,7 +316,7 @@ export const FOOTER = {
   disclaimer:
     "Independent publication. Not affiliated with or endorsed by The Church of Jesus Christ of Latter-day Saints.",
   /** Rendered as "© {year} Tiffany Books LLC. Illustrations by Kelley Hicken." */
-  copyrightHolder: "Tiffany Books LLC", // CONFIRM legal entity (§5, item 24); the live site says “© 2026 Tiffany Wheeler.”
+  copyrightHolder: "Tiffany Books LLC", // Publisher of record on Easter Journey's copyright page
   copyrightSuffix: "Illustrations by Kelley Hicken.",
   /** Hidden until Shopify checkout is live. */
   showPaymentLine: false,

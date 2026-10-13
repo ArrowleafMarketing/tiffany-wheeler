@@ -21,6 +21,7 @@ import {
   FLAT_RATE_SHIPPING,
   FREE_SHIPPING_THRESHOLD,
   HANDLING_TIME,
+  RETURN_WINDOW_DAYS,
   SHIPS_FROM,
   TRANSIT_TIME,
 } from "@/lib/store-config";
@@ -150,21 +151,20 @@ function signed(season: Season): FaqItem | null {
   };
 }
 
-/** The 30-day guarantee when confirmed; otherwise the damaged/help answer that is always true. */
+/** The 60-day returns promise when confirmed; otherwise the damaged/help answer that is always true. */
 function guarantee(): FaqItem {
   if (CLAIMS.moneyBackGuarantee) {
     return {
       id: "guarantee",
       question: "What if we don’t love it?",
-      // CONFIRM guarantee terms (§5, item 5). Scope matches /returns.
-      answer:
-        "Then we’ll make it right. If a book, bundle or gift isn’t a fit for your family, email us within 30 days of delivery for a full refund. If anything arrives damaged, send a photo and we’ll replace it free. Made-to-order prints and digital downloads can’t be returned, but if one arrives flawed or a file won’t open, we’ll fix it.",
+      // Same terms as /returns (returnsCopy in info.ts).
+      answer: `Send it back unused within ${RETURN_WINDOW_DAYS} days of delivery for a refund, minus return shipping. If anything arrives damaged or defective, we’ll replace or refund it free. Digital downloads, gift cards and made-to-order prints are final sale, but if a file won’t open, we’ll fix it.`,
     };
   }
   return {
     id: "guarantee",
     question: "What if something’s wrong with my order?",
-    answer: `Email ${CONTACT_EMAIL} and we’ll make it right. If anything arrives damaged, send a photo and we’ll replace it free. Digital downloads can’t be returned, but if a file won’t open, we’ll fix it.`,
+    answer: `Email ${CONTACT_EMAIL} and we’ll make it right. If anything arrives damaged or defective, send a photo and we’ll replace or refund it free. Digital downloads can’t be returned, but if a file won’t open, we’ll fix it.`,
   };
 }
 

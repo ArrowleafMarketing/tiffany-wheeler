@@ -112,7 +112,7 @@ Every unconfirmed promise is gated by `CLAIMS` in `src/lib/store-config.ts`. Whi
 
 | Flag | Now | Needs from Tiffany |
 |---|---|---|
-| `moneyBackGuarantee` | on | Confirm the 30-day guarantee and its scope (every physical item except made-to-order) |
+| `moneyBackGuarantee` | on | Confirmed Oct 13, 2026: 60-day returns on unused items, return shipping deducted from the refund (see /returns). Made-to-order items are final sale; original shipping isn't refunded |
 | `freeShipping` | on | Confirm free shipping at $45+ and the $5.99 flat rate below it |
 | `signedCopies` | off | Can she sign copies, and until when? The cart checkbox is built and hidden. |
 | `localPickup` | off | Keep Boise pickup? |

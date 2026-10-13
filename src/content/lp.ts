@@ -11,7 +11,6 @@
 import { featuredReviewRefs, type ReviewRef } from "@/content/reviews";
 import type { FaqId } from "@/content/faq";
 import { FOOTER } from "@/content/site";
-import { CLAIMS } from "@/lib/store-config";
 
 export const LP_CHRISTMAS_PATH = "/lp/christmas-tradition";
 
@@ -122,7 +121,7 @@ export const lpFooterCopy = {
   navLabel: "Store policies",
   links: [
     { label: "Shipping & Christmas Delivery", href: "/shipping#christmas-delivery" },
-    { label: CLAIMS.moneyBackGuarantee ? "Returns & Guarantee" : "Returns", href: "/returns" },
+    { label: "Returns & Exchanges", href: "/returns" },
     ...FOOTER.legal,
     { label: "Contact Tiffany", href: "/contact" },
   ],

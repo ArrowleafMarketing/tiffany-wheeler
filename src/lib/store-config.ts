@@ -10,7 +10,11 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tiffany-whe
  * neutral fallback copy and hides the related UI.
  */
 export const CLAIMS = {
-  /** 30-day "love it or your money back" guarantee (§5 item 3). CONFIRM before launch. */
+  /**
+   * The 60-day returns promise in trust rows, the ticker and the cart (Tiffany's
+   * policy, Oct 2026: unused items, return shipping deducted from the refund).
+   * The name predates the policy: it is not a full-refund guarantee.
+   */
   moneyBackGuarantee: true,
   /** Free US shipping at FREE_SHIPPING_THRESHOLD and the flat rate below (§5 item 2). CONFIRM before launch. */
   freeShipping: true,
@@ -57,6 +61,9 @@ export const PRIORITY_TRANSIT_BUSINESS_DAYS = 2;
 export const SIGNED_EXTRA_BUSINESS_DAYS = 2;
 /** Boise pickup runs through this month-day (only used when CLAIMS.localPickup). */
 export const LOCAL_PICKUP_THROUGH = "12-23";
+
+/** Days after delivery to start a return (Tiffany, Oct 2026). Terms on /returns. */
+export const RETURN_WINDOW_DAYS = 60;
 
 export const HANDLING_TIME = `${HANDLING_BUSINESS_DAYS.min}–${HANDLING_BUSINESS_DAYS.max} business days`;
 export const TRANSIT_TIME = `${TRANSIT_BUSINESS_DAYS.min}–${TRANSIT_BUSINESS_DAYS.max} business days`;

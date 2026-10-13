@@ -16,6 +16,7 @@ import {
   FREE_SHIPPING_THRESHOLD,
   HANDLES,
   HANDLING_TIME,
+  RETURN_WINDOW_DAYS,
   SHIPS_FROM,
   productPath,
 } from "@/lib/store-config";
@@ -262,8 +263,8 @@ export const trustItems: TrustItem[] = [
   CLAIMS.moneyBackGuarantee
     ? {
         id: "guarantee",
-        text: "Love it or your money back", // CONFIRM (§5, item 5)
-        sub: "30 days, no hassle", // CONFIRM (§5, item 5)
+        text: "Love it or return it",
+        sub: `${RETURN_WINDOW_DAYS} days to decide`,
       }
     : null,
 ].filter((item): item is TrustItem => item !== null);

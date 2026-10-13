@@ -1216,7 +1216,7 @@ Each item lists where it appears. Nothing tagged `[CONFIRM]` should ship to prod
 2. **Free shipping at $45+.** Is that the threshold? Lower 48 only, or all US? Do digital items count toward it? *Used in:* announcement bar, trust strip, hero, set bar, FAQ 5, cart progress.
 3. **Flat-rate shipping under $45** (suggested $5.99) and the carrier (USPS Ground Advantage?). *Used in:* trust strip tooltip, FAQ 5, cart shipping row.
 4. **Bulk discount.** Is it 10% off 5+ books, any mix of titles, applied automatically? Does it stack with the Complete Set price? *Used in:* §2.10, §2.13, FAQ 9, cart bulk lines, off-season bar.
-5. **Guarantee.** A 30-day “love it or your money back” refund. Who pays return shipping? Are digital items excluded (proposed yes)? This replaces the current policy, which says sale items can’t be refunded. *Used in:* trust strip, FAQ 8, PDP bullets, cart reassurance.
+5. **Guarantee.** *Resolved Oct 13, 2026:* 60-day returns on unused items, return shipping deducted from the refund, damaged/defective items replaced or refunded free, digital downloads and gift cards final sale. Site copy now reads “Love it or return it · 60 days.” *Original question:* A 30-day “love it or your money back” refund. Who pays return shipping? Are digital items excluded (proposed yes)? This replaces the current policy, which says sale items can’t be refunded. *Used in:* trust strip, FAQ 8, PDP bullets, cart reassurance.
 
 **Shipping and dates**
 6. **Handling time.** Ships from Idaho in 1–2 business days, packed by hand; transit 2–5 business days by USPS. *Used in:* announcement bar, trust strip, FAQ 5, “Get it by” line.

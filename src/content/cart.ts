@@ -10,6 +10,7 @@ import {
   CONTACT_EMAIL,
   GIFT_NOTE_MAX,
   HANDLING_TIME,
+  RETURN_WINDOW_DAYS,
   SHIPS_FROM,
 } from "@/lib/store-config";
 
@@ -161,7 +162,7 @@ export const cartCopy = {
   checkout: {
     button: (subtotal: string) => `Checkout · ${subtotal}`,
     loading: "Heading to checkout…",
-    reassurance: `Secure checkout · Ships from ${SHIPS_FROM} in ${HANDLING_TIME}${CLAIMS.moneyBackGuarantee ? " · 30-day money-back guarantee" : ""}`, // CONFIRM (§5, items 5–6)
+    reassurance: `Secure checkout · Ships from ${SHIPS_FROM} in ${HANDLING_TIME}${CLAIMS.moneyBackGuarantee ? ` · ${RETURN_WINDOW_DAYS}-day returns` : ""}`, // CONFIRM handling time (§5, item 6)
     reassuranceDigital: "Secure checkout · Instant download · delivered by email",
     christmasDelivery: (date: string) => `Order by ${date} for Christmas delivery.`, // CONFIRM (§5, item 7)
     /** After the standard cutoff, for carts with anything that ships (every add button leads here). */

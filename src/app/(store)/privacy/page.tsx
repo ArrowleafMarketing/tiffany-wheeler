@@ -1,7 +1,3 @@
-// LEGAL REVIEW NEEDED: plain-English template for a small US store (Shopify
-// checkout, email marketing, Meta/Google pixels). Makes no compliance
-// certification claims. Have a lawyer review before launch.
-
 import type { Metadata } from "next";
 import { InfoPageShell } from "@/components/info/info-page-shell";
 import { LegalDocument } from "@/components/info/legal-document";
