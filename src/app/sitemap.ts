@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getProducts } from "@/lib/commerce";
+import { getArticles, getProducts } from "@/lib/commerce";
 import { HANDLES, SITE_URL, productPath } from "@/lib/store-config";
 
 type Entry = MetadataRoute.Sitemap[number];
@@ -14,7 +14,6 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Entry["c
   { path: "/faq", priority: 0.6, changeFrequency: "monthly" },
   { path: "/shipping", priority: 0.6, changeFrequency: "monthly" },
   { path: "/freebies", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/bulk-orders", priority: 0.5, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.4, changeFrequency: "yearly" },
   { path: "/returns", priority: 0.4, changeFrequency: "yearly" },
   { path: "/privacy", priority: 0.2, changeFrequency: "yearly" },
@@ -27,7 +26,7 @@ const LEAD_PRODUCTS = new Set<string>([HANDLES.nephiteChristmas, HANDLES.easterJ
 const absolute = (path: string) => new URL(path, SITE_URL).toString();
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const products = await getProducts();
+  const [products, posts] = await Promise.all([getProducts(), getArticles()]);
   const images = new Map(products.map((p) => [p.handle, p.images[0]?.url]));
 
   const pages: MetadataRoute.Sitemap = STATIC_ROUTES.map(({ path, priority, changeFrequency }) => ({
@@ -47,5 +46,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     };
   });
 
-  return [...pages, ...productPages];
+  // The blog only exists while it has posts (src/app/(store)/blog).
+  const blogPages: MetadataRoute.Sitemap = posts.length
+    ? [
+        { url: absolute("/blog"), changeFrequency: "weekly", priority: 0.6 },
+        ...posts.map((post) => ({
+          url: absolute(`/blog/${post.handle}`),
+          lastModified: post.publishedAt,
+          changeFrequency: "monthly" as const,
+          priority: 0.5,
+          ...(post.image ? { images: [absolute(post.image.url)] } : {}),
+        })),
+      ]
+    : [];
+
+  return [...pages, ...productPages, ...blogPages];
 }

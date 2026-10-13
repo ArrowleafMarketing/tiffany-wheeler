@@ -7,7 +7,6 @@ import { formatMonthDay } from "@/lib/delivery";
 import { formatMoney } from "@/lib/money";
 import type { Season, SeasonMode } from "@/lib/season";
 import {
-  BULK_DISCOUNT,
   CLAIMS,
   FREE_SHIPPING_THRESHOLD,
   HANDLES,
@@ -234,14 +233,6 @@ function seasonMessages(season: Season): AnnouncementMessage[] {
       return [
         freeShippingMessage,
         { text: "Free printables for your family, by email", href: "/freebies" },
-        ...(CLAIMS.bulkDiscount
-          ? [
-              {
-                text: `Save ${BULK_DISCOUNT.percent}% on ${BULK_DISCOUNT.minBooks}+ hardcovers for a ward`, // CONFIRM (§5, item 4)
-                href: "/bulk-orders",
-              },
-            ]
-          : []),
       ];
   }
 }
@@ -281,7 +272,6 @@ export const FOOTER = {
         { label: "Shipping & Christmas Delivery", href: "/shipping#christmas-delivery" },
         { label: "Returns & Exchanges", href: "/returns" },
         { label: "Contact Tiffany", href: "/contact" },
-        { label: "Bulk & Ward Orders", href: "/bulk-orders" },
       ],
     },
     {
@@ -291,7 +281,6 @@ export const FOOTER = {
         // The about page should give Kelley's section id="illustrator".
         { label: "Illustrator Kelley Hicken", href: "/about#illustrator" },
         { label: "Free Printables", href: "/freebies" },
-        { label: "Wholesale for Retailers", href: "/bulk-orders#wholesale" },
       ],
     },
   ] satisfies FooterColumn[],

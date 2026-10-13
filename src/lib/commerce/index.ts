@@ -39,4 +39,22 @@ export async function getReviews(productHandle: string) {
   return commerce.getReviews(productHandle);
 }
 
+// Blog posts (Shopify's blog). The "blog" profile (next.config.ts) picks up a
+// newly published post within about 10 minutes; revalidateTag("articles")
+// (POST /api/revalidate/blog) shows it right away.
+
+export async function getArticles() {
+  "use cache";
+  cacheLife("blog");
+  cacheTag("articles");
+  return commerce.getArticles();
+}
+
+export async function getArticle(handle: string) {
+  "use cache";
+  cacheLife("blog");
+  cacheTag("articles", `article:${handle}`);
+  return commerce.getArticle(handle);
+}
+
 export type * from "./types";

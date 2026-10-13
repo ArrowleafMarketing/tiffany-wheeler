@@ -53,7 +53,6 @@ export async function HowFamiliesUse() {
                 </span>
                 <div>
                   <h3 className="text-lg font-semibold leading-snug">{item.title}</h3>
-                  {/* last item: CONFIRM bulk discount (copy deck §5, item 4) */}
                   <p className="mt-1 leading-relaxed text-body">{item.line}</p>
                 </div>
               </li>

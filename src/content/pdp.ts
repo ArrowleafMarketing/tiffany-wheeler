@@ -27,7 +27,7 @@ export const PDP_COPY = {
   /** §4.7 max quantity. */
   maxQuantity: CART_MAX_QUANTITY,
   maxQuantityNote: `Need more than ${CART_MAX_QUANTITY}?`,
-  maxQuantityLink: "Email us about bulk pricing.",
+  maxQuantityLink: "Email us.",
   addToCart: "Add to Cart",
   buyNow: "Buy Now",
   soldOut: "Sold out",

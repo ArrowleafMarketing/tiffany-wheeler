@@ -15,7 +15,6 @@ import { formatDate, type IsoDate } from "@/lib/delivery";
 import { formatMoney } from "@/lib/money";
 import type { Season } from "@/lib/season";
 import {
-  BULK_DISCOUNT,
   CLAIMS,
   CONTACT_EMAIL,
   FLAT_RATE_SHIPPING,
@@ -36,7 +35,6 @@ export type FaqId =
   | "gifts"
   | "signed"
   | "guarantee"
-  | "bulk"
   | "pdf"
   | "dove"
   | "easter-advent";
@@ -168,15 +166,6 @@ function guarantee(): FaqItem {
   };
 }
 
-const bulk: FaqItem = {
-  id: "bulk",
-  question: "Do you offer bulk or ward orders?",
-  // CONFIRM bulk discount (§5, item 4) and the contact address (§5, item 32).
-  answer: CLAIMS.bulkDiscount
-    ? `Yes. Buy ${BULK_DISCOUNT.minBooks} or more hardcovers, mixing titles if you like, and you’ll save ${BULK_DISCOUNT.percent}% on each automatically. The Complete Set counts as two books; PDFs don’t count. It’s a favorite for grandparents, Primary teachers and ward gifts. For large orders, email ${CONTACT_EMAIL}. Stores can apply for wholesale pricing.`
-    : `Yes. The books are a favorite for grandparents, Primary teachers and ward gifts. For an order of several copies, or copies going to several homes, email ${CONTACT_EMAIL} and we’ll help. Stores can apply for wholesale pricing.`,
-};
-
 const pdf: FaqItem = {
   id: "pdf",
   question: "What’s the difference between the PDF and the hardcover?",
@@ -224,17 +213,17 @@ const isItem = (item: FaqItem | null): item is FaqItem => item !== null;
 /**
  * The six most purchase-relevant questions for the homepage, in season order:
  * what it is and who it's for, the holiday deadline (with shipping cost), the
- * guarantee, the Church question, the dove, and bulk/ward orders.
+ * guarantee, the Church question, the dove, and PDF vs. hardcover.
  */
 export function homeFaqs(season: Season): FaqItem[] {
   switch (season.mode) {
     case "after-christmas":
     case "easter":
-      return [ages, easterAdvent(season), shipping(), guarantee(), church, bulk];
+      return [ages, easterAdvent(season), shipping(), guarantee(), church, pdf];
     case "off-season":
-      return [ages, shipping(), guarantee(), church, dove, bulk];
+      return [ages, shipping(), guarantee(), church, dove, pdf];
     default:
-      return [ages, christmasDeadline(season, { withShippingCost: true }), guarantee(), church, dove, bulk];
+      return [ages, christmasDeadline(season, { withShippingCost: true }), guarantee(), church, dove, pdf];
   }
 }
 
@@ -254,7 +243,6 @@ export function allFaqs(season: Season): FaqItem[] {
     gifts(),
     signed(season),
     guarantee(),
-    bulk,
     pdf,
     dove,
     dated[1],

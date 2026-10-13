@@ -1,8 +1,8 @@
 "use client";
 
-import { LoaderCircle, Lock, Percent } from "lucide-react";
+import { LoaderCircle, Lock } from "lucide-react";
 import { cartCopy } from "@/content/cart";
-import { bookUnits, booksToBulkDiscount } from "@/lib/cart/pricing";
+import { bookUnits } from "@/lib/cart/pricing";
 import type { Cart, CartLine } from "@/lib/commerce/types";
 import { formatMoney, toNumber } from "@/lib/money";
 import { HANDLES, productPath } from "@/lib/store-config";
@@ -69,7 +69,6 @@ function FilledCart({ cart, data, onNavigate }: { cart: Cart; data: CartDrawerDa
   const secondCopy = secondCopyCandidate(cart);
   const hint = shippingHint(data, plan, physical, secondCopy);
   const books = bookUnits(cart.lines);
-  const booksToGo = booksToBulkDiscount(cart.lines);
   const hasHardcover = books > 0;
   // The Christmas cutoff is for items we ship ourselves; made-to-order items
   // have no confirmed production time yet (copy deck §4.4), so no promise for them.
@@ -117,12 +116,6 @@ function FilledCart({ cart, data, onNavigate }: { cart: Cart; data: CartDrawerDa
         </ul>
 
         <div className="space-y-5 border-t border-line py-5">
-          {books > 0 && booksToGo > 0 && booksToGo <= 2 ? (
-            <p className="flex items-start gap-2 rounded-xl bg-periwinkle-light px-3 py-2.5 text-sm font-medium text-ink">
-              <Percent aria-hidden className="mt-0.5 size-4 shrink-0 text-periwinkle-text" />
-              {cartCopy.bulk.nudge(booksToGo)}
-            </p>
-          ) : null}
           <CartUpsells cart={cart} data={data} plan={plan} onNavigate={onNavigate} />
           <GiftNote initialNote={cart.note} />
           {data.signedCopies && hasHardcover ? (

@@ -6,6 +6,7 @@ import { applyCompareAtRule } from "../compare-at-rule";
 import { catalog } from "../mock/catalog";
 import { publishedReviews } from "../mock/reviews";
 import type { CommerceProvider } from "../provider";
+import { getArticle, getArticles } from "./blog";
 import type { Cart, CartDiscount, CartLine, Money, Product, ProductQuery, Variant } from "../types";
 import { assertNoUserErrors, storefront } from "./client";
 
@@ -115,7 +116,7 @@ type Payload = { cart: SCart | null; userErrors: { message: string }[] };
 
 const productByHandle = new Map(catalog.map((p) => [p.handle, p]));
 
-/** Hardcover books in one unit of a line, for the bulk-discount messaging (same rule as the mock). */
+/** Hardcover books in one unit of a line, for signed copies and the cart nudges (same rule as the mock). */
 function bookCount(handle: string): number {
   const p = productByHandle.get(handle);
   if (!p) return 0;
@@ -193,6 +194,9 @@ export const shopifyProvider: CommerceProvider = {
   async getReviews(productHandle) {
     return publishedReviews.filter((r) => r.productHandle === productHandle);
   },
+
+  getArticles,
+  getArticle,
 
   async getCart(cartId) {
     if (!cartId.startsWith("gid://shopify/Cart/")) return null;

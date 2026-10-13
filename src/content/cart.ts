@@ -4,7 +4,6 @@
 // `{token}` values from the deck are function arguments here.
 
 import {
-  BULK_DISCOUNT,
   CART_MAX_QUANTITY,
   CLAIMS,
   CONTACT_EMAIL,
@@ -17,9 +16,6 @@ import {
 // The commercial constants live in store-config; re-exported here for older
 // imports (e.g. src/content/info.ts). New code imports them from store-config.
 export { CART_MAX_QUANTITY, FLAT_RATE_SHIPPING, GIFT_NOTE_MAX } from "@/lib/store-config";
-
-const bulkMin = BULK_DISCOUNT.minBooks;
-const bulkPct = BULK_DISCOUNT.percent;
 
 /** "$10 or less away" switches the free-shipping message to the "Almost there" wording (§4.1). */
 export const FREE_SHIPPING_NEAR = 10;
@@ -45,11 +41,11 @@ export const cartCopy = {
     removeLabel: (title: string) => `Remove ${title} from cart`,
     quantityLabel: (title: string) => `Quantity of ${title}`,
     total: (amount: string) => `${amount} total`,
-    maxQuantity: `Need more than ${CART_MAX_QUANTITY}? Email us about bulk pricing.`,
+    maxQuantity: `Need more than ${CART_MAX_QUANTITY}? Email us.`,
     /** One book in the cart: the second-copy nudge under that line (AOV). */
     secondCopy: (price: string, shipsFree: boolean) =>
       `Buying for another family? Add a 2nd copy · +${price}${shipsFree ? " · ships free" : ""}`,
-    maxQuantityHref: `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Bulk order")}`,
+    maxQuantityHref: `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Large order")}`,
   },
 
   summary: {
@@ -62,12 +58,6 @@ export const cartCopy = {
     /** Shown instead of the two rows above while CLAIMS.freeShipping is off. */
     shippingAtCheckout: "Shipping calculated at checkout",
     taxNote: "Taxes calculated at checkout.",
-  },
-
-  bulk: {
-    // §4.1 "Bulk nudge (exactly 4 books)", extended to 3 books.
-    nudge: (more: number) =>
-      `Add ${more === 1 ? "one more book" : `${more} more books`} and save ${bulkPct}% on all ${bulkMin}.`, // CONFIRM (§5, item 4)
   },
 
   empty: {

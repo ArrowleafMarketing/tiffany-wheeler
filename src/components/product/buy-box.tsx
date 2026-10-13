@@ -257,7 +257,7 @@ export function BuyBox({ slots, className }: { slots?: Slots; className?: string
           <p className="text-sm text-muted">
             {PDP_COPY.maxQuantityNote}{" "}
             <a
-              href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Bulk order")}`}
+              href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Large order")}`}
               className="font-semibold text-periwinkle-text underline underline-offset-2"
             >
               {PDP_COPY.maxQuantityLink}

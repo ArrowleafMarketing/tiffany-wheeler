@@ -1,9 +1,9 @@
 // Copy for the info pages: /about, /contact, /faq, /shipping, /returns,
-// /freebies, /bulk-orders, /privacy, /terms, /accessibility.
+// /freebies, /privacy, /terms, /accessibility.
 //
 // Sources: docs/copy-deck.md (§1.x, §2.10–§2.14, §4.4, §5), the live site
 // (docs/discovery/current-site.md and live-site-pages-text.txt: Tiffany’s and
-// Kelley’s bios, the Easter Journey story, wholesale terms) and
+// Kelley’s bios, the Easter Journey story) and
 // docs/discovery/market-cro.md (USPS holiday dates, FTC and Church guidance).
 // Copy that isn’t in the deck is drafted in the deck’s voice for review.
 // "[CONFIRM]" claims render without the tag and carry a `// CONFIRM` comment
@@ -22,8 +22,6 @@ import type { StaticImageData } from "next/image";
 import { FOOTER } from "@/content/site";
 import { formatMoney } from "@/lib/money";
 import {
-  BULK_DISCOUNT,
-  CART_MAX_QUANTITY,
   CLAIMS,
   CONTACT_EMAIL,
   FLAT_RATE_SHIPPING,
@@ -63,11 +61,6 @@ export type StaticPhoto = { src: StaticImageData; alt: string };
 
 const freeShip = formatMoney(FREE_SHIPPING_THRESHOLD, { trim: true }); // "$45"
 const flatRate = formatMoney(FLAT_RATE_SHIPPING); // "$5.99" CONFIRM (§5, item 3)
-const bulkMin = BULK_DISCOUNT.minBooks;
-const bulkPct = BULK_DISCOUNT.percent;
-/** Bulk-discount promises only while that discount exists in Shopify (CLAIMS.bulkDiscount). */
-const BULK = CLAIMS.bulkDiscount;
-
 const FREE_SHIPPING = CLAIMS.freeShipping; // CONFIRM (§5, items 2 and 3)
 const PICKUP = CLAIMS.localPickup; // CONFIRM (§5, item 9)
 const RETURNS_LABEL = "Returns & Exchanges";
@@ -81,8 +74,6 @@ const SITE_HOST = SITE_URL.replace(/^https?:\/\//, "").replace(/\/$/, "");
 
 /** How quickly we answer email. */
 const REPLY_TIME = "1–2 business days";
-/** How quickly we answer wholesale applications. CONFIRM with Tiffany. */
-const WHOLESALE_REPLY_TIME = "2–3 business days"; // CONFIRM
 
 /** Church-affiliation disclaimer, verbatim from the footer (copy deck §1.5). */
 export const CHURCH_DISCLAIMER = FOOTER.disclaimer;
@@ -244,8 +235,6 @@ export const aboutCopy = {
 export const CONTACT_TOPICS = [
   { value: "order", label: "An order I placed" },
   { value: "books", label: "A question about the books" },
-  { value: "bulk", label: "A bulk or ward order" },
-  { value: "wholesale", label: "Wholesale for my store" },
   { value: "other", label: "Something else" },
 ] as const;
 
@@ -284,7 +273,7 @@ export type ContactFormCopy = typeof contactFormCopy;
 export const contactCopy = {
   meta: {
     title: "Contact Tiffany",
-    description: `Questions about an order, a big ward order or wholesale? Email ${CONTACT_EMAIL} or send Tiffany a message here.`,
+    description: `Questions about an order or the books? Email ${CONTACT_EMAIL} or send Tiffany a message here.`,
   },
   eyebrow: "We’d love to hear from you",
   title: "Send Tiffany a Message",
@@ -304,10 +293,8 @@ export const contactCopy = {
       label: RETURNS_LABEL,
       href: "/returns",
       line: `${returnWindow} to return unused items`,
-    }, // CONFIRM (§5, item 5)
+    },
     { label: "FAQ", href: "/faq", line: "Ages, sizes, PDFs and more" },
-    { label: "Bulk & Ward Orders", href: "/bulk-orders", line: BULK ? `Save ${bulkPct}% on ${bulkMin} or more hardcovers` : "Gifts for the whole family or the whole ward" }, // CONFIRM (§5, item 4)
-    { label: "Wholesale for Retailers", href: "/bulk-orders#wholesale", line: "Carry the books in your store" },
   ] satisfies InfoLink[],
 };
 
@@ -316,7 +303,7 @@ export const contactCopy = {
 export const faqPageCopy = {
   meta: {
     title: "FAQ",
-    description: `Answers about Nephite Christmas and Easter Journey: ages and sizes, shipping and Christmas delivery,${CLAIMS.signedCopies ? " signed copies," : ""} returns, bulk orders and the PDF editions.`,
+    description: `Answers about Nephite Christmas and Easter Journey: ages and sizes, shipping and Christmas delivery,${CLAIMS.signedCopies ? " signed copies," : ""} returns and the PDF editions.`,
   },
   eyebrow: "FAQ",
   title: "Questions? We’re here to help.",
@@ -334,7 +321,6 @@ export const faqPageCopy = {
       href: "/returns",
       line: "Returns, exchanges and damaged items",
     },
-    { label: "Bulk & Ward Orders", href: "/bulk-orders", line: "Grandparents, Primary and ward gifts" },
   ] satisfies InfoLink[],
 };
 
@@ -618,13 +604,6 @@ export const returnsCopy: ReturnsCopy = {
         },
       ],
     },
-    {
-      id: "wholesale",
-      title: "Wholesale orders",
-      blocks: [
-        "Store and wholesale orders follow the wholesale terms on our [Wholesale for Retailers](/bulk-orders#wholesale) page.",
-      ],
-    },
   ],
   help: {
     title: "Need help with an order?",
@@ -687,143 +666,6 @@ export const freebiesCopy = {
   },
 };
 
-// ── /bulk-orders ────────────────────────────────────────────────────────────
-
-/** Wholesale terms from the live site (current-site.md §5). CONFIRM they still apply. */
-export const WHOLESALE_TERMS = {
-  /** Minimum order per title (the live wholesale products each had MOQ 12). CONFIRM per title vs per order */
-  minimumPerTitle: 12,
-  returnDays: 180,
-  /** Wholesale unit prices; suggested retail comes from the catalog price. */
-  items: [
-    { handle: HANDLES.nephiteChristmas, label: "Nephite Christmas (hardcover)", wholesale: 12.5 },
-    { handle: HANDLES.coloringBook, label: "Coloring & Activity Book (printed)", wholesale: 4 },
-  ],
-} as const;
-
-export const wholesaleFormCopy = {
-  formLabel: "Wholesale application",
-  business: { label: "Business name" },
-  name: { label: "Your name" },
-  email: { label: "Email address", placeholder: "you@yourstore.com" },
-  phone: { label: "Phone" },
-  permit: { label: "Resale permit number", hint: "Your state seller’s or resale permit number." },
-  message: {
-    label: "Message",
-    placeholder: "Which titles, about how many copies, and anything else we should know",
-  },
-  optional: "(optional)",
-  submit: "Apply for Wholesale",
-  privacy: "We’ll only use these details to review your application and reply. See our [Privacy Policy](/privacy).",
-  /** `{email}` is the applicant’s address. */
-  success: {
-    title: "Thank you! We’ve received your application.",
-    body: `We’ll review it and reply to {email} within ${WHOLESALE_REPLY_TIME} with wholesale pricing and ordering details.`, // CONFIRM response time
-  },
-  another: "Send another application",
-  errors: {
-    summary: "Please check the highlighted fields.",
-    business: "Please enter your business name.",
-    name: "Please enter your name.",
-    email: "Please enter a valid email address.",
-    phone: "Please enter a phone number we can reach you at.",
-    permit: "Please enter your resale permit number.",
-    messageLong: "Please keep your message under 5,000 characters.",
-    server: `Something went wrong on our end. Please try again in a moment, or email ${CONTACT_EMAIL}.`,
-  },
-};
-
-export type WholesaleFormCopy = typeof wholesaleFormCopy;
-
-// The bulk discount counts hardcovers only: each Nephite Christmas or Easter
-// Journey is one book, the Complete Set counts as two, and PDFs don't count
-// (store-config BULK_DISCOUNT; the cart applies it and shows the nudge).
-// CONFIRM the terms and whether it stacks with the Complete Set price (§5, item 4).
-export const bulkOrdersCopy = {
-  meta: {
-    title: "Bulk, Ward & Wholesale Orders",
-    description: BULK
-      ? `Save ${bulkPct}% on ${bulkMin} or more hardcovers, applied automatically at checkout. Gifts for grandparents, Primary and ward, plus wholesale pricing for stores.` // CONFIRM (§5, item 4)
-      : "Several copies for grandchildren, Primary or the ward, plus wholesale pricing for stores.",
-  },
-  eyebrow: "Bulk & ward orders",
-  title: "Gifts for the whole family, or the whole ward",
-  intro: BULK
-    ? `Buy ${bulkMin} or more hardcovers and save ${bulkPct}% on each, applied automatically at checkout.` // CONFIRM (§5, item 4)
-    : `Sending copies to several homes, or ordering for a ward or classroom? We’ll help you get it right.`,
-  cta: { label: "Shop the Books", href: "#shop-books" },
-  how: {
-    title: BULK ? "How the bulk discount works" : "How bulk orders work",
-    steps: [
-      BULK
-        ? {
-            title: `Add ${bulkMin} or more hardcovers`,
-            line: "Mix and match Nephite Christmas and Easter Journey however you like. The Complete Set counts as two books; PDFs don’t count.",
-          }
-        : {
-            title: "Add the books to your cart",
-            line: "Mix and match Nephite Christmas and Easter Journey however you like, up to 10 of each.",
-          },
-      BULK
-        ? {
-            title: `Save ${bulkPct}% on each`,
-            line: "The discount comes off automatically at checkout. No code needed.",
-          }
-        : {
-            title: "Send each copy where it’s going",
-            line: "Add a gift note in your cart. For copies going to several addresses, email us and we’ll set it up.",
-          },
-      {
-        title: "Need a lot?",
-        line: `Ordering more than ${CART_MAX_QUANTITY} of one title, or sending copies to several homes? Email ${CONTACT_EMAIL} and we’ll help.`,
-      },
-    ],
-  },
-  who: { title: "Who orders in bulk" },
-  ward: {
-    title: "Ideas for Primary, ward and classroom",
-    items: [
-      "Put the PDF on the big screen at a ward Christmas party, and set out nativity crafts at the craft table.",
-      "Give each teacher a hardcover to read aloud in class, then pull it out again every December.",
-      "Send a copy to every grandchild’s home with a gift note in your own words.",
-    ],
-    note: "Sharing a book PDF on screen at a family, church or classroom gathering is welcome.", // CONFIRM (§5, item 30)
-  },
-  shop: {
-    id: "shop-books",
-    title: "Shop the books",
-    subtitle: BULK
-      ? `Add ${bulkMin} or more hardcovers to your cart, in any mix, and ${bulkPct}% comes off each at checkout. The Complete Set counts as two.` // CONFIRM (§5, item 4)
-      : "Hardcovers for every home on your list.",
-    /** Hardcovers only: PDFs don't count toward the bulk discount. */
-    handles: [HANDLES.nephiteChristmas, HANDLES.easterJourney, HANDLES.completeSet],
-  },
-  contactLine: "Questions about a large order? Email",
-  wholesale: {
-    id: "wholesale",
-    eyebrow: "For stores and gift shops",
-    title: "Wholesale for retailers",
-    intro:
-      "Carry Nephite Christmas and the Coloring & Activity Book at wholesale prices. A reseller permit is required.",
-    termsTitle: "Wholesale terms",
-    colItem: "Title",
-    colWholesale: "Wholesale",
-    colRetail: "Suggested retail",
-    /** Narrow phones: the three columns fit at 320px. */
-    colRetailShort: "Retail",
-    terms: [
-      "A valid reseller (resale) permit is required.",
-      "The retailer pays shipping.",
-      "Returns within 180 days in resaleable condition, with our approval first. The retailer pays return shipping.",
-    ],
-    /** `{n}` copies. CONFIRM MOQ per title vs per order */
-    minimum: (n: number) => `Minimum order: ${n} copies of each title.`,
-    easterNote: "Interested in Easter Journey for your store? Ask in your message.", // CONFIRM Easter Journey wholesale
-    formTitle: "Apply for wholesale",
-    formIntro: `Tell us about your store and we’ll reply with pricing and ordering details within ${WHOLESALE_REPLY_TIME}.`, // CONFIRM response time
-  },
-};
-
 // ── /privacy, /terms, /accessibility ────────────────────────────────────────
 // Plain-English policies for a small US store on Shopify checkout with email
 // marketing and Meta/Google pixels. They make no compliance-certification claims.
@@ -859,7 +701,7 @@ export const privacyCopy: LegalPageCopy = {
         {
           list: [
             "**Order details.** When you buy, our checkout (provided by Shopify) collects your name, email address, shipping and billing addresses, phone number if you give one, and what you ordered. Payments are handled by Shopify and its payment partners. We never see or store your full card number.",
-            "**Messages and forms.** If you email us or use our contact or wholesale forms, we get what you send, such as your name, email address, phone number, business details and your message.",
+            "**Messages and forms.** If you email us or use our contact form, we get what you send, such as your name, email address, order number and your message.",
             "**Email sign-ups.** Your email address, when and where you signed up, and whether you open or click our emails.",
             "**Device and usage information.** Like most websites, we and our partners collect some information automatically when you visit, such as your IP address, browser and device type, the pages you view, the site that sent you here, and actions like adding a book to your cart. This comes from cookies, pixels and similar tools (see below).",
             "**Reviews.** If you write a review, we publish your review and your first name and last initial.",
@@ -874,7 +716,7 @@ export const privacyCopy: LegalPageCopy = {
         {
           list: [
             "To process and ship your order, deliver your downloads, and send order and shipping updates.",
-            "To answer your questions and wholesale applications.",
+            "To answer your questions.",
             "To send the emails you signed up for, such as free printables, new books and holiday shipping reminders. You can unsubscribe at any time.",
             "To understand how people use the site, so we can make it better.",
             "To measure our ads and show them to people who might like our books, including people who have visited this site.",

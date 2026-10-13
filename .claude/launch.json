@@ -26,6 +26,20 @@
         "SEASON_PREVIEW_DATE": "2026-12-20"
       },
       "port": 3100
+    },
+    {
+      "name": "blog-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "next",
+        "start",
+        "-p",
+        "3200"
+      ],
+      "port": 3200,
+      "env": {
+        "COMMERCE_PROVIDER": "mock"
+      }
     }
   ]
 }

@@ -3,7 +3,7 @@
 // Numbers that live in store-config are interpolated so copy and cart agree.
 
 import type { StaticImageData } from "next/image";
-import { BULK_DISCOUNT, CLAIMS, CONTACT_EMAIL, HANDLES, HANDLING_TIME, SHIPS_FROM, productPath } from "@/lib/store-config";
+import { HANDLES, HANDLING_TIME, SHIPS_FROM, productPath } from "@/lib/store-config";
 
 import family08 from "@/assets/images/lifestyle/family-08.jpg";
 import kelleyHicken from "@/assets/images/people/kelley-hicken.jpg";
@@ -14,14 +14,6 @@ import cubeDove from "@/assets/images/printables/cube-dove.jpg";
 import familyPraying from "@/assets/images/printables/family-praying.jpg";
 import nephiPreaching from "@/assets/images/printables/nephi-preaching.jpg";
 import origamiDove from "@/assets/images/printables/origami-dove.jpg";
-
-const NUMBER_WORDS = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
-const spelled = (n: number) => NUMBER_WORDS[n] ?? String(n);
-
-const bulkMin = BULK_DISCOUNT.minBooks;
-const bulkPct = BULK_DISCOUNT.percent;
-/** Bulk-discount lines only while that discount exists in Shopify (CLAIMS.bulkDiscount). */
-const BULK = CLAIMS.bulkDiscount;
 
 // ── §2.9 Make it a tradition ────────────────────────────────────────────────
 
@@ -69,7 +61,7 @@ export const howFamiliesUseCopy = {
     {
       icon: "gift",
       title: "A gift from Grandma and Grandpa",
-      line: `Send a copy to every grandchild’s home with a gift note in your own words.${BULK ? ` ${spelled(bulkMin)} or more books save ${bulkPct}%.` : ""}`, // CONFIRM bulk discount (§5, item 4)
+      line: "Send a copy to every grandchild’s home with a gift note in your own words.",
     },
   ] satisfies { icon: UseCaseIcon; title: string; line: string }[],
 };
@@ -149,51 +141,6 @@ export const meetAuthorCopy = {
   link: { label: "Read Tiffany’s story", href: "/about" },
   photo: { src: tiffanyPortrait, alt: "Tiffany Wheeler, author of Nephite Christmas and Easter Journey" },
   illustratorPhoto: { src: kelleyHicken, alt: "Kelley Hicken, illustrator" },
-};
-
-// ── §2.13 Bulk orders and where to find it ──────────────────────────────────
-
-export type BulkCardIcon = "family" | "ward" | "store" | "find";
-
-export const bulkCopy = {
-  title: "Gifts for the whole family, or the whole ward",
-  subtitle: BULK
-    ? `Buy ${bulkMin} or more books and save ${bulkPct}% on each, applied automatically at checkout.` // CONFIRM bulk discount (§5, item 4)
-    : `Sending copies to several homes, or ordering for a ward? Email ${CONTACT_EMAIL} and we’ll help.`,
-  cards: [
-    {
-      icon: "family",
-      title: "Grandparents and big families",
-      line: BULK
-        ? `Send a copy to every grandchild’s home. Mix and match titles; ${bulkMin}+ books save ${bulkPct}%.` // CONFIRM bulk discount (§5, item 4)
-        : "Send a copy to every grandchild’s home, each with a gift note in your own words.",
-      link: { label: "Shop the books", href: "/shop#books-sets" },
-    },
-    {
-      icon: "ward",
-      title: "Primary, ward and classroom",
-      line: "Hardcovers for teachers, PDFs for the big screen, and nativity crafts for the craft table.",
-      link: { label: "See instant downloads", href: "/shop#instant-downloads" },
-    },
-    {
-      icon: "store",
-      title: "Stores and gift shops",
-      line: "Carry Nephite Christmas and the Coloring & Activity Book at wholesale prices (reseller permit required).",
-      link: { label: "Apply for Wholesale", href: "/bulk-orders#wholesale" },
-    },
-    {
-      icon: "find",
-      title: "Find it in stores",
-      // Text only: no logos and no outbound links.
-      line: "Nephite Christmas is also carried by BYU Store, Eborn Books in Provo, Barnes & Noble in Sandy, and This Is the Place Bookstore in Palmyra, NY and Kirtland, OH.", // CONFIRM retailers still current (§5)
-    },
-  ] satisfies { icon: BulkCardIcon; title: string; line: string; link?: { label: string; href: string } }[],
-  contactLead: "Questions about a large order? Email",
-  contactEmail: CONTACT_EMAIL, // CONFIRM customer-service address (§5, item 32)
-  /** Footer label (§1.5) reused for the link to the bulk page. */
-  bulkLink: { label: "Bulk & Ward Orders", href: "/bulk-orders" },
-  /** The homepage's one-line version (Christmas mode): the §2.13 heading as a question, then the link. */
-  lineLead: "Gifts for the whole family, or the whole ward?",
 };
 
 // ── §2.14 FAQ ───────────────────────────────────────────────────────────────

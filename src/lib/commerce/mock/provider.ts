@@ -1,6 +1,5 @@
 import "server-only";
 
-import { bulkDiscountAmount, BULK_DISCOUNT_TITLE } from "@/lib/cart/pricing";
 import { BUY_NOW_ATTRIBUTE } from "@/lib/cart/ops";
 import { money, toNumber } from "@/lib/money";
 import { GIFT_NOTE_MAX } from "@/lib/store-config";
@@ -15,6 +14,7 @@ import type {
   Variant,
 } from "../types";
 import { applyCompareAtRule } from "../compare-at-rule";
+import { sampleArticles } from "./articles";
 import { catalog as rawCatalog } from "./catalog";
 import { publishedReviews } from "./reviews";
 
@@ -106,8 +106,6 @@ function build(state: Encoded): Cart {
     (sum, l) => sum + toNumber(l.compareAtUnitPrice ?? l.unitPrice) * l.quantity,
     0,
   );
-  // Stands in for the Shopify automatic discount (5+ books, 10% off).
-  const bulk = bulkDiscountAmount(lines);
   const id = encode(state);
   const attributes = state.a ?? [];
   return {
@@ -119,9 +117,9 @@ function build(state: Encoded): Cart {
       : "/checkout",
     totalQuantity: lines.reduce((n, l) => n + l.quantity, 0),
     lines,
-    subtotal: money(linesTotal - bulk),
+    subtotal: money(linesTotal),
     savings: compare - linesTotal > 0.004 ? money(compare - linesTotal) : null,
-    discounts: bulk > 0 ? [{ title: BULK_DISCOUNT_TITLE, amount: money(bulk) }] : [],
+    discounts: [],
     note: state.n ?? "",
     attributes,
     requiresShipping: lines.some((l) => l.requiresShipping),
@@ -178,6 +176,16 @@ export const mockProvider: CommerceProvider = {
 
   async getReviews(productHandle) {
     return publishedReviews.filter((r) => r.productHandle === productHandle);
+  },
+
+  async getArticles() {
+    return [...sampleArticles]
+      .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+      .map((article) => ({ ...article, contentHtml: undefined }));
+  },
+
+  async getArticle(handle) {
+    return sampleArticles.find((a) => a.handle === handle) ?? null;
   },
 
   async getCart(cartId) {

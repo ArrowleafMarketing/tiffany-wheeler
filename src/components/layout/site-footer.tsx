@@ -1,7 +1,9 @@
 import { cacheLife } from "next/cache";
 import Link from "next/link";
 import { EmailCapture } from "@/components/home/email-capture";
+import { BLOG } from "@/content/blog";
 import { FOOTER, HEADER } from "@/content/site";
+import { getArticles } from "@/lib/commerce";
 import { ChurchDisclaimer } from "./church-disclaimer";
 import { Logo } from "./logo";
 import { SocialLinks } from "./social-icons";
@@ -13,8 +15,18 @@ async function CopyrightYear() {
   return <>{new Date().getFullYear()}</>;
 }
 
+/** Footer columns, with the Blog link while at least one post is published. */
+async function footerColumns() {
+  const hasPosts = (await getArticles()).length > 0;
+  if (!hasPosts) return FOOTER.columns;
+  return FOOTER.columns.map((column) =>
+    column.title === BLOG.footerColumn ? { ...column, links: [...column.links, BLOG.nav] } : column,
+  );
+}
+
 /** Site footer: blurb, link columns, email signup, social, legal row and the Church disclaimer. */
-export function SiteFooter() {
+export async function SiteFooter() {
+  const columns = await footerColumns();
   return (
     <footer className="mt-auto border-t border-line bg-cream-deep text-body">
       <div className="container-page grid gap-10 py-12 sm:py-16 lg:grid-cols-12 lg:gap-8">
@@ -34,7 +46,7 @@ export function SiteFooter() {
           aria-label={FOOTER.navLabel}
           className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:col-span-5"
         >
-          {FOOTER.columns.map((column) => (
+          {columns.map((column) => (
             <div key={column.title}>
               <h2 className="font-sans text-sm font-bold tracking-[0.08em] text-ink uppercase">{column.title}</h2>
               <ul className="mt-2">

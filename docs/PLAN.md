@@ -75,7 +75,7 @@ Goal: turn paid-ad (mostly Meta/Instagram, mobile, in-app browser) traffic into 
 2. **Ad landing pages:** `/lp/christmas-tradition`, `/lp/grandparent-gift`, and Easter later.
 3. **Supporting pages:**
    - About (Tiffany and illustrator Kelley Hicken), FAQ, shipping and Christmas delivery dates, returns/guarantee, privacy, terms.
-   - Freebies page (email-gated), wholesale inquiry, 404.
+   - Freebies page (email-gated), 404. (Wholesale and bulk/ward orders were removed from the site on Oct 13, 2026.)
    - Metadata, OG images, JSON-LD (Product, AggregateRating, FAQ), sitemap and robots.
    - 301 redirects from the old WooCommerce URLs.
 4. **Shopify wiring:**
@@ -148,7 +148,7 @@ Every unconfirmed promise is gated by `CLAIMS` in `src/lib/store-config.ts`. Whi
    - What is the audio on the 30s video (voice-over or live reading)?
    - Is any Easter video coming?
 5. **Catalog and ops.**
-   - Keep the puzzle, canvas and wholesale?
+   - Keep the puzzle and canvas? (Wholesale and the bulk discount are dropped.)
    - Keep Boise pickup?
    - What return address should the returns policy use?
    - May we lock down the public Nephite Christmas PDFs on the live site now?

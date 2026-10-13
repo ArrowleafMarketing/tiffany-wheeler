@@ -15,7 +15,6 @@ import {
 import { cartCopy } from "@/content/cart";
 import { track, type AnalyticsItem } from "@/lib/analytics";
 import type { CartOp, CartResponse, SwappedLine } from "@/lib/cart/ops";
-import { bulkDiscountAmount, BULK_DISCOUNT_TITLE } from "@/lib/cart/pricing";
 import type { Attribute, Cart, CartLine, LineInput } from "@/lib/commerce/types";
 import { money, toNumber } from "@/lib/money";
 import { HANDLES } from "@/lib/store-config";
@@ -114,15 +113,13 @@ function recalc(cart: Cart, lines: CartLine[]): Cart {
     compare += toNumber(l.compareAtUnitPrice ?? l.unitPrice) * l.quantity;
     return { ...l, total: money(unit * l.quantity) };
   });
-  const bulk = bulkDiscountAmount(next);
-  const title = cart.discounts?.[0]?.title ?? BULK_DISCOUNT_TITLE;
   return {
     ...cart,
     lines: next,
     totalQuantity: next.reduce((n, l) => n + l.quantity, 0),
-    subtotal: money(total - bulk),
+    subtotal: money(total),
     savings: compare - total > 0.004 ? money(compare - total) : null,
-    discounts: bulk > 0 ? [{ title, amount: money(bulk) }] : [],
+    discounts: [],
     requiresShipping: next.some((l) => l.requiresShipping),
   };
 }

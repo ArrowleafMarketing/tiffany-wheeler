@@ -134,16 +134,16 @@ export type CartLine = {
   total: Money;
   attributes: Attribute[];
   /**
-   * Hardcover books in one unit of this line, for the bulk discount (a book
+   * Hardcover books in one unit of this line, for signed copies and the cart nudges (a book
    * = 1, the Complete Set = 2, a bundle with one hardcover = 1, everything
    * else = 0). Optional: providers that can't tell leave it out.
    */
   bookCount?: number;
 };
 
-/** An automatic cart-level discount (e.g. the 5+ books bulk discount). */
+/** An automatic cart-level discount, as Shopify reports it. */
 export type CartDiscount = {
-  /** Shown as the summary label, e.g. "5+ books: 10% off applied". */
+  /** Shown as the summary label. */
   title: string;
   amount: Money;
 };
@@ -176,4 +176,22 @@ export type ProductQuery = {
   kind?: ProductKind | ProductKind[];
   holiday?: Holiday;
   handles?: string[];
+};
+
+/** A blog post. Shopify's blog (Content → Blog posts) is the source; the mock has samples. */
+export type Article = {
+  handle: string;
+  title: string;
+  /** Plain-text summary for cards and meta descriptions (Shopify's excerpt, or the post's opening). */
+  excerpt: string;
+  /** The post body as HTML from Shopify's editor. Only loaded for the post page. */
+  contentHtml?: string;
+  /** ISO date-time. */
+  publishedAt: string;
+  author?: string;
+  /** Lowercased. A tag that matches a product handle puts that product under the post. */
+  tags: string[];
+  image?: Image;
+  /** Shopify's "Search engine listing" fields; empty when not set. */
+  seo: { title?: string; description?: string };
 };

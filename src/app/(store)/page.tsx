@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { AddOnsRow } from "@/components/home/add-ons-row";
-import { BulkAndStores } from "@/components/home/bulk-and-stores";
-import { BulkOrdersLine } from "@/components/home/bulk-orders-line";
 import { ClosingCta } from "@/components/home/closing-cta";
 import { CompleteSetBar } from "@/components/home/complete-set-bar";
 import { EmailCapture } from "@/components/home/email-capture";
@@ -39,8 +37,7 @@ export const metadata: Metadata = {
  * then the book itself, the family story, one email ask, a closing buy band,
  * and only then the author and FAQ. The add-ons row is left out (the cart
  * drawer already upsells them, and the PDF stays in /shop and the last-minute
- * hero), "How families use it" is folded into "Why families", and bulk orders
- * are one line. The other seasons keep the fuller deck order (§2).
+ * hero), and "How families use it" is folded into "Why families". The other seasons keep the fuller deck order (§2).
  */
 export default async function Home() {
   const season = await getCurrentSeason();
@@ -63,7 +60,6 @@ export default async function Home() {
           <MeetAuthor />
           {/* CONTENT OWNER: the homepage FAQ should be the 6-item home list (see faq.ts). */}
           <FaqSection />
-          <BulkOrdersLine />
         </>
       ) : (
         <>
@@ -75,7 +71,6 @@ export default async function Home() {
           <AddOnsRow />
           <EmailCapture />
           <MeetAuthor />
-          <BulkAndStores />
           <FaqSection />
         </>
       )}

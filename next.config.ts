@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
     // Shopify catalog (prices, sales, availability): a price or sale changed in the
     // Shopify admin shows on the site within about 5 minutes.
     catalog: { stale: 60, revalidate: 300, expire: 3600 },
+    // Blog posts: a post published in Shopify appears within about 10 minutes.
+    blog: { stale: 60, revalidate: 600, expire: 86400 },
   },
   images: {
     formats: ["image/avif", "image/webp"],
@@ -44,8 +46,8 @@ const nextConfig: NextConfig = {
         destination: "/products/nephite-christmas-coloring-activity-book?format=pdf",
         permanent: true,
       },
-      // Wholesale products (retailers with old links) -> the wholesale inquiry.
-      { source: "/product/:slug(.*wholesale.*)", destination: "/bulk-orders#wholesale", permanent: true },
+      // Old wholesale product links (wholesale is discontinued) -> contact.
+      { source: "/product/:slug(.*wholesale.*)", destination: "/contact", permanent: true },
       ...Object.entries(renamed).map(([from, to]) => ({
         source: `/product/${from}`,
         destination: `/products/${to}`,

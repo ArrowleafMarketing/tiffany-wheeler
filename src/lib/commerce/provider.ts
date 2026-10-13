@@ -1,4 +1,5 @@
 import type {
+  Article,
   Attribute,
   Cart,
   LineInput,
@@ -21,6 +22,11 @@ export interface CommerceProvider {
   getProduct(handle: string): Promise<Product | null>;
   getProducts(query?: ProductQuery): Promise<Product[]>;
   getReviews(productHandle: string): Promise<Review[]>;
+
+  /** Published blog posts, newest first, without their bodies. Never throws: no blog = []. */
+  getArticles(): Promise<Article[]>;
+  /** One post with its body, or null. */
+  getArticle(handle: string): Promise<Article | null>;
 
   getCart(cartId: string): Promise<Cart | null>;
   createCart(input?: { lines?: LineInput[]; attributes?: Attribute[] }): Promise<Cart>;

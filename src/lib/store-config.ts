@@ -34,12 +34,6 @@ export const CLAIMS = {
   bythewayComplimentaryCopy: null as boolean | null,
   /** "Bestseller" badge on Nephite Christmas (§5 item 18). False = "Family favorite". */
   bestsellerBadge: false,
-  /**
-   * The automatic "5+ hardcovers, 10% off" bulk discount (BULK_DISCOUNT). Off since
-   * Oct 2026: Shopify has no such discount (sales are set as compare-at prices). Turn
-   * this on only after creating the matching automatic discount in Shopify.
-   */
-  bulkDiscount: false,
 } as const;
 
 /** Free US shipping at or above this subtotal. One book misses it; the set clears it. CONFIRM */
@@ -68,8 +62,6 @@ export const RETURN_WINDOW_DAYS = 60;
 export const HANDLING_TIME = `${HANDLING_BUSINESS_DAYS.min}–${HANDLING_BUSINESS_DAYS.max} business days`;
 export const TRANSIT_TIME = `${TRANSIT_BUSINESS_DAYS.min}–${TRANSIT_BUSINESS_DAYS.max} business days`;
 
-/** "Bulk purchases of 5 or more get an automatic 10% off each book" (live site). Counts hardcovers; the set counts as 2. */
-export const BULK_DISCOUNT = { minBooks: 5, percent: 10 } as const;
 
 
 /** Max quantity per cart line, and max gift-note length. */
